@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	486851409	Play_BGM_Playlist_1			\Default Work Unit\BGM Events\Play_BGM_Playlist_1	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	876023904	041923 bulletsketch 155	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\041923 bulletsketch 155_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\BGM Playlist 1\041923 bulletsketch 155\041923 bulletsketch 155		21850936
+

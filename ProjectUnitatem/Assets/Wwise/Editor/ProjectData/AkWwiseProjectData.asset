@@ -38,8 +38,25 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 64256cb5947fe945ba3ae7756291f256
     GuidInternal: 
-    m_lastTime: -8585197681667236072
+    m_lastTime: -8585196785375084946
     List:
+    - name: BGM Bus
+      guid: 1e9ce8a7422da24fbdc774c6d66c7099
+      id: 1697111475
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 64256cb5947fe945ba3ae7756291f256
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: BGM Bus
+        ObjectType: 2
+        guid: 1e9ce8a7422da24fbdc774c6d66c7099
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\BGM Bus
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -66,8 +83,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 52f3de0e45781d45abd578999dcfb3c8
     GuidInternal: 
-    m_lastTime: -8585197681665365651
-    List: []
+    m_lastTime: -8585196785374999866
+    List:
+    - name: Main_SoundBank
+      guid: 637a242824bf4540920312da923301ee
+      id: 2228651116
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 52f3de0e45781d45abd578999dcfb3c8
+      - ElementName: Main_SoundBank
+        ObjectType: 7
+        guid: 637a242824bf4540920312da923301ee
+      Path: SoundBanks\Default Work Unit\Main_SoundBank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +111,45 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ef80d5b12813f445b45e212240442c8f
     GuidInternal: 
-    m_lastTime: -8585197681667086039
-    List: []
+    m_lastTime: -8585196785375263967
+    List:
+    - name: BGM Events
+      guid: 37629faea5275649b7c25d56337d639f
+      id: 4010315356
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ef80d5b12813f445b45e212240442c8f
+      - ElementName: BGM Events
+        ObjectType: 4
+        guid: 37629faea5275649b7c25d56337d639f
+      Path: Events\Default Work Unit\BGM Events
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_BGM_Playlist_1
+      guid: 1c58db4fa713824caea2e7324cecd57c
+      id: 486851409
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ef80d5b12813f445b45e212240442c8f
+      - ElementName: BGM Events
+        ObjectType: 4
+        guid: 37629faea5275649b7c25d56337d639f
+      - ElementName: Play_BGM_Playlist_1
+        ObjectType: 3
+        guid: 1c58db4fa713824caea2e7324cecd57c
+      Path: Events\Default Work Unit\BGM Events\Play_BGM_Playlist_1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -139,7 +207,7 @@ MonoBehaviour:
     m_lastTime: -8585197681665075589
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 060000000700000008000000090000000a000000a4200200
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
