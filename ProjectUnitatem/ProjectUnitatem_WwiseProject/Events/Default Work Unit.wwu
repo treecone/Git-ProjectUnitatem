@@ -3,17 +3,116 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{B1D580EF-1328-45F4-B45E-212240442C8F}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="BGM Events" ID="{AE9F6237-27A5-4956-B7C2-5D56337D639F}" ShortID="1053621802">
+				<Folder Name="Music" ID="{4302AC74-468D-4314-8CA1-AB913552908B}" ShortID="414714358">
 					<ChildrenList>
-						<Event Name="Play_BGM_Playlist_1" ID="{4FDB581C-13A7-4C82-AEA2-E7324CECD57C}">
+						<Event Name="Play_BGM" ID="{2C4FBA63-D781-4165-95EB-4BD30C81AD53}">
 							<ChildrenList>
-								<Action Name="" ID="{2D38328B-68F0-43F9-A7E1-BD3CCEE6700E}" ShortID="201445457">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="BGM Playlist 1" ID="{FC90EA57-5DE6-46FF-A1A8-2111A89C89D5}" WorkUnitID="{AF475F4C-17BB-4EAB-AD40-531018188FE6}"/>
-										</Reference>
-									</ReferenceList>
+								<Action Name="" ID="{E50DE32C-D297-489D-A3C4-EA27EC50578A}" ShortID="362827318"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Victory_Stinger" ID="{2A221938-225E-48F3-B191-EA53BB75F8A0}">
+							<ChildrenList>
+								<Action Name="" ID="{F054BD2F-3A28-4A96-A9D8-82E68F3BB54F}" ShortID="260053109"/>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Player" ID="{094FF139-03CF-405F-A401-59DC2A383081}" ShortID="644159756">
+					<ChildrenList>
+						<Event Name="Player_Attack" ID="{D3A94977-4AC1-4A30-A2C8-EC8A1A8DB999}">
+							<ChildrenList>
+								<Action Name="" ID="{06080C0F-A22E-49AF-90EA-E35A0B8E72BD}" ShortID="768114992"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Move" ID="{A08C0235-2475-4BD8-AF16-D511452C3D61}">
+							<ChildrenList>
+								<Action Name="" ID="{5AE1A331-9C0C-4EFF-B91F-C969FD42EFDB}" ShortID="1046114294"/>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="States" ID="{AA0F0531-F39D-4AB1-A147-F1359A0E33A2}" ShortID="997330721"/>
+				<Folder Name="Switches" ID="{289EC00B-38DD-436B-AB37-FF3C1EE4177E}" ShortID="786195030">
+					<ChildrenList>
+						<Event Name="Set_ViolinSwitch" ID="{4C357B8F-7CFD-40D9-BEBF-BC48C044892E}">
+							<ChildrenList>
+								<Action Name="" ID="{4EFD94DD-C33F-4D4A-96D2-F54DC713774A}" ShortID="519784696">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList/>
 								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Set_GuitarSwitch" ID="{9EFF149C-5404-499D-BCB5-55D923E2CE76}">
+							<ChildrenList>
+								<Action Name="" ID="{3E8CC444-45BC-4374-9C85-7637DE3B6F2C}" ShortID="989378731">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Set_8BitSwitch" ID="{B1380AFA-CDEB-4CDF-AE12-3A1EC99711D8}">
+							<ChildrenList>
+								<Action Name="" ID="{C45EFB96-CC10-42A9-89BA-9BE32014A305}" ShortID="673138753">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="RTPCs" ID="{4DE83CB3-7603-4F29-8DCC-F7BE23D3840C}" ShortID="223171842"/>
+				<Folder Name="Boss" ID="{2D280A7B-3811-43A8-ABFC-B7ADC31C0CA0}" ShortID="582932154">
+					<ChildrenList>
+						<Event Name="Enemy_Attack" ID="{A7922E72-016C-41AA-8FDA-350A015718F4}">
+							<ChildrenList>
+								<Action Name="" ID="{85CBC57E-173B-425B-8344-63A2DB518A27}" ShortID="225071620"/>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{69B4E096-FB70-4D23-B182-699B947A0396}" ShortID="690745737"/>
+				<Folder Name="Game" ID="{5D2925EA-958E-497D-87DB-C4DAF0460532}" ShortID="818043040">
+					<ChildrenList>
+						<Event Name="Pause_Menu" ID="{7078C31B-FFF6-4C16-90C5-467EACD3B54E}">
+							<ChildrenList>
+								<Action Name="" ID="{3BFB75CA-036B-42CC-A3DA-EAC98DDCE531}" ShortID="106794213">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Resume_Game" ID="{B40A252E-632D-4B51-84E6-795A51EC024A}">
+							<ChildrenList>
+								<Action Name="" ID="{54067E25-23C6-4E14-8E3C-A635B0378134}" ShortID="339191036">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_All" ID="{A164DDD0-3831-4446-8C10-6C9961281677}">
+							<ChildrenList>
+								<Action Name="" ID="{878A3401-3AB1-4387-9A77-4B482A16AB77}" ShortID="218234666">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Start_Game" ID="{D4E198E0-28BF-4DFE-870D-5A88E2DD129B}"/>
+						<Event Name="Death" ID="{5F92D11C-4E29-4AC2-9398-8C56B254F3F0}">
+							<ChildrenList>
+								<Action Name="" ID="{BCDF153A-00E7-4937-B3B0-C077AAF1AD43}" ShortID="889269069"/>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>

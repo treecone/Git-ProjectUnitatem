@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6B4D209D-E99B-463A-81B2-FA6E0D981078}" SchemaVersion="110">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{6B4D209D-E99B-463A-81B2-FA6E0D981078}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{6B4D209D-E99B-463A-81B2-FA6E0D981078}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Player_Health" ID="{56F5E44D-B494-4A70-990C-61721C32999B}"/>
+				<GameParameter Name="Distortion" ID="{5E5161C6-0A89-49F5-9A28-B8C07D43F677}"/>
+				<GameParameter Name="Score" ID="{FFDC15B2-352B-4090-86B2-9043501733AB}"/>
+				<GameParameter Name="DamageToBoss" ID="{92035F73-122A-423B-B073-23AC68BA4B10}"/>
+				<GameParameter Name="BGM_Controller" ID="{AF6F93AD-7946-44FF-BBFD-CE28BDE5B961}">
+					<PropertyList>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="25"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="25"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="PauseFilter" ID="{BB1F9053-352E-4EEA-8A5D-7B86670B2A87}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

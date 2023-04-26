@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{83BF2CB3-BD3B-46CF-AF10-AEEC699BEEAA}" SchemaVersion="110">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{83BF2CB3-BD3B-46CF-AF10-AEEC699BEEAA}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{83BF2CB3-BD3B-46CF-AF10-AEEC699BEEAA}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="MusicSwitch" ID="{719FEC84-7B0A-4AB3-BA74-666BFC2D752A}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Retro" ID="{F9F81909-6EE3-4B50-A834-118170878645}"/>
+						<Switch Name="Guitar" ID="{AD8DA46D-2702-45FF-ACD2-D927869AA1F8}"/>
+						<Switch Name="Violin" ID="{DA5C30DF-3D1C-4540-A104-48F02559CD6A}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="BGM_Controller" ID="{AF6F93AD-7946-44FF-BBFD-CE28BDE5B961}"/>
+						<Curve Name="" ID="{78089259-3EC8-4D80-BA7F-13CB8189FF2B}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>0</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>30</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>60</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>90</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>100</XPos>
+									<YPos>0</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

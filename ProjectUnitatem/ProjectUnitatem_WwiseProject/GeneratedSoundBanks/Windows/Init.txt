@@ -1,5 +1,32 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1445037870	MusicSwitch			\Default Work Unit\MusicSwitch	
+
+Switch	ID	Name	Switch Group			Notes
+	3063529226	Violin	MusicSwitch			
+	3232836819	Guitar	MusicSwitch			
+	3496907731	Retro	MusicSwitch			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3630029033	Phases			\Default Work Unit\Phases	
+	3762137787	Player_Life			\Default Work Unit\Player_Life	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Phases			
+	1865857008	Transition	Phases			
+	2764240573	Combat	Phases			
+	655265632	Alive	Player_Life			
+	748895195	None	Player_Life			
+	2044049779	Dead	Player_Life			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1201445347	PauseFilter			\Default Work Unit\PauseFilter	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	228317785	Transitions Bus			\Default Work Unit\Master Audio Bus\Transitions Bus	
+	1578025756	Player Attack Bus			\Default Work Unit\Master Audio Bus\Player Attack Bus	
+	1664460283	Enemy Attack Bus			\Default Work Unit\Master Audio Bus\Enemy Attack Bus	
 	1697111475	BGM Bus			\Default Work Unit\Master Audio Bus\BGM Bus	
+	3600729941	UI Bus			\Default Work Unit\Master Audio Bus\UI Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Audio Devices	ID	Name	Type				Notes

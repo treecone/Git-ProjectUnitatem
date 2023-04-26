@@ -11,7 +11,50 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="BGM Bus" ID="{A7E89C1E-2D42-4FA2-BDC7-74C6D66C7099}"/>
+						<Bus Name="Player Attack Bus" ID="{8EB25FE0-39C5-4494-BC2D-7BE0FAB09891}"/>
+						<Bus Name="Transitions Bus" ID="{7CD1BB95-0D46-4E9D-8675-764E1A3C3595}"/>
+						<Bus Name="Enemy Attack Bus" ID="{84E9558D-0D2F-41F2-9B7C-EBBD13FC77B5}"/>
+						<Bus Name="UI Bus" ID="{207E6894-D2D7-47AC-AC92-8B8C0DA2D198}"/>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{EF402307-B6E5-465B-B656-727B19ADE919}" ShortID="961350609">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="PauseFilter" ID="{BB1F9053-352E-4EEA-8A5D-7B86670B2A87}" WorkUnitID="{6B4D209D-E99B-463A-81B2-FA6E0D981078}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{469A22D3-7248-419F-84BE-7E9BF73480AD}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

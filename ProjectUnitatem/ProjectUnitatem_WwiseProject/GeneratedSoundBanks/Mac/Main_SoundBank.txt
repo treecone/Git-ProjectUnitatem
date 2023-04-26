@@ -1,6 +1,15 @@
 Event	ID	Name			Wwise Object Path	Notes
-	486851409	Play_BGM_Playlist_1			\Default Work Unit\BGM Events\Play_BGM_Playlist_1	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	876023904	041923 bulletsketch 155	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\041923 bulletsketch 155_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\BGM Playlist 1\041923 bulletsketch 155\041923 bulletsketch 155		21850936
+	452547817	Stop_All			\Default Work Unit\Game\Stop_All	
+	779278001	Death			\Default Work Unit\Game\Death	
+	1114964412	Start_Game			\Default Work Unit\Game\Start_Game	
+	1399716893	Set_ViolinSwitch			\Default Work Unit\Switches\Set_ViolinSwitch	
+	1565052233	Resume_Game			\Default Work Unit\Game\Resume_Game	
+	1781417190	Enemy_Attack			\Default Work Unit\Boss\Enemy_Attack	
+	2155888594	Victory_Stinger			\Default Work Unit\Music\Victory_Stinger	
+	2824512041	Player_Attack			\Default Work Unit\Player\Player_Attack	
+	3011204530	Move			\Default Work Unit\Player\Move	
+	3126765036	Play_BGM			\Default Work Unit\Music\Play_BGM	
+	3422541661	Pause_Menu			\Default Work Unit\Game\Pause_Menu	
+	3901001571	Set_8BitSwitch			\Default Work Unit\Switches\Set_8BitSwitch	
+	4003498308	Set_GuitarSwitch			\Default Work Unit\Switches\Set_GuitarSwitch	
 
