@@ -7,7 +7,10 @@ using Input = UnityEngine.Input;
 public class PlayerScript : MonoBehaviour
 {
     public GameObject bullet;
-    int movementCounter;
+
+    [Header("Player Attributes")]
+    public float movementSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,25 +20,25 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*float a = Input.GetAxis("Horizontal");
-        gameObject.transform.Translate(Vector2.right * a * 0.2f);*/
 
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKey(KeyCode.A))
         {
-            if(movementCounter > 0)
-            {
-                movementCounter--;
-                gameObject.transform.Translate(Vector2.left * 2);
-            }
+            gameObject.transform.Translate(Vector2.left * movementSpeed * Time.deltaTime);
         }
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
-            if (movementCounter < 5)
-            {
-                movementCounter++;
-                gameObject.transform.Translate(Vector2.right * 2);
-            }
+            gameObject.transform.Translate(Vector2.right * movementSpeed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            gameObject.transform.Translate(Vector2.up * movementSpeed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            gameObject.transform.Translate(Vector2.down * movementSpeed * Time.deltaTime);
         }
 
 
