@@ -154,7 +154,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 52f3de0e45781d45abd578999dcfb3c8
     GuidInternal: 
-    m_lastTime: -8585190625199753001
+    m_lastTime: -8585188942583989851
     List:
     - name: Main_SoundBank
       guid: 637a242824bf4540920312da923301ee
@@ -182,7 +182,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ef80d5b12813f445b45e212240442c8f
     GuidInternal: 
-    m_lastTime: -8585190625378372981
+    m_lastTime: -8585188942584199896
     List:
     - name: Boss
       guid: 7b0a282d1138a843abfcb7adc31c0ca0
@@ -919,7 +919,7 @@ MonoBehaviour:
     m_lastTime: -8585197681665075589
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 06000000070000000a0000000e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

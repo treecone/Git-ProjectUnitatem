@@ -61,25 +61,107 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{BFAD9E7F-A921-63E5-92D7-4D3DD6A62B2C}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{5E9A15B8-652C-96C2-A331-BDC6AA21DFA4}">
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
+			<Media>
+				<File Id="655935024" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>042723 bullet fuck guitar playlist 1.wav</ShortName>
+					<CachePath>SFX/042723 bullet fuck guitar playlist 1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="758842039" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>042823 bullet fuck 8-bit playlist 1.wav</ShortName>
+					<CachePath>SFX/042823 bullet fuck 8-bit playlist 1_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
 				<Event Id="779278001" Name="Death" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1781417190" Name="Enemy_Attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3011204530" Name="Move" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3422541661" Name="Pause_Menu" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3126765036" Name="Play_BGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3126765036" Name="Play_BGM" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3762137787" Id="655265632"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="3630029033" Id="0"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3232836819"/>
+											<MediaRefs>
+												<MediaRef Id="655935024"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3762137787" Id="655265632"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="3630029033" Id="0"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3496907731"/>
+											<MediaRefs>
+												<MediaRef Id="758842039"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="2824512041" Name="Player_Attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1565052233" Name="Resume_Game" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3901001571" Name="Set_8BitSwitch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="4003498308" Name="Set_GuitarSwitch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3901001571" Name="Set_8BitSwitch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="1445037870" Id="3496907731" Name="Retro"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="4003498308" Name="Set_GuitarSwitch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="1445037870" Id="3232836819" Name="Guitar"/>
+					</ActionSetSwitch>
+				</Event>
 				<Event Id="1399716893" Name="Set_ViolinSwitch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1114964412" Name="Start_Game" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2155888594" Name="Victory_Stinger" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="3230961072" Name="BGM_Controller"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3630029033" Name="Phases">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1865857008" Name="Transition"/>
+						<State Id="2764240573" Name="Combat"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3762137787" Name="Player_Life">
+					<States>
+						<State Id="655265632" Name="Alive"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2044049779" Name="Dead"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="1445037870" Name="MusicSwitch">
+					<GameParameterRef Id="3230961072"/>
+					<Switches>
+						<Switch Id="3063529226" Name="Violin"/>
+						<Switch Id="3232836819" Name="Guitar"/>
+						<Switch Id="3496907731" Name="Retro"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0E2F729A-C404-9E4D-A151-83F3C9621BD2}</FileHash>
+	<FileHash>{1D118860-1B05-3360-6D54-5660AB15647A}</FileHash>
 </SoundBanksInfo>

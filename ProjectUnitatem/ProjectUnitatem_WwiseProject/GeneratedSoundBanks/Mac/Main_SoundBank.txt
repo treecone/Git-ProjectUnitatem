@@ -13,3 +13,30 @@ Event	ID	Name			Wwise Object Path	Notes
 	3901001571	Set_8BitSwitch			\Default Work Unit\Switches\Set_8BitSwitch	
 	4003498308	Set_GuitarSwitch			\Default Work Unit\Switches\Set_GuitarSwitch	
 
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1445037870	MusicSwitch			\Default Work Unit\MusicSwitch	
+
+Switch	ID	Name	Switch Group			Notes
+	3063529226	Violin	MusicSwitch			
+	3232836819	Guitar	MusicSwitch			
+	3496907731	Retro	MusicSwitch			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3630029033	Phases			\Default Work Unit\Phases	
+	3762137787	Player_Life			\Default Work Unit\Player_Life	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Phases			
+	1865857008	Transition	Phases			
+	2764240573	Combat	Phases			
+	655265632	Alive	Player_Life			
+	748895195	None	Player_Life			
+	2044049779	Dead	Player_Life			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3230961072	BGM_Controller			\Default Work Unit\BGM_Controller	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	655935024	042723 bullet fuck guitar playlist 1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\042723 bullet fuck guitar playlist 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Guitar1\042723 bullet fuck guitar playlist 1\042723 bullet fuck guitar playlist 1		3044668
+	758842039	042823 bullet fuck 8-bit playlist 1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\042823 bullet fuck 8-bit playlist 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\8-Bit1\042823 bullet fuck 8-bit playlist 1\042823 bullet fuck 8-bit playlist 1		2838952
+

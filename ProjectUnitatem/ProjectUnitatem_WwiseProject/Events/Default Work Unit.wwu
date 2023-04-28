@@ -7,7 +7,13 @@
 					<ChildrenList>
 						<Event Name="Play_BGM" ID="{2C4FBA63-D781-4165-95EB-4BD30C81AD53}">
 							<ChildrenList>
-								<Action Name="" ID="{E50DE32C-D297-489D-A3C4-EA27EC50578A}" ShortID="362827318"/>
+								<Action Name="" ID="{A166526B-10E7-49EF-B9CC-EC83A7371468}" ShortID="636496761">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MusicSwitchContainer" ID="{E5C0983D-D718-45ED-9AAD-7A40405E4628}" WorkUnitID="{AF475F4C-17BB-4EAB-AD40-531018188FE6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Victory_Stinger" ID="{2A221938-225E-48F3-B191-EA53BB75F8A0}">
@@ -50,7 +56,11 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="23"/>
 									</PropertyList>
-									<ReferenceList/>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Guitar" ID="{AD8DA46D-2702-45FF-ACD2-D927869AA1F8}" WorkUnitID="{83BF2CB3-BD3B-46CF-AF10-AEEC699BEEAA}"/>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
@@ -60,7 +70,11 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="23"/>
 									</PropertyList>
-									<ReferenceList/>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Retro" ID="{F9F81909-6EE3-4B50-A834-118170878645}" WorkUnitID="{83BF2CB3-BD3B-46CF-AF10-AEEC699BEEAA}"/>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
