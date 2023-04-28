@@ -6,6 +6,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1565052233	Resume_Game			\Default Work Unit\Game\Resume_Game	
 	1781417190	Enemy_Attack			\Default Work Unit\Boss\Enemy_Attack	
 	2155888594	Victory_Stinger			\Default Work Unit\Music\Victory_Stinger	
+	2752533807	Play_TestSound			\Default Work Unit\Play_TestSound	
 	2824512041	Player_Attack			\Default Work Unit\Player\Player_Attack	
 	3011204530	Move			\Default Work Unit\Player\Move	
 	3126765036	Play_BGM			\Default Work Unit\Music\Play_BGM	
@@ -39,4 +40,5 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	655935024	042723 bullet fuck guitar playlist 1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\042723 bullet fuck guitar playlist 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Guitar1\042723 bullet fuck guitar playlist 1\042723 bullet fuck guitar playlist 1		3044668
 	758842039	042823 bullet fuck 8-bit playlist 1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\042823 bullet fuck 8-bit playlist 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\8-Bit1\042823 bullet fuck 8-bit playlist 1\042823 bullet fuck 8-bit playlist 1		2838952
+	949661045	LoD Player hurt 3	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\LoD Player hurt 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\LoD Player hurt 3		192096
 

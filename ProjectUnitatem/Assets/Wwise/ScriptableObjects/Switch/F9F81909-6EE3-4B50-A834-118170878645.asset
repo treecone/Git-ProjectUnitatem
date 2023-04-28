@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f40db220c313e349a65c31ed80fef90, type: 3}
+  m_Name: F9F81909-6EE3-4B50-A834-118170878645
+  m_EditorClassIdentifier: 
+  objectName: Retro
+  id: 3496907731
+  guid: F9F81909-6EE3-4B50-A834-118170878645
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 90c54a3180d29b941933610f79c4d594, type: 2}

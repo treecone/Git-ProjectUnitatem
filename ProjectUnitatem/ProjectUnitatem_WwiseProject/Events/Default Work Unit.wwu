@@ -131,6 +131,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_TestSound" ID="{6AA67608-8C33-4676-A8B1-C80EAB8DBB46}">
+					<ChildrenList>
+						<Action Name="" ID="{78AC9C93-71B4-444D-9980-78AEC3386111}" ShortID="808624708">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LoD Player hurt 3" ID="{3609F6F7-FB0E-48C1-A4A5-52C439230693}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

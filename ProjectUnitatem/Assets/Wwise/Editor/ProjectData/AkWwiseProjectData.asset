@@ -154,7 +154,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 52f3de0e45781d45abd578999dcfb3c8
     GuidInternal: 
-    m_lastTime: -8585188942583989851
+    m_lastTime: -8585188928225795176
     List:
     - name: Main_SoundBank
       guid: 637a242824bf4540920312da923301ee
@@ -182,7 +182,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ef80d5b12813f445b45e212240442c8f
     GuidInternal: 
-    m_lastTime: -8585188942584199896
+    m_lastTime: -8585188928225865195
     List:
     - name: Boss
       guid: 7b0a282d1138a843abfcb7adc31c0ca0
@@ -332,6 +332,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 63ba4f2c81d7654195eb4bd30c81ad53
       Path: Events\Default Work Unit\Music\Play_BGM
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TestSound
+      guid: 0876a66a338c7646a8b1c80eab8dbb46
+      id: 2752533807
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ef80d5b12813f445b45e212240442c8f
+      - ElementName: Play_TestSound
+        ObjectType: 3
+        guid: 0876a66a338c7646a8b1c80eab8dbb46
+      Path: Events\Default Work Unit\Play_TestSound
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -836,7 +853,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: b32cbf833bbdcf46af10aeec699beeaa
     GuidInternal: 
-    m_lastTime: -8585190620823262920
+    m_lastTime: -8585188917160491948
     List:
     - name: MusicSwitch
       guid: 84ec9f710a7bb34aba74666bfc2d752a
@@ -919,7 +936,7 @@ MonoBehaviour:
     m_lastTime: -8585197681665075589
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 06000000070000000a0000000e000000
+  ExpandedWaapiItemIds: 010000000500000006000000070000000a0000000d0000000e0000000f000000100000001400000015000000160000001700000018000000190000001a000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

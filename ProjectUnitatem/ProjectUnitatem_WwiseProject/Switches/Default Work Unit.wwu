@@ -4,9 +4,6 @@
 		<WorkUnit Name="Default Work Unit" ID="{83BF2CB3-BD3B-46CF-AF10-AEEC699BEEAA}" PersistMode="Standalone">
 			<ChildrenList>
 				<SwitchGroup Name="MusicSwitch" ID="{719FEC84-7B0A-4AB3-BA74-666BFC2D752A}">
-					<PropertyList>
-						<Property Name="UseGameParameter" Type="bool" Value="True"/>
-					</PropertyList>
 					<ChildrenList>
 						<Switch Name="Retro" ID="{F9F81909-6EE3-4B50-A834-118170878645}"/>
 						<Switch Name="Guitar" ID="{AD8DA46D-2702-45FF-ACD2-D927869AA1F8}"/>

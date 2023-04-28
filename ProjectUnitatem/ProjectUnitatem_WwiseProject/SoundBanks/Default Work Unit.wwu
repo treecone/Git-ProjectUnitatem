@@ -10,6 +10,7 @@
 						<ObjectRef Name="Music" ID="{4302AC74-468D-4314-8CA1-AB913552908B}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Switches" ID="{289EC00B-38DD-436B-AB37-FF3C1EE4177E}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Boss" ID="{2D280A7B-3811-43A8-ABFC-B7ADC31C0CA0}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TestSound" ID="{6AA67608-8C33-4676-A8B1-C80EAB8DBB46}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Game" ID="{5D2925EA-958E-497D-87DB-C4DAF0460532}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Set_GuitarSwitch" ID="{9EFF149C-5404-499D-BCB5-55D923E2CE76}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="States" ID="{AA0F0531-F39D-4AB1-A147-F1359A0E33A2}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>

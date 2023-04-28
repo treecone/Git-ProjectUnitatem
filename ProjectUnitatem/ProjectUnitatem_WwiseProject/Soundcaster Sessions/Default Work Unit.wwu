@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1684262C-CD10-449B-98D1-C9F41835A9B9}" SchemaVersion="110">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{1684262C-CD10-449B-98D1-C9F41835A9B9}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{1684262C-CD10-449B-98D1-C9F41835A9B9}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{B820AA67-6936-4F8C-A600-619D7083748F}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_BGM" ID="{2C4FBA63-D781-4165-95EB-4BD30C81AD53}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="BGM_Controller" ID="{AF6F93AD-7946-44FF-BBFD-CE28BDE5B961}"/>
+							<Value>42.202</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Alive" ID="{1C3578F9-B866-454F-956E-B7C9F0396A3A}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Retro" ID="{F9F81909-6EE3-4B50-A834-118170878645}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

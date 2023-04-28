@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{CAB21D45-B782-BB1F-8FAF-EE3F909F0A19}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{70AD9E17-4117-0A88-E2C9-4179EA6B6913}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -52,7 +52,6 @@
 			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="1445037870" Name="MusicSwitch">
-					<GameParameterRef Id="3230961072"/>
 					<Switches>
 						<Switch Id="3063529226" Name="Violin"/>
 						<Switch Id="3232836819" Name="Guitar"/>
@@ -61,7 +60,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{5E9A15B8-652C-96C2-A331-BDC6AA21DFA4}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{290BC1D0-C0DE-AE44-4C92-1202B205BFB2}">
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<Media>
@@ -72,6 +71,10 @@
 				<File Id="758842039" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>042823 bullet fuck 8-bit playlist 1.wav</ShortName>
 					<CachePath>SFX/042823 bullet fuck 8-bit playlist 1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="949661045" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LoD Player hurt 3.wav</ShortName>
+					<CachePath>SFX/LoD Player hurt 3_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -115,6 +118,11 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="2752533807" Name="Play_TestSound" DurationType="OneShot" DurationMin="1" DurationMax="1">
+					<MediaRefs>
+						<MediaRef Id="949661045"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2824512041" Name="Player_Attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1565052233" Name="Resume_Game" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3901001571" Name="Set_8BitSwitch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
@@ -132,9 +140,6 @@
 				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2155888594" Name="Victory_Stinger" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
-			<GameParameters>
-				<GameParameter Id="3230961072" Name="BGM_Controller"/>
-			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="3630029033" Name="Phases">
 					<States>
@@ -153,7 +158,6 @@
 			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="1445037870" Name="MusicSwitch">
-					<GameParameterRef Id="3230961072"/>
 					<Switches>
 						<Switch Id="3063529226" Name="Violin"/>
 						<Switch Id="3232836819" Name="Guitar"/>
@@ -163,5 +167,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CAE794BC-B80A-D1CA-81EE-ABF9E4994701}</FileHash>
+	<FileHash>{C7E6BEC6-8D5E-77ED-4616-3D2BC8D715C2}</FileHash>
 </SoundBanksInfo>

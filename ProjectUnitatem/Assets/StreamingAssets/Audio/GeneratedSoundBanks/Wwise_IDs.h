@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID MOVE = 3011204530U;
         static const AkUniqueID PAUSE_MENU = 3422541661U;
         static const AkUniqueID PLAY_BGM = 3126765036U;
+        static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
         static const AkUniqueID PLAYER_ATTACK = 2824512041U;
         static const AkUniqueID RESUME_GAME = 1565052233U;
         static const AkUniqueID SET_8BITSWITCH = 3901001571U;
