@@ -14,12 +14,22 @@ public class TestScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.S))
+/*        if(Input.GetKeyDown(KeyCode.S))
         {
             a += 100;
             List<DisplayInfo> displayLayout = new List<DisplayInfo>();
             Screen.GetDisplayLayout(displayLayout);
             Screen.MoveMainWindowTo(displayLayout[0], new Vector2Int(a, 500));
-        }
+        }*/
+    }
+
+    public void SuperDuperFunction()
+    {
+        gameObject.transform.localScale *= 1.1f;
+    }
+
+    public void SuperDuperFunction2()
+    {
+        gameObject.transform.localScale *= 1.5f;
     }
 }
