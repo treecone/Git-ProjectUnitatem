@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.Windows;
 using Input = UnityEngine.Input;
 
@@ -14,6 +15,7 @@ public class PlayerScript : MonoBehaviour
 
     [Header("Player Attributes")]
     public float movementSpeed;
+    public int currentHealth;
 
     private Rigidbody2D rb;
     private GameObject mainCanvas;
@@ -46,6 +48,20 @@ public class PlayerScript : MonoBehaviour
     private void OnDisable()
     {
         mainControls.Disable();
+    }
+
+    public void TakeDamage()
+    {
+        currentHealth -= 1;
+        if(currentHealth <= 0)
+        {
+            Death();
+        }
+    }
+
+    private void Death()
+    {
+        SceneManager.LoadScene(0);
     }
 
     // Update is called once per frame
