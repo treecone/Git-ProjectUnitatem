@@ -405,6 +405,104 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
+						<Folder Name="Stingers" ID="{E809D403-178B-4A66-831F-5E30E6F1EF40}" ShortID="959235003">
+							<ChildrenList>
+								<MusicSegment Name="woosh 2" ID="{0C115ED0-D2F6-4372-B8BB-9127C687D2A5}" ShortID="715683371">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="1104.46977547496"/>
+										<Property Name="Tempo" Type="Real64" Value="140"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="woosh 2" ID="{21DC8689-A19C-4AED-BA95-733481A4FEE4}" ShortID="852333598">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="woosh 2" ID="{DDFE36F0-5146-423D-BE6A-215D9415C5DA}">
+													<Language>SFX</Language>
+													<AudioFile>woosh 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="854177119"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{8483D717-EB07-4569-AA5A-B3494EC8AA3E}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{4CEF8506-647C-4943-BB4A-B6F0A92D8202}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="woosh 2" ID="{149A06A5-781D-418C-8DED-D37E9622DB16}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="938.666666666667"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="119.170984455959"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="woosh 2" ID="{DDFE36F0-5146-423D-BE6A-215D9415C5DA}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{CE3580DA-B3F9-4B96-9C4B-F0941CE94254}">
+														<PropertyList>
+															<Property Name="TimeMs" Type="Real64" Value="428.571428571429"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{50D52CC6-6145-45D4-9031-3F8B1D7CDF5C}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="428.571428571429"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{83745D95-489A-4F84-BCEF-57C47E56CB63}">
@@ -420,11 +518,11 @@
 										<Property Name="ExitSourceAt" Type="int16" Value="3"/>
 									</PropertyList>
 									<TransitionInfo>
+										<TransitionObjectRef Name="woosh 2" ID="{0C115ED0-D2F6-4372-B8BB-9127C687D2A5}" WorkUnitID="{AF475F4C-17BB-4EAB-AD40-531018188FE6}"/>
 										<SourceFadeOut>
 											<MusicFade Name="Source Fade-out" ID="{5B3B8D3D-A356-4C82-85FF-6019618D0536}">
 												<PropertyList>
-													<Property Name="FadeOffset" Type="Real64" Value="0.1"/>
-													<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+													<Property Name="FadeTime" Type="Real64" Value="0.43"/>
 													<Property Name="FadeType" Type="int16" Value="1"/>
 												</PropertyList>
 											</MusicFade>
@@ -432,8 +530,8 @@
 										<DestinationFadeIn>
 											<MusicFade Name="Destination Fade-in" ID="{299B1376-4EA9-4A14-87A0-C185E251B79F}">
 												<PropertyList>
-													<Property Name="FadeOffset" Type="Real64" Value="-0.3"/>
-													<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+													<Property Name="FadeOffset" Type="Real64" Value="-0.43"/>
+													<Property Name="FadeTime" Type="Real64" Value="0.43"/>
 												</PropertyList>
 											</MusicFade>
 										</DestinationFadeIn>

@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
 {
     public GameObject bullet;
 
+
     [Header("Input")]
     private MainControls mainControls;
 
@@ -26,6 +27,7 @@ public class PlayerScript : MonoBehaviour
     public AK.Wwise.Event WeaponSwitch1;
     public AK.Wwise.Event WeaponSwitch2;
     public AK.Wwise.Event WeaponSwitch3;
+    public AK.Wwise.RTPC healthRTPC;
 
 
     // Start is called before the first frame update
@@ -57,6 +59,7 @@ public class PlayerScript : MonoBehaviour
         {
             Death();
         }
+        healthRTPC.SetGlobalValue(currentHealth);
     }
 
     private void Death()
@@ -72,6 +75,10 @@ public class PlayerScript : MonoBehaviour
             GameObject b = Instantiate(bullet);
             b.transform.position = gameObject.transform.position;
             b.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 400);
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+         TakeDamage();
         }
 
 

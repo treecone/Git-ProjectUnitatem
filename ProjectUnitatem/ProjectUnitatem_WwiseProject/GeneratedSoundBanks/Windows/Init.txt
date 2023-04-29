@@ -19,6 +19,7 @@ State	ID	Name	State Group			Notes
 	2044049779	Dead	Player_Life			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	215992295	Player_Health			\Default Work Unit\Player_Health	
 	1201445347	PauseFilter			\Default Work Unit\PauseFilter	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes

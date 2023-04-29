@@ -52,6 +52,16 @@
 						</Event>
 						<Event Name="Set_GuitarSwitch" ID="{9EFF149C-5404-499D-BCB5-55D923E2CE76}">
 							<ChildrenList>
+								<Action Name="" ID="{4EE4C900-CDC8-46B8-997A-2EBC3FF7A705}" ShortID="556752200">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Wooshtransition" ID="{A3420609-EC24-4E9A-830A-177D0A234A10}" WorkUnitID="{47B5411D-20C9-408D-8011-DE061C568CDA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{3E8CC444-45BC-4374-9C85-7637DE3B6F2C}" ShortID="989378731">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="23"/>
@@ -66,6 +76,16 @@
 						</Event>
 						<Event Name="Set_8BitSwitch" ID="{B1380AFA-CDEB-4CDF-AE12-3A1EC99711D8}">
 							<ChildrenList>
+								<Action Name="" ID="{6CAC1700-71E8-4978-9F17-FC70E5A40E18}" ShortID="1047887300">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Wooshtransition" ID="{A3420609-EC24-4E9A-830A-177D0A234A10}" WorkUnitID="{47B5411D-20C9-408D-8011-DE061C568CDA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{C45EFB96-CC10-42A9-89BA-9BE32014A305}" ShortID="673138753">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="23"/>
