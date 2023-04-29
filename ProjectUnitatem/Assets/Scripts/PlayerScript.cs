@@ -18,6 +18,14 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D rb;
     private GameObject mainCanvas;
 
+    private int currentWeapon;
+
+    //Audio ---------------------
+    public AK.Wwise.Event WeaponSwitch1;
+    public AK.Wwise.Event WeaponSwitch2;
+    public AK.Wwise.Event WeaponSwitch3;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,17 +58,40 @@ public class PlayerScript : MonoBehaviour
             b.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 400);
         }
 
-        /*
-        actionWheelInput = actionWheelRefrence.action.ReadValue<float>() > 0.9f;
-        if(actionWheelInput)
+
+ /*       float actionWheelInput = mainControls.Player.ActionWheel.ReadValue<float>();
+        if (actionWheelInput > 0.1f)
         {
             mainCanvas.transform.Find("ActionWheel").gameObject.SetActive(true);
         }
         else
         {
             mainCanvas.transform.Find("ActionWheel").gameObject.SetActive(false);
+        }*/
+
+        if(Input.GetKeyDown(KeyCode.F1))
+        {
+            currentWeapon = 1;
+            WeaponSwitch1.Post(GameObject.Find("BGM Manager"));
+            Debug.Log("Switched to weapon: 1");
         }
-        */
+
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            currentWeapon = 2;
+            WeaponSwitch2.Post(GameObject.Find("BGM Manager"));
+            Debug.Log("Switched to weapon: 2");
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+            currentWeapon = 3;
+            WeaponSwitch3.Post(GameObject.Find("BGM Manager"));
+            Debug.Log("Switched to weapon: 3");
+
+        }
+
     }
 
     public void FixedUpdate()

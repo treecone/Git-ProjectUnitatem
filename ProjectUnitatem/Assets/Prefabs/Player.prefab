@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5614346196796053201}
   - component: {fileID: 6916772454847418656}
+  - component: {fileID: 345234221466777171}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 1499216594237479321}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6916772454847418656
 MonoBehaviour:
@@ -46,7 +47,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 879036675128083036, guid: cd54eb8c953406a41911eccfc2aa54d2, type: 3}
-  movementSpeed: 0
+  movementSpeed: 350
+  WeaponSwitch1:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9f134ee3344b89540b4ff900baaa4278, type: 2}
+  WeaponSwitch2:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 59cf9fb788734254c851923ba3732a7c, type: 2}
+  WeaponSwitch3:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b70a9f3959e042543bb3e4f8484803f1, type: 2}
+--- !u!50 &345234221466777171
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754005998104691533}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6620108563486699946
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +158,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1273986391
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4557b9971d31d2a4faba277b72598e2e, type: 3}
   m_Color: {r: 0.3915094, g: 0.7038125, b: 1, a: 1}
