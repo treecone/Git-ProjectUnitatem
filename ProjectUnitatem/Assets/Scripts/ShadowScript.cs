@@ -16,6 +16,6 @@ public class ShadowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position = new Vector3(player.position.x, player.position.y, 0);
+        //gameObject.transform.position = new Vector3(player.position.x, player.position.y, 0);
     }
 }

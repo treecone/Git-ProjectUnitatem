@@ -34,11 +34,8 @@ State	ID	Name	State Group			Notes
 	748895195	None	Player_Life			
 	2044049779	Dead	Player_Life			
 
-Game Parameter	ID	Name			Wwise Object Path	Notes
-	3230961072	BGM_Controller			\Default Work Unit\BGM_Controller	
-
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	655935024	042723 bullet fuck guitar playlist 1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\042723 bullet fuck guitar playlist 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Guitar1\042723 bullet fuck guitar playlist 1\042723 bullet fuck guitar playlist 1		3044668
-	758842039	042823 bullet fuck 8-bit playlist 1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\042823 bullet fuck 8-bit playlist 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\8-Bit1\042823 bullet fuck 8-bit playlist 1\042823 bullet fuck 8-bit playlist 1		2838952
-	949661045	LoD Player hurt 3	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\LoD Player hurt 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\LoD Player hurt 3		192096
+	655935024	042723 bullet fuck guitar playlist 1	H:\Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\042723 bullet fuck guitar playlist 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Guitar1\042723 bullet fuck guitar playlist 1\042723 bullet fuck guitar playlist 1		3044668
+	758842039	042823 bullet fuck 8-bit playlist 1	H:\Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\042823 bullet fuck 8-bit playlist 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\8-Bit1\042823 bullet fuck 8-bit playlist 1\042823 bullet fuck 8-bit playlist 1		2838952
+	949661045	LoD Player hurt 3	H:\Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\LoD Player hurt 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\LoD Player hurt 3		192096
 

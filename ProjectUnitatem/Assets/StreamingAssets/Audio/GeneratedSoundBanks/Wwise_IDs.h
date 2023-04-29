@@ -83,6 +83,11 @@ namespace AK
         static const AkUniqueID SCORE = 2398231425U;
     } // namespace GAME_PARAMETERS
 
+    namespace TRIGGERS
+    {
+        static const AkUniqueID WOOSHTRANSITION = 1947560590U;
+    } // namespace TRIGGERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;

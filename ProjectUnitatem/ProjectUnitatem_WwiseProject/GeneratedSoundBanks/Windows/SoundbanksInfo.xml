@@ -60,7 +60,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{290BC1D0-C0DE-AE44-4C92-1202B205BFB2}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{0023C6DB-E8E9-006E-1557-BBBEA73CBE1E}">
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<Media>
@@ -129,11 +129,17 @@
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry GroupId="1445037870" Id="3496907731" Name="Retro"/>
 					</ActionSetSwitch>
+					<ActionTrigger>
+						<ActionTriggerEntry Id="1947560590" Name="Wooshtransition"/>
+					</ActionTrigger>
 				</Event>
 				<Event Id="4003498308" Name="Set_GuitarSwitch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry GroupId="1445037870" Id="3232836819" Name="Guitar"/>
 					</ActionSetSwitch>
+					<ActionTrigger>
+						<ActionTriggerEntry Id="1947560590" Name="Wooshtransition"/>
+					</ActionTrigger>
 				</Event>
 				<Event Id="1399716893" Name="Set_ViolinSwitch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1114964412" Name="Start_Game" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -165,7 +171,10 @@
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
+			<Triggers>
+				<Trigger Id="1947560590" Name="Wooshtransition"/>
+			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4FBA9F2A-AC1F-683E-CF20-878A73497946}</FileHash>
+	<FileHash>{42BF980B-185C-F6FB-4910-25FA5B421F07}</FileHash>
 </SoundBanksInfo>
