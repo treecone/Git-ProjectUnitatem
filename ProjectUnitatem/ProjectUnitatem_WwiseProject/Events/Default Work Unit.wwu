@@ -162,6 +162,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Player_Damage" ID="{10B7379A-04A2-4A2B-BBBB-CF93CE946ED0}">
+					<ChildrenList>
+						<Action Name="" ID="{52557CDA-AEFC-4A84-884C-99EEC897D2B4}" ShortID="478731433">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player Damage" ID="{FF58C0B3-F149-4A8E-B68C-2309DD256850}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
