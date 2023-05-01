@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.Windows;
 using Input = UnityEngine.Input;
 
@@ -17,9 +18,11 @@ public class PlayerScript : MonoBehaviour
     [Header("Player Attributes")]
     public float movementSpeed;
     public int currentHealth;
+    public int score;
 
     private Rigidbody2D rb;
     private GameObject mainCanvas;
+    private GameObject BGMManager;
 
     private int currentWeapon;
 
@@ -28,6 +31,8 @@ public class PlayerScript : MonoBehaviour
     public AK.Wwise.Event WeaponSwitch2;
     public AK.Wwise.Event WeaponSwitch3;
     public AK.Wwise.RTPC healthRTPC;
+    public AK.Wwise.Event highScoreEvent;
+    public List<AK.Wwise.Event> healthEvents;
 
 
     // Start is called before the first frame update
@@ -35,6 +40,7 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         mainCanvas = GameObject.Find("MainCanvas");
+        BGMManager = GameObject.Find("BGM Manager");
     }
 
     private void Awake()
@@ -60,6 +66,7 @@ public class PlayerScript : MonoBehaviour
             Death();
         }
         healthRTPC.SetGlobalValue(currentHealth);
+        healthEvents[currentHealth].Post(BGMManager);
     }
 
     private void Death()
@@ -78,31 +85,35 @@ public class PlayerScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
-         TakeDamage();
+            TakeDamage();
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            score++;
+            highScoreEvent.Post(BGMManager);
         }
 
+        /*       float actionWheelInput = mainControls.Player.ActionWheel.ReadValue<float>();
+               if (actionWheelInput > 0.1f)
+               {
+                   mainCanvas.transform.Find("ActionWheel").gameObject.SetActive(true);
+               }
+               else
+               {
+                   mainCanvas.transform.Find("ActionWheel").gameObject.SetActive(false);
+               }*/
 
- /*       float actionWheelInput = mainControls.Player.ActionWheel.ReadValue<float>();
-        if (actionWheelInput > 0.1f)
-        {
-            mainCanvas.transform.Find("ActionWheel").gameObject.SetActive(true);
-        }
-        else
-        {
-            mainCanvas.transform.Find("ActionWheel").gameObject.SetActive(false);
-        }*/
-
-        if(Input.GetKeyDown(KeyCode.F1))
+        if (Input.GetKeyDown(KeyCode.F1))
         {
             currentWeapon = 1;
-            WeaponSwitch1.Post(GameObject.Find("BGM Manager"));
+            WeaponSwitch1.Post(BGMManager);
             Debug.Log("Switched to weapon: 1");
         }
 
         if (Input.GetKeyDown(KeyCode.F2))
         {
             currentWeapon = 2;
-            WeaponSwitch2.Post(GameObject.Find("BGM Manager"));
+            WeaponSwitch2.Post(BGMManager);
             Debug.Log("Switched to weapon: 2");
 
         }
@@ -110,7 +121,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F3))
         {
             currentWeapon = 3;
-            WeaponSwitch3.Post(GameObject.Find("BGM Manager"));
+            WeaponSwitch3.Post(BGMManager);
             Debug.Log("Switched to weapon: 3");
 
         }
