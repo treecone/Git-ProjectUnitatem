@@ -37,12 +37,12 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Combat" ID="{853A9C2C-693A-40A7-9288-79A66CCCDC11}"/>
+						<CurrentStateRef Name="Transition" ID="{AB608C97-798F-4F7A-97D2-39CBD5F187B5}"/>
 						<CurrentStateRef Name="Alive" ID="{1C3578F9-B866-454F-956E-B7C9F0396A3A}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Regular" ID="{567AC318-B62F-49EA-B905-CCA54B0DE61B}"/>
-						<CurrentSwitchRef Name="Guitar" ID="{AD8DA46D-2702-45FF-ACD2-D927869AA1F8}"/>
+						<CurrentSwitchRef Name="Violin" ID="{DA5C30DF-3D1C-4540-A104-48F02559CD6A}"/>
 						<CurrentSwitchRef Name="One" ID="{E4F163D2-E9A2-42FF-AF7D-7CC7754FAFBA}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
