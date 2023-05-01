@@ -10,11 +10,133 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="BGM Bus" ID="{A7E89C1E-2D42-4FA2-BDC7-74C6D66C7099}"/>
+						<Bus Name="BGM Bus" ID="{A7E89C1E-2D42-4FA2-BDC7-74C6D66C7099}">
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{6AD105C8-ED44-41FE-9284-797494F4A9B5}" ShortID="128373214">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="DamageSideChain" ID="{6DB8BDFF-4271-4E21-B084-9291544F4D89}" WorkUnitID="{6B4D209D-E99B-463A-81B2-FA6E0D981078}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{469DA853-F2DE-4321-8CC4-530EC2424B3C}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-48</XPos>
+																		<YPos>0.15054</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-26.36815</XPos>
+																		<YPos>0.03961</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-7.5</XPos>
+																		<YPos>-1.39755</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>6</XPos>
+																		<YPos>-1.92969</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{013E0D4C-CAF9-441B-9E1E-E1285F3949B8}" ShortID="240049897">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="OutputBusLowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="DamageSideChain" ID="{6DB8BDFF-4271-4E21-B084-9291544F4D89}" WorkUnitID="{6B4D209D-E99B-463A-81B2-FA6E0D981078}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{42403D2D-5D74-43C3-B9C7-92F90CA1F7AB}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-48</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-34.97424</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-23.85548</XPos>
+																		<YPos>25</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>6</XPos>
+																		<YPos>25</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
 						<Bus Name="Player Attack Bus" ID="{8EB25FE0-39C5-4494-BC2D-7BE0FAB09891}"/>
 						<Bus Name="Transitions Bus" ID="{7CD1BB95-0D46-4E9D-8675-764E1A3C3595}"/>
 						<Bus Name="Enemy Attack Bus" ID="{84E9558D-0D2F-41F2-9B7C-EBBD13FC77B5}"/>
 						<Bus Name="UI Bus" ID="{207E6894-D2D7-47AC-AC92-8B8C0DA2D198}"/>
+						<Bus Name="Player Damage Bus" ID="{51A51C98-EE11-454E-886F-58CC6AC030AB}">
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Compressor (Custom)" ID="{1AC480C3-B1FB-456E-85AF-A9FF851AFBD9}" ShortID="585875790" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+											<PropertyList>
+												<Property Name="AttackTime" Type="Real32" Value="0"/>
+												<Property Name="Ratio" Type="Real32" Value="6.9"/>
+												<Property Name="Threshold" Type="Real32" Value="-6.6"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+								<Reference Name="Effect1">
+									<Custom>
+										<Effect Name="Meter (Custom)" ID="{9B0A4E6F-EA47-438D-92DC-C45D6520E8C5}" ShortID="990475134" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+											<PropertyList>
+												<Property Name="Max" Type="Real32" Value="6"/>
+											</PropertyList>
+											<PluginData>
+	<GameParameter Name="DamageSideChain" ID="{6DB8BDFF-4271-4E21-B084-9291544F4D89}"/>
+</PluginData>
+										</Effect>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+						</Bus>
 					</ChildrenList>
 					<ObjectLists>
 						<ObjectList Name="RTPC">
@@ -43,51 +165,6 @@
 															<Point>
 																<XPos>100</XPos>
 																<YPos>0</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</Custom>
-											</Reference>
-										</ReferenceList>
-									</RTPC>
-								</Local>
-							</Reference>
-							<Reference>
-								<Local>
-									<RTPC Name="" ID="{94B70FE1-68D4-4228-8AD6-1DBB57774F49}" ShortID="377451898">
-										<PropertyList>
-											<Property Name="PropertyName" Type="string" Value="Lowpass"/>
-										</PropertyList>
-										<ReferenceList>
-											<Reference Name="ControlInput">
-												<ObjectRef Name="Player_Health" ID="{56F5E44D-B494-4A70-990C-61721C32999B}" WorkUnitID="{6B4D209D-E99B-463A-81B2-FA6E0D981078}"/>
-											</Reference>
-											<Reference Name="Curve">
-												<Custom>
-													<Curve Name="" ID="{BAE9CD38-A82D-4D3D-9056-0C6BD288286D}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="65537"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>49</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>0.99429</XPos>
-																<YPos>52</YPos>
-																<Flags>0</Flags>
-															</Point>
-															<Point>
-																<XPos>2</XPos>
-																<YPos>-4</YPos>
-																<Flags>0</Flags>
-															</Point>
-															<Point>
-																<XPos>3</XPos>
-																<YPos>-100</YPos>
 																<Flags>37</Flags>
 															</Point>
 														</PointList>

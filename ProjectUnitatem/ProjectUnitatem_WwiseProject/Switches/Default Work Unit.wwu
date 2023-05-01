@@ -45,6 +45,58 @@
 						</Curve>
 					</SwitchOnRTPC>
 				</SwitchGroup>
+				<SwitchGroup Name="Score" ID="{104A1AF1-ACCE-474F-8B5A-8B5963111E05}">
+					<ChildrenList>
+						<Switch Name="Regular" ID="{567AC318-B62F-49EA-B905-CCA54B0DE61B}"/>
+						<Switch Name="HighScore" ID="{A31FC5AF-F5D5-4D21-B7DA-C4EB302637DF}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerHealth" ID="{7C486282-0171-4C11-B526-D5D138B61636}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Three" ID="{EAD55E5D-58E0-40A7-AAEB-E8E7802A7D52}"/>
+						<Switch Name="Two" ID="{9CE9C2B7-65D4-459C-8009-F33B72AD2FC1}"/>
+						<Switch Name="One" ID="{E4F163D2-E9A2-42FF-AF7D-7CC7754FAFBA}"/>
+						<Switch Name="Dead" ID="{DFAD55A9-A861-43C0-BA21-0B5D19674236}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="Player_Health" ID="{56F5E44D-B494-4A70-990C-61721C32999B}"/>
+						<Curve Name="" ID="{5642AAE6-4B15-48D5-B8A3-408EF49468BD}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>4</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2.999</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3</XPos>
+									<YPos>0</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

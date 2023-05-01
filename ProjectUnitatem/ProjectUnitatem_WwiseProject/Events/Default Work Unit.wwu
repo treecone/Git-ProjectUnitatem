@@ -98,6 +98,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Set_HighScore" ID="{E3B2FFEB-FB2C-41EA-BA1A-DB2C0F5F1512}">
+							<ChildrenList>
+								<Action Name="" ID="{022054AB-8068-4FB2-8792-74763BFAF995}" ShortID="400353837">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HighScore" ID="{A31FC5AF-F5D5-4D21-B7DA-C4EB302637DF}" WorkUnitID="{83BF2CB3-BD3B-46CF-AF10-AEEC699BEEAA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="RTPCs" ID="{4DE83CB3-7603-4F29-8DCC-F7BE23D3840C}" ShortID="223171842"/>
@@ -168,6 +182,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Player Damage" ID="{FF58C0B3-F149-4A8E-B68C-2309DD256850}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Set_RegularScore" ID="{B0A71147-6751-456C-8569-C99CEDDB01C3}">
+					<ChildrenList>
+						<Action Name="" ID="{DD5B44D2-F4CB-4092-BA01-E90DD8737E7F}" ShortID="534678499">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Regular" ID="{567AC318-B62F-49EA-B905-CCA54B0DE61B}" WorkUnitID="{83BF2CB3-BD3B-46CF-AF10-AEEC699BEEAA}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -1,7 +1,12 @@
 Switch Group	ID	Name			Wwise Object Path	Notes
+	151362964	PlayerHealth			\Default Work Unit\PlayerHealth	
 	1445037870	MusicSwitch			\Default Work Unit\MusicSwitch	
 
 Switch	ID	Name	Switch Group			Notes
+	678209053	Two	PlayerHealth			
+	912956111	Three	PlayerHealth			
+	1064933119	One	PlayerHealth			
+	2044049779	Dead	PlayerHealth			
 	3063529226	Violin	MusicSwitch			
 	3232836819	Guitar	MusicSwitch			
 	3496907731	Retro	MusicSwitch			
@@ -19,7 +24,6 @@ State	ID	Name	State Group			Notes
 	2044049779	Dead	Player_Life			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	215992295	Player_Health			\Default Work Unit\Player_Health	
 	1201445347	PauseFilter			\Default Work Unit\PauseFilter	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes

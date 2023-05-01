@@ -18,11 +18,14 @@ namespace AK
         static const AkUniqueID MOVE = 3011204530U;
         static const AkUniqueID PAUSE_MENU = 3422541661U;
         static const AkUniqueID PLAY_BGM = 3126765036U;
+        static const AkUniqueID PLAY_PLAYER_DAMAGE = 3638125099U;
         static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
         static const AkUniqueID PLAYER_ATTACK = 2824512041U;
         static const AkUniqueID RESUME_GAME = 1565052233U;
         static const AkUniqueID SET_8BITSWITCH = 3901001571U;
         static const AkUniqueID SET_GUITARSWITCH = 4003498308U;
+        static const AkUniqueID SET_HIGHSCORE = 1277381556U;
+        static const AkUniqueID SET_REGULARSCORE = 1452016848U;
         static const AkUniqueID SET_VIOLINSWITCH = 1399716893U;
         static const AkUniqueID START_GAME = 1114964412U;
         static const AkUniqueID STOP_ALL = 452547817U;
@@ -71,11 +74,36 @@ namespace AK
             } // namespace SWITCH
         } // namespace MUSICSWITCH
 
+        namespace PLAYERHEALTH
+        {
+            static const AkUniqueID GROUP = 151362964U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID DEAD = 2044049779U;
+                static const AkUniqueID ONE = 1064933119U;
+                static const AkUniqueID THREE = 912956111U;
+                static const AkUniqueID TWO = 678209053U;
+            } // namespace SWITCH
+        } // namespace PLAYERHEALTH
+
+        namespace SCORE
+        {
+            static const AkUniqueID GROUP = 2398231425U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID HIGHSCORE = 2808377621U;
+                static const AkUniqueID REGULAR = 2628937827U;
+            } // namespace SWITCH
+        } // namespace SCORE
+
     } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID BGM_CONTROLLER = 3230961072U;
+        static const AkUniqueID DAMAGESIDECHAIN = 4113888122U;
         static const AkUniqueID DAMAGETOBOSS = 1049310662U;
         static const AkUniqueID DISTORTION = 1517463400U;
         static const AkUniqueID PAUSEFILTER = 1201445347U;
@@ -100,6 +128,7 @@ namespace AK
         static const AkUniqueID ENEMY_ATTACK_BUS = 1664460283U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID PLAYER_ATTACK_BUS = 1578025756U;
+        static const AkUniqueID PLAYER_DAMAGE_BUS = 257282035U;
         static const AkUniqueID TRANSITIONS_BUS = 228317785U;
         static const AkUniqueID UI_BUS = 3600729941U;
     } // namespace BUSSES

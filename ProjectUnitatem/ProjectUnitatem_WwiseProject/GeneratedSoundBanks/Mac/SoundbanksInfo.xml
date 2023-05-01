@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B7388EBE-3779-BF8F-4846-C114CC61E50C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1F844D3C-1761-29B7-934A-D45E96C52DB9}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -51,6 +51,15 @@
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
+				<SwitchGroup Id="151362964" Name="PlayerHealth">
+					<GameParameterRef Id="215992295"/>
+					<Switches>
+						<Switch Id="678209053" Name="Two"/>
+						<Switch Id="912956111" Name="Three"/>
+						<Switch Id="1064933119" Name="One"/>
+						<Switch Id="2044049779" Name="Dead"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="1445037870" Name="MusicSwitch">
 					<Switches>
 						<Switch Id="3063529226" Name="Violin"/>
@@ -58,12 +67,30 @@
 						<Switch Id="3496907731" Name="Retro"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="2398231425" Name="Score">
+					<Switches>
+						<Switch Id="2628937827" Name="Regular"/>
+						<Switch Id="2808377621" Name="HighScore"/>
+					</Switches>
+				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{0023C6DB-E8E9-006E-1557-BBBEA73CBE1E}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{BA8F42F3-182F-FCC1-EDED-ABF34F781A97}">
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<Media>
+				<File Id="523750168" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>retrohit_2hearts_1.wav</ShortName>
+					<CachePath>SFX/retrohit_2hearts_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="540432875" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>retrohit_3hearts_1.wav</ShortName>
+					<CachePath>SFX/retrohit_3hearts_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="645680326" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>guitar_topline_solo.wav</ShortName>
+					<CachePath>SFX/guitar_topline_solo_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="655935024" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>042723 bullet fuck guitar playlist 1.wav</ShortName>
 					<CachePath>SFX/042723 bullet fuck guitar playlist 1_D79FB2B7.wem</CachePath>
@@ -71,6 +98,10 @@
 				<File Id="758842039" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>042823 bullet fuck 8-bit playlist 1.wav</ShortName>
 					<CachePath>SFX/042823 bullet fuck 8-bit playlist 1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="897376006" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>retrohit_1hearts_1.wav</ShortName>
+					<CachePath>SFX/retrohit_1hearts_1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="949661045" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LoD Player hurt 3.wav</ShortName>
@@ -91,10 +122,16 @@
 									<SwitchValue GroupType="State" GroupId="3630029033" Id="0"/>
 									<Children>
 										<SwitchContainer>
-											<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3232836819"/>
-											<MediaRefs>
-												<MediaRef Id="655935024"/>
-											</MediaRefs>
+											<SwitchValue GroupType="Switch" GroupId="2398231425" Id="0"/>
+											<Children>
+												<SwitchContainer>
+													<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3232836819"/>
+													<MediaRefs>
+														<MediaRef Id="645680326"/>
+														<MediaRef Id="655935024"/>
+													</MediaRefs>
+												</SwitchContainer>
+											</Children>
 										</SwitchContainer>
 									</Children>
 								</SwitchContainer>
@@ -107,14 +144,75 @@
 									<SwitchValue GroupType="State" GroupId="3630029033" Id="0"/>
 									<Children>
 										<SwitchContainer>
-											<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3496907731"/>
-											<MediaRefs>
-												<MediaRef Id="758842039"/>
-											</MediaRefs>
+											<SwitchValue GroupType="Switch" GroupId="2398231425" Id="0"/>
+											<Children>
+												<SwitchContainer>
+													<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3496907731"/>
+													<MediaRefs>
+														<MediaRef Id="758842039"/>
+													</MediaRefs>
+												</SwitchContainer>
+											</Children>
 										</SwitchContainer>
 									</Children>
 								</SwitchContainer>
 							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3762137787" Id="655265632"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="3630029033" Id="2764240573"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="Switch" GroupId="2398231425" Id="2808377621"/>
+											<Children>
+												<SwitchContainer>
+													<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3232836819"/>
+													<MediaRefs>
+														<MediaRef Id="645680326"/>
+														<MediaRef Id="655935024"/>
+													</MediaRefs>
+												</SwitchContainer>
+											</Children>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3762137787" Id="655265632"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="3630029033" Id="2764240573"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="Switch" GroupId="2398231425" Id="2628937827"/>
+											<Children>
+												<SwitchContainer>
+													<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3232836819"/>
+													<MediaRefs>
+														<MediaRef Id="645680326"/>
+														<MediaRef Id="655935024"/>
+													</MediaRefs>
+												</SwitchContainer>
+											</Children>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3638125099" Name="Play_Player_Damage" DurationType="OneShot" DurationMin="0" DurationMax="2.0052154">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3496907731" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="523750168"/>
+								<MediaRef Id="540432875"/>
+								<MediaRef Id="897376006"/>
+							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
@@ -141,11 +239,24 @@
 						<ActionTriggerEntry Id="1947560590" Name="Wooshtransition"/>
 					</ActionTrigger>
 				</Event>
+				<Event Id="1277381556" Name="Set_HighScore" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="2398231425" Id="2808377621" Name="HighScore"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="1452016848" Name="Set_RegularScore" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="2398231425" Id="2628937827" Name="Regular"/>
+					</ActionSetSwitch>
+				</Event>
 				<Event Id="1399716893" Name="Set_ViolinSwitch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1114964412" Name="Start_Game" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2155888594" Name="Victory_Stinger" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="215992295" Name="Player_Health"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="3630029033" Name="Phases">
 					<States>
@@ -170,11 +281,17 @@
 						<Switch Id="3496907731" Name="Retro"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="2398231425" Name="Score">
+					<Switches>
+						<Switch Id="2628937827" Name="Regular"/>
+						<Switch Id="2808377621" Name="HighScore"/>
+					</Switches>
+				</SwitchGroup>
 			</SwitchGroups>
 			<Triggers>
 				<Trigger Id="1947560590" Name="Wooshtransition"/>
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{476A545E-AAEA-EA98-7520-BC676FFF9B21}</FileHash>
+	<FileHash>{7589BC4C-284A-995B-7821-7CED44AC58D0}</FileHash>
 </SoundBanksInfo>

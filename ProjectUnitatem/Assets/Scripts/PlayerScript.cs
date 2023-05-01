@@ -32,7 +32,7 @@ public class PlayerScript : MonoBehaviour
     public AK.Wwise.Event WeaponSwitch3;
     public AK.Wwise.RTPC healthRTPC;
     public AK.Wwise.Event highScoreEvent;
-    public List<AK.Wwise.Event> healthEvents;
+    public AK.Wwise.Event playerDamage;
 
 
     // Start is called before the first frame update
@@ -66,7 +66,7 @@ public class PlayerScript : MonoBehaviour
             Death();
         }
         healthRTPC.SetGlobalValue(currentHealth);
-        healthEvents[currentHealth].Post(BGMManager);
+        playerDamage.Post(BGMManager);
     }
 
     private void Death()

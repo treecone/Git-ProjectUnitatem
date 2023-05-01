@@ -3,7 +3,12 @@
 	<MixingSessions>
 		<WorkUnit Name="Default Work Unit" ID="{EC5068EA-5408-4B9E-8810-2A51AF13DB65}" PersistMode="Standalone">
 			<ChildrenList>
-				<MixingSession Name="New Mixing Session" ID="{BA5BD24E-8A2E-4E3A-BB8A-9100A8850491}"/>
+				<MixingSession Name="New Mixing Session" ID="{BA5BD24E-8A2E-4E3A-BB8A-9100A8850491}">
+					<ObjectList>
+						<ObjectRef Name="BGM Bus" ID="{A7E89C1E-2D42-4FA2-BDC7-74C6D66C7099}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+						<ObjectRef Name="Player Damage Bus" ID="{51A51C98-EE11-454E-886F-58CC6AC030AB}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+					</ObjectList>
+				</MixingSession>
 			</ChildrenList>
 		</WorkUnit>
 	</MixingSessions>

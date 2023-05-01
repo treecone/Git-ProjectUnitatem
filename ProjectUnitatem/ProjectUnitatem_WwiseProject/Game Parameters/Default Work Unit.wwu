@@ -20,6 +20,16 @@
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="PauseFilter" ID="{BB1F9053-352E-4EEA-8A5D-7B86670B2A87}"/>
+				<GameParameter Name="DamageSideChain" ID="{6DB8BDFF-4271-4E21-B084-9291544F4D89}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="6"/>
+						<Property Name="Max" Type="Real64" Value="6"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="100"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
