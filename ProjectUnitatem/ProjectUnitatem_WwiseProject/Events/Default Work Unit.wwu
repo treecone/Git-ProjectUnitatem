@@ -46,22 +46,16 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="23"/>
 									</PropertyList>
-									<ReferenceList/>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Violin" ID="{DA5C30DF-3D1C-4540-A104-48F02559CD6A}" WorkUnitID="{83BF2CB3-BD3B-46CF-AF10-AEEC699BEEAA}"/>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Set_GuitarSwitch" ID="{9EFF149C-5404-499D-BCB5-55D923E2CE76}">
 							<ChildrenList>
-								<Action Name="" ID="{4EE4C900-CDC8-46B8-997A-2EBC3FF7A705}" ShortID="556752200">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="35"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Wooshtransition" ID="{A3420609-EC24-4E9A-830A-177D0A234A10}" WorkUnitID="{47B5411D-20C9-408D-8011-DE061C568CDA}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{3E8CC444-45BC-4374-9C85-7637DE3B6F2C}" ShortID="989378731">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="23"/>
@@ -76,16 +70,6 @@
 						</Event>
 						<Event Name="Set_8BitSwitch" ID="{B1380AFA-CDEB-4CDF-AE12-3A1EC99711D8}">
 							<ChildrenList>
-								<Action Name="" ID="{6CAC1700-71E8-4978-9F17-FC70E5A40E18}" ShortID="1047887300">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="35"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Wooshtransition" ID="{A3420609-EC24-4E9A-830A-177D0A234A10}" WorkUnitID="{47B5411D-20C9-408D-8011-DE061C568CDA}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{C45EFB96-CC10-42A9-89BA-9BE32014A305}" ShortID="673138753">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="23"/>
@@ -160,7 +144,52 @@
 						<Event Name="Start_Game" ID="{D4E198E0-28BF-4DFE-870D-5A88E2DD129B}"/>
 						<Event Name="Death" ID="{5F92D11C-4E29-4AC2-9398-8C56B254F3F0}">
 							<ChildrenList>
-								<Action Name="" ID="{BCDF153A-00E7-4937-B3B0-C077AAF1AD43}" ShortID="889269069"/>
+								<Action Name="" ID="{BCDF153A-00E7-4937-B3B0-C077AAF1AD43}" ShortID="889269069">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Dead" ID="{2DCE219F-0AE4-4C20-BC0D-7F4082740EA9}" WorkUnitID="{291FBA07-EFE2-4C1F-9AB7-BF2D46B4338A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{94E741B2-C8F5-442B-94F4-C9563FBDB804}" ShortID="663122772">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="8-Bit1" ID="{F8CB1780-C38B-4BF2-829B-A00D5AA0EA10}" WorkUnitID="{AF475F4C-17BB-4EAB-AD40-531018188FE6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{22490993-2860-4229-8D64-061156C54AD7}" ShortID="376539277">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Classical1" ID="{EB320EE1-31A1-49D6-BD03-FC689BD98A9A}" WorkUnitID="{AF475F4C-17BB-4EAB-AD40-531018188FE6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F9C8DAAD-66EF-4CCF-ACB9-F9F798B1D9C4}" ShortID="549593241">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Guitar1" ID="{F0704AE0-97D5-4900-9FF2-D61877B00D2C}" WorkUnitID="{AF475F4C-17BB-4EAB-AD40-531018188FE6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>

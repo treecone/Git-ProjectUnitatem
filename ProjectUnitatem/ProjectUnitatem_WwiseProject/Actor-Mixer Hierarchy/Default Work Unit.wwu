@@ -45,29 +45,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<BlendContainer Name="Classical" ID="{5B4D7791-55BB-42CC-866A-B6880E080EE3}" ShortID="706251644">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
-								</Reference>
-							</ReferenceList>
-							<BlendTrackList>
-								<BlendTrack Name="New Blend Track" ID="{A89FCB00-03B2-4A55-988B-4656964FFF35}" ShortID="1024744607">
-									<PropertyList>
-										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="LayerCrossFadeControlInput">
-											<ObjectRef Name="Player_Health" ID="{56F5E44D-B494-4A70-990C-61721C32999B}" WorkUnitID="{6B4D209D-E99B-463A-81B2-FA6E0D981078}"/>
-										</Reference>
-									</ReferenceList>
-								</BlendTrack>
-							</BlendTrackList>
-						</BlendContainer>
-						<BlendContainer Name="Retro" ID="{BAF24371-292A-44E1-B703-4268F49F8148}" ShortID="1039294505">
+						<BlendContainer Name="Rock" ID="{74B1C8F8-455D-4051-B0EE-2DE9E6ABA8D0}" ShortID="906444523">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
@@ -77,19 +55,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="retrohit_1hearts_1" ID="{26A37ABE-0EFB-40C4-BA00-65C0A99FDE09}" ShortID="1056800816">
-									<PropertyList>
-										<Property Name="MakeUpGain" Type="Real64">
-											<ValueList>
-												<Value>9</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>1</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+								<Sound Name="rock_1hearts_1" ID="{D64CB94A-8135-4047-AC0A-802A1C08BF0F}" ShortID="281991790">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
@@ -99,26 +65,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="retrohit_1hearts_1" ID="{9FADA791-77D4-471D-937E-F7E01F34B13B}">
+										<AudioFileSource Name="rock_1hearts_1" ID="{618EAF54-8E28-4CAC-B631-425435B6E442}">
 											<Language>SFX</Language>
-											<AudioFile>retrohit_1hearts_1.wav</AudioFile>
+											<AudioFile>rock_1hearts_1.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="897376006"/>
+												<MediaID ID="663987526"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="retrohit_1hearts_1" ID="{9FADA791-77D4-471D-937E-F7E01F34B13B}" Platform="Linked"/>
+										<ActiveSource Name="rock_1hearts_1" ID="{618EAF54-8E28-4CAC-B631-425435B6E442}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="retrohit_2hearts_1" ID="{6911C743-0E55-43B5-ABEF-9B60E5CCFA4F}" ShortID="628623418">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>10</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+								<Sound Name="rock_2hearts_1" ID="{0C5A2396-7FD1-42E6-802A-6A6DFAD1D270}" ShortID="177773735">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
@@ -128,26 +87,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="retrohit_2hearts_1" ID="{F6E0FAF3-5485-4CFA-97FC-0A7C531AEFFE}">
+										<AudioFileSource Name="rock_2hearts_1" ID="{D963763E-4AFE-4BA0-A248-A36CA404662E}">
 											<Language>SFX</Language>
-											<AudioFile>retrohit_2hearts_1.wav</AudioFile>
+											<AudioFile>rock_2hearts_1.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="523750168"/>
+												<MediaID ID="1058371040"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="retrohit_2hearts_1" ID="{F6E0FAF3-5485-4CFA-97FC-0A7C531AEFFE}" Platform="Linked"/>
+										<ActiveSource Name="rock_2hearts_1" ID="{D963763E-4AFE-4BA0-A248-A36CA404662E}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="retrohit_3hearts_1" ID="{2369DFBB-E2E8-4776-A641-65BFB30E9D7A}" ShortID="395741198">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>8</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+								<Sound Name="rock_3hearts_1" ID="{D5C1595B-81DF-4B7A-9965-3EA78B1F73E1}" ShortID="54737313">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
@@ -157,21 +109,21 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="retrohit_3hearts_1" ID="{81037043-673D-43B6-9986-DDFB9F31AC0B}">
+										<AudioFileSource Name="rock_3hearts_1" ID="{39EE73D5-B790-475B-9632-3E537085662F}">
 											<Language>SFX</Language>
-											<AudioFile>retrohit_3hearts_1.wav</AudioFile>
+											<AudioFile>rock_3hearts_1.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="540432875"/>
+												<MediaID ID="648207739"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="retrohit_3hearts_1" ID="{81037043-673D-43B6-9986-DDFB9F31AC0B}" Platform="Linked"/>
+										<ActiveSource Name="rock_3hearts_1" ID="{39EE73D5-B790-475B-9632-3E537085662F}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 							<BlendTrackList>
-								<BlendTrack Name="New Blend Track" ID="{936073EB-D1D1-4828-B4AF-ED15C97AE09C}" ShortID="75871580">
+								<BlendTrack Name="New Blend Track" ID="{1B41032C-E2B9-412A-BEF5-42405493D53E}" ShortID="96410421">
 									<PropertyList>
 										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
 									</PropertyList>
@@ -182,29 +134,29 @@
 									</ReferenceList>
 									<BlendTrackAssocList>
 										<BlendTrackAssoc>
-											<ItemRef Name="retrohit_1hearts_1" ID="{26A37ABE-0EFB-40C4-BA00-65C0A99FDE09}"/>
+											<ItemRef Name="rock_1hearts_1" ID="{D64CB94A-8135-4047-AC0A-802A1C08BF0F}"/>
 											<CrossfadingInfo>
 												<LeftEdgePos>0</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>
-												<RightEdgePos>0.49014898989899</RightEdgePos>
+												<RightEdgePos>0.42954292929293</RightEdgePos>
 												<RightFadingMode>Automatic</RightFadingMode>
 											</CrossfadingInfo>
 										</BlendTrackAssoc>
 										<BlendTrackAssoc>
-											<ItemRef Name="retrohit_2hearts_1" ID="{6911C743-0E55-43B5-ABEF-9B60E5CCFA4F}"/>
+											<ItemRef Name="rock_2hearts_1" ID="{0C5A2396-7FD1-42E6-802A-6A6DFAD1D270}"/>
 											<CrossfadingInfo>
-												<LeftEdgePos>0.705300505050505</LeftEdgePos>
+												<LeftEdgePos>0.851765151515152</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>
-												<RightEdgePos>1.30530050505051</RightEdgePos>
+												<RightEdgePos>1.15226515151515</RightEdgePos>
 												<RightFadingMode>Automatic</RightFadingMode>
 											</CrossfadingInfo>
 										</BlendTrackAssoc>
 										<BlendTrackAssoc>
-											<ItemRef Name="retrohit_3hearts_1" ID="{2369DFBB-E2E8-4776-A641-65BFB30E9D7A}"/>
+											<ItemRef Name="rock_3hearts_1" ID="{D5C1595B-81DF-4B7A-9965-3EA78B1F73E1}"/>
 											<CrossfadingInfo>
-												<LeftEdgePos>1.62222222222222</LeftEdgePos>
+												<LeftEdgePos>1.73825378787879</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>
-												<RightEdgePos>2.36363636363636</RightEdgePos>
+												<RightEdgePos>2.33825378787879</RightEdgePos>
 												<RightFadingMode>Automatic</RightFadingMode>
 											</CrossfadingInfo>
 										</BlendTrackAssoc>
@@ -212,11 +164,130 @@
 								</BlendTrack>
 							</BlendTrackList>
 						</BlendContainer>
-						<BlendContainer Name="Guitar" ID="{52DEC188-5CF5-46DD-9B2D-E38935746311}" ShortID="554961134">
+						<BlendContainer Name="Retro" ID="{FD8FA4A5-62F9-4502-B709-6293F1AFB037}" ShortID="987540875">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="retrohit_1hearts_1" ID="{91F73563-70B7-46E8-94C0-7D74A54988D8}" ShortID="661134119">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="retrohit_1hearts_1" ID="{9A234D85-24C2-455B-B23B-E58B11010AA1}">
+											<Language>SFX</Language>
+											<AudioFile>retrohit_1hearts_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="897376006"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="retrohit_1hearts_1" ID="{9A234D85-24C2-455B-B23B-E58B11010AA1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="retrohit_2hearts_1" ID="{6F054160-BACE-4B1B-A8BE-34958EBDFC13}" ShortID="776521988">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="retrohit_2hearts_1" ID="{8CB6DDE3-B185-42AD-9699-FA742D828D51}">
+											<Language>SFX</Language>
+											<AudioFile>retrohit_2hearts_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="523750168"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="retrohit_2hearts_1" ID="{8CB6DDE3-B185-42AD-9699-FA742D828D51}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="retrohit_3hearts_1" ID="{5A9C2AE5-24AA-4EFB-923B-F02C3FCD158F}" ShortID="61210873">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="retrohit_3hearts_1" ID="{877691A6-6621-4E18-90D7-945271CA5C90}">
+											<Language>SFX</Language>
+											<AudioFile>retrohit_3hearts_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="540432875"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="retrohit_3hearts_1" ID="{877691A6-6621-4E18-90D7-945271CA5C90}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<BlendTrackList>
+								<BlendTrack Name="New Blend Track" ID="{71B2481D-EADF-4363-8711-346BFFF6D6B4}" ShortID="970433864">
+									<PropertyList>
+										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="LayerCrossFadeControlInput">
+											<ObjectRef Name="Player_Health" ID="{56F5E44D-B494-4A70-990C-61721C32999B}" WorkUnitID="{6B4D209D-E99B-463A-81B2-FA6E0D981078}"/>
+										</Reference>
+									</ReferenceList>
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="retrohit_1hearts_1" ID="{91F73563-70B7-46E8-94C0-7D74A54988D8}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>0.373987373737374</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="retrohit_2hearts_1" ID="{6F054160-BACE-4B1B-A8BE-34958EBDFC13}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0.725502525252525</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>1.32550252525253</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="retrohit_3hearts_1" ID="{5A9C2AE5-24AA-4EFB-923B-F02C3FCD158F}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>1.73333333333333</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>2.33333333333333</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
+						<BlendContainer Name="Classical" ID="{776A4DBC-C5F8-43F0-A905-707513B7D55B}" ShortID="236557391">
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>12</Value>
+										<Value>3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -229,7 +300,14 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="hitaiko" ID="{9CA81CD5-E483-4A99-8998-115D7791C63B}" ShortID="209255268">
+								<Sound Name="class_1hearts_1" ID="{0FC35BCA-327B-4969-BCDB-02DC7B64CA39}" ShortID="750390132">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>610</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
@@ -239,19 +317,26 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="hitaiko" ID="{9B2A9682-ABF2-47E5-A2A7-B971F55AD302}">
+										<AudioFileSource Name="class_1hearts_1" ID="{33161144-EF0E-4C02-87E6-6745CDA667AD}">
 											<Language>SFX</Language>
-											<AudioFile>hitaiko.wav</AudioFile>
+											<AudioFile>class_1hearts_1.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="482440263"/>
+												<MediaID ID="27547024"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="hitaiko" ID="{9B2A9682-ABF2-47E5-A2A7-B971F55AD302}" Platform="Linked"/>
+										<ActiveSource Name="class_1hearts_1" ID="{33161144-EF0E-4C02-87E6-6745CDA667AD}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="lotaiko" ID="{AE62DF42-F943-4541-8FC3-1E804999D73B}" ShortID="644252485">
+								<Sound Name="class_2hearts_1" ID="{499DD520-FD5B-4A3E-9BBB-2AB12C65F38E}" ShortID="932896917">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>230</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
@@ -261,19 +346,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="lotaiko" ID="{90568F42-CEAE-441A-B963-A34C0647DC29}">
+										<AudioFileSource Name="class_2hearts_1" ID="{7BFBAD9B-5564-43C3-B91D-1B194196473D}">
 											<Language>SFX</Language>
-											<AudioFile>lotaiko.wav</AudioFile>
+											<AudioFile>class_2hearts_1.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="228977532"/>
+												<MediaID ID="90237330"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="lotaiko" ID="{90568F42-CEAE-441A-B963-A34C0647DC29}" Platform="Linked"/>
+										<ActiveSource Name="class_2hearts_1" ID="{7BFBAD9B-5564-43C3-B91D-1B194196473D}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="midtaiko" ID="{124AD09A-DAB7-4274-AC27-309D38B6C727}" ShortID="708250374">
+								<Sound Name="class_3hearts_1" ID="{BF467D9E-AF17-4690-8602-044A7C77D849}" ShortID="134061418">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
@@ -283,21 +368,21 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="midtaiko" ID="{D9F800EB-85C6-4C65-AC72-6CFE5766A11E}">
+										<AudioFileSource Name="class_3hearts_1" ID="{31A1B13F-D8B8-4C9F-9ED5-9AC2CEF43699}">
 											<Language>SFX</Language>
-											<AudioFile>midtaiko.wav</AudioFile>
+											<AudioFile>class_3hearts_1.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="231310544"/>
+												<MediaID ID="672768681"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="midtaiko" ID="{D9F800EB-85C6-4C65-AC72-6CFE5766A11E}" Platform="Linked"/>
+										<ActiveSource Name="class_3hearts_1" ID="{31A1B13F-D8B8-4C9F-9ED5-9AC2CEF43699}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 							<BlendTrackList>
-								<BlendTrack Name="New Blend Track" ID="{07F048F9-E614-4FAC-8166-4FC03794BE52}" ShortID="389472954">
+								<BlendTrack Name="New Blend Track" ID="{311AE955-2A64-4160-B701-3D0F66B0757A}" ShortID="208242062">
 									<PropertyList>
 										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
 									</PropertyList>
@@ -308,29 +393,29 @@
 									</ReferenceList>
 									<BlendTrackAssocList>
 										<BlendTrackAssoc>
-											<ItemRef Name="lotaiko" ID="{AE62DF42-F943-4541-8FC3-1E804999D73B}"/>
+											<ItemRef Name="class_1hearts_1" ID="{0FC35BCA-327B-4969-BCDB-02DC7B64CA39}"/>
 											<CrossfadingInfo>
 												<LeftEdgePos>0</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>
-												<RightEdgePos>0.429292929292929</RightEdgePos>
+												<RightEdgePos>0.328532828282829</RightEdgePos>
 												<RightFadingMode>Automatic</RightFadingMode>
 											</CrossfadingInfo>
 										</BlendTrackAssoc>
 										<BlendTrackAssoc>
-											<ItemRef Name="midtaiko" ID="{124AD09A-DAB7-4274-AC27-309D38B6C727}"/>
+											<ItemRef Name="class_2hearts_1" ID="{499DD520-FD5B-4A3E-9BBB-2AB12C65F38E}"/>
 											<CrossfadingInfo>
-												<LeftEdgePos>0.666666666666667</LeftEdgePos>
+												<LeftEdgePos>0.811361111111111</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>
-												<RightEdgePos>1.34343434343434</RightEdgePos>
+												<RightEdgePos>1.24974494949495</RightEdgePos>
 												<RightFadingMode>Automatic</RightFadingMode>
 											</CrossfadingInfo>
 										</BlendTrackAssoc>
 										<BlendTrackAssoc>
-											<ItemRef Name="hitaiko" ID="{9CA81CD5-E483-4A99-8998-115D7791C63B}"/>
+											<ItemRef Name="class_3hearts_1" ID="{BF467D9E-AF17-4690-8602-044A7C77D849}"/>
 											<CrossfadingInfo>
-												<LeftEdgePos>1.58080808080808</LeftEdgePos>
+												<LeftEdgePos>1.73825378787879</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>
-												<RightEdgePos>2.58080808080808</RightEdgePos>
+												<RightEdgePos>2.33825378787878</RightEdgePos>
 												<RightFadingMode>Automatic</RightFadingMode>
 											</CrossfadingInfo>
 										</BlendTrackAssoc>
@@ -342,26 +427,32 @@
 					<GroupingInfo>
 						<GroupingBehaviorList>
 							<GroupingBehavior>
-								<ItemRef Name="Retro" ID="{BAF24371-292A-44E1-B703-4268F49F8148}"/>
+								<ItemRef Name="Retro" ID="{FD8FA4A5-62F9-4502-B709-6293F1AFB037}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="Guitar" ID="{52DEC188-5CF5-46DD-9B2D-E38935746311}"/>
+								<ItemRef Name="Classical" ID="{776A4DBC-C5F8-43F0-A905-707513B7D55B}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="Classical" ID="{5B4D7791-55BB-42CC-866A-B6880E080EE3}"/>
+								<ItemRef Name="Rock" ID="{74B1C8F8-455D-4051-B0EE-2DE9E6ABA8D0}"/>
 							</GroupingBehavior>
 						</GroupingBehaviorList>
 						<GroupingList>
 							<Grouping>
 								<SwitchRef Name="Retro" ID="{F9F81909-6EE3-4B50-A834-118170878645}"/>
 								<ItemList>
-									<ItemRef Name="Retro" ID="{BAF24371-292A-44E1-B703-4268F49F8148}"/>
+									<ItemRef Name="Retro" ID="{FD8FA4A5-62F9-4502-B709-6293F1AFB037}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
 								<SwitchRef Name="Guitar" ID="{AD8DA46D-2702-45FF-ACD2-D927869AA1F8}"/>
 								<ItemList>
-									<ItemRef Name="Guitar" ID="{52DEC188-5CF5-46DD-9B2D-E38935746311}"/>
+									<ItemRef Name="Rock" ID="{74B1C8F8-455D-4051-B0EE-2DE9E6ABA8D0}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Violin" ID="{DA5C30DF-3D1C-4540-A104-48F02559CD6A}"/>
+								<ItemList>
+									<ItemRef Name="Classical" ID="{776A4DBC-C5F8-43F0-A905-707513B7D55B}"/>
 								</ItemList>
 							</Grouping>
 						</GroupingList>
