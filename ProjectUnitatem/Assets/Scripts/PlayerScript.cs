@@ -24,7 +24,9 @@ public class PlayerScript : MonoBehaviour
     private GameObject mainCanvas;
     private GameObject BGMManager;
 
+    //Abilites
     private int currentWeapon;
+    private GameObject playerArm;
 
     //Audio ---------------------
     public AK.Wwise.Event WeaponSwitch1;
@@ -33,6 +35,8 @@ public class PlayerScript : MonoBehaviour
     public AK.Wwise.RTPC healthRTPC;
     public AK.Wwise.Event highScoreEvent;
     public AK.Wwise.Event playerDamage;
+    public AK.Wwise.Event deathEvent;
+    public AK.Wwise.Event setRegularScore;
 
 
     // Start is called before the first frame update
@@ -41,6 +45,7 @@ public class PlayerScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         mainCanvas = GameObject.Find("MainCanvas");
         BGMManager = GameObject.Find("BGM Manager");
+        playerArm = gameObject.transform.Find("PlayerArm").gameObject;
     }
 
     private void Awake()
@@ -69,10 +74,22 @@ public class PlayerScript : MonoBehaviour
         playerDamage.Post(BGMManager);
     }
 
+    #region Death
+
+    //Call wise event to look for end of beat
     private void Death()
     {
-        SceneManager.LoadScene(0);
+        deathEvent.Post(BGMManager);
     }
+
+    //Actual death function, called from wise when beat ends
+    public void WiseDeath()
+    {
+        GameObject.Find("Main Camera").GetComponent<MainCameraScript>().cameraZoom = 4;
+        mainCanvas.transform.Find("DeathPanel").gameObject.SetActive(true);
+    }
+
+    #endregion
 
     // Update is called once per frame
     void Update()
@@ -123,9 +140,24 @@ public class PlayerScript : MonoBehaviour
             currentWeapon = 3;
             WeaponSwitch3.Post(BGMManager);
             Debug.Log("Switched to weapon: 3");
-
         }
 
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            setRegularScore.Post(BGMManager);
+        }
+
+        //Abilites
+        playerArm.transform.rotation = Quaternion.Euler(0, 0, GetRotationForAbilities());
+
+    }
+
+    public float GetRotationForAbilities()
+    {
+        Vector2 v = mainControls.Player.ActionRotation.ReadValue<Vector2>();
+        Vector2 inputVector = v - (Vector2)gameObject.transform.position;
+        //Vector2 dir = (gameObject.transform.) - gameObject.transform.position;
+        return Mathf.Atan2(inputVector.y, inputVector.x) * Mathf.Rad2Deg;
     }
 
     public void FixedUpdate()
