@@ -37,7 +37,7 @@ public class PlayerScript : MonoBehaviour
     public AK.Wwise.Event playerDamage;
     public AK.Wwise.Event deathEvent;
     public AK.Wwise.Event setRegularScore;
-
+    
 
     // Start is called before the first frame update
     void Start()
