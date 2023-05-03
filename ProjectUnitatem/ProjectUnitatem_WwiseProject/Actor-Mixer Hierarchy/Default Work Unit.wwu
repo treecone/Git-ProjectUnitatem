@@ -458,6 +458,120 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<Folder Name="Bowshots" ID="{A5384511-8378-4161-BD52-F7150DD6E91F}" ShortID="500639694">
+					<ChildrenList>
+						<Sound Name="bowshot1_emin" ID="{B4037475-5847-4EF2-A54D-52494BE3A295}" ShortID="918792067">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bowshot1" ID="{07DF9039-8552-43E6-B854-2BA0FB18C6CE}">
+									<Language>SFX</Language>
+									<AudioFile>bowshot1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="238069379"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bowshot1" ID="{07DF9039-8552-43E6-B854-2BA0FB18C6CE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bowshot2_gmaj" ID="{B41F1273-EB6C-4744-A343-4A2E4711B72F}" ShortID="893028418">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bowshot2" ID="{74397F61-5E64-41D8-A61C-4302EC75C0C7}">
+									<Language>SFX</Language>
+									<AudioFile>bowshot2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="265884621"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bowshot2" ID="{74397F61-5E64-41D8-A61C-4302EC75C0C7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bowshot3_amin" ID="{9CC2EC48-1677-4B15-BC6C-2842F007AA61}" ShortID="479209224">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bowshot3" ID="{5524BC85-EC60-44B5-A965-C4FC3755E43C}">
+									<Language>SFX</Language>
+									<AudioFile>bowshot3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="221970478"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bowshot3" ID="{5524BC85-EC60-44B5-A965-C4FC3755E43C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bowshot4_cmaj" ID="{47C36E89-AE3D-46BA-9468-D2DDD1BC1FDA}" ShortID="184857726">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bowshot4" ID="{E85A4E0B-C095-4CFB-88B1-16018D4C3EC3}">
+									<Language>SFX</Language>
+									<AudioFile>bowshot4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="417742145"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bowshot4" ID="{E85A4E0B-C095-4CFB-88B1-16018D4C3EC3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bowshot5_bmin" ID="{6265A27C-705C-40FF-A084-9021CDBF5D61}" ShortID="635175594">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bowshot5" ID="{66B76817-84A7-4070-AEAC-C2992B9C0281}">
+									<Language>SFX</Language>
+									<AudioFile>bowshot5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="847368009"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bowshot5" ID="{66B76817-84A7-4070-AEAC-C2992B9C0281}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
