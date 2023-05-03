@@ -24,9 +24,10 @@ public class PlayerScript : MonoBehaviour
     private GameObject mainCanvas;
     private GameObject BGMManager;
 
-    //Abilites
+    [Header("Player Abilities")]
     private int currentWeapon;
     private GameObject playerArm;
+    public GameObject hammerHitbox;
 
     //Audio ---------------------
     public AK.Wwise.Event WeaponSwitch1;
@@ -126,14 +127,14 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            currentWeapon = 1;
+            currentWeapon = 0;
             WeaponSwitch1.Post(BGMManager);
             Debug.Log("Switched to weapon: 1");
         }
 
         if (Input.GetKeyDown(KeyCode.F2))
         {
-            currentWeapon = 2;
+            currentWeapon = 1;
             WeaponSwitch2.Post(BGMManager);
             Debug.Log("Switched to weapon: 2");
 
@@ -141,7 +142,7 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F3))
         {
-            currentWeapon = 3;
+            currentWeapon = 2;
             WeaponSwitch3.Post(BGMManager);
             Debug.Log("Switched to weapon: 3");
         }
@@ -159,12 +160,35 @@ public class PlayerScript : MonoBehaviour
 
     private void UseAction_started(InputAction.CallbackContext context)
     {
-        playerArm.transform.rotation = Quaternion.Lerp(playerArm.transform.rotation, Quaternion.Euler(0, 0, GetRotationForAbilities()), 0.5f);
-        float jumpValue = context.ReadValue<float>();
-        if (jumpValue > 0)
+        switch(currentWeapon)
         {
-            playerArm.transform.GetChild(0).GetComponent<Animator>().SetBool("SwingBool", !playerArm.transform.GetChild(0).GetComponent<Animator>().GetBool("SwingBool"));
+            case 0:
+                playerArm.transform.rotation = Quaternion.Lerp(playerArm.transform.rotation, Quaternion.Euler(0, 0, GetRotationForAbilities()), 0.5f);
+                float inputValue = context.ReadValue<float>();
+                if (inputValue > 0)
+                {
+                    playerArm.transform.GetChild(0).GetComponent<Animator>().SetBool("SwingBool", !playerArm.transform.GetChild(0).GetComponent<Animator>().GetBool("SwingBool"));
+                }
+                Transform HitboxSpawnPoint = playerArm.transform.Find("HitboxSpawnPoint").transform;
+                GameObject hitBox = Instantiate(hammerHitbox, HitboxSpawnPoint.position, HitboxSpawnPoint.rotation);
+                hitBox.GetComponent<HitboxScript>().pScript = this;
+                hitBox.GetComponent<HitboxScript>().hitType = HITBOX_TYPE.SWORD;
+                break;
+
+            case 1:
+                playerArm.transform.rotation = Quaternion.Lerp(playerArm.transform.rotation, Quaternion.Euler(0, 0, GetRotationForAbilities()), 0.5f);
+                inputValue = context.ReadValue<float>();
+                if (inputValue > 0)
+                {
+                    playerArm.transform.GetChild(0).GetComponent<Animator>().SetBool("SwingBool", !playerArm.transform.GetChild(0).GetComponent<Animator>().GetBool("SwingBool"));
+                }
+                HitboxSpawnPoint = playerArm.transform.Find("HitboxSpawnPoint").transform;
+                hitBox = Instantiate(hammerHitbox, HitboxSpawnPoint.position, HitboxSpawnPoint.rotation);
+                hitBox.GetComponent<HitboxScript>().pScript = this;
+                hitBox.GetComponent<HitboxScript>().hitType = HITBOX_TYPE.AXE;
+                break;
         }
+
     }
 
     public float GetRotationForAbilities()

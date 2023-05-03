@@ -11,8 +11,8 @@ public enum BULLET_TYPE
 public class BulletBase : MonoBehaviour
 {
     [Header("Bullet Attributes")]
-    [SerializeField] private float baseSpeed;
-    [SerializeField] private float damage;
+    public float baseSpeed;
+    public float damage;
     [SerializeField] private BULLET_TYPE type;
 
     private float timeCounter;
