@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{191D88E7-CE05-990E-4B2F-4D0CA52A134A}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{51991302-07A4-43B3-289F-98E83E972BFE}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -88,13 +88,17 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{809E4D39-CB6F-629F-D263-72C35E6BBBE3}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{591EC4D4-D7F0-D9F8-28DD-A80ABC334758}">
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<Media>
 				<File Id="27547024" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>class_1hearts_1.wav</ShortName>
 					<CachePath>SFX/class_1hearts_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="72084117" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LoD Landing.wav</ShortName>
+					<CachePath>SFX/LoD Landing_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="90237330" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>class_2hearts_1.wav</ShortName>
@@ -318,6 +322,11 @@
 				</Event>
 				<Event Id="1114964412" Name="Start_Game" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4048499067" Name="Sync_DoubleTime" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="72084117"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2155888594" Name="Victory_Stinger" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
@@ -356,5 +365,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E609EF32-F6E6-DA3D-3D2E-4DA83EFF2BD5}</FileHash>
+	<FileHash>{53C8A84D-1C51-2C15-492A-698482A3F0DB}</FileHash>
 </SoundBanksInfo>
