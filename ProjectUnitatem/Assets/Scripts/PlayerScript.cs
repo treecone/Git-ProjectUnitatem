@@ -45,7 +45,10 @@ public class PlayerScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         mainCanvas = GameObject.Find("MainCanvas");
         BGMManager = GameObject.Find("BGM Manager");
-        playerArm = gameObject.transform.Find("PlayerArm").gameObject;
+        playerArm = gameObject.transform.Find("PlayerArmRoot").gameObject;
+
+        //Input
+        mainControls.Player.UseAction.started += UseAction_started;
     }
 
     private void Awake()
@@ -61,6 +64,7 @@ public class PlayerScript : MonoBehaviour
     private void OnDisable()
     {
         mainControls.Disable();
+        mainControls.Player.UseAction.started -= UseAction_started;
     }
 
     public void TakeDamage()
@@ -148,14 +152,24 @@ public class PlayerScript : MonoBehaviour
         }
 
         //Abilites
-        playerArm.transform.rotation = Quaternion.Euler(0, 0, GetRotationForAbilities());
+        if (playerArm.transform.GetChild(0).GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !playerArm.transform.GetChild(0).GetComponent<Animator>().IsInTransition(0))
+            playerArm.transform.rotation = Quaternion.Lerp(playerArm.transform.rotation, Quaternion.Euler(0, 0, GetRotationForAbilities()), 5 * Time.deltaTime);
 
+    }
+
+    private void UseAction_started(InputAction.CallbackContext context)
+    {
+        playerArm.transform.rotation = Quaternion.Lerp(playerArm.transform.rotation, Quaternion.Euler(0, 0, GetRotationForAbilities()), 0.5f);
+        float jumpValue = context.ReadValue<float>();
+        if (jumpValue > 0)
+        {
+            playerArm.transform.GetChild(0).GetComponent<Animator>().SetBool("SwingBool", !playerArm.transform.GetChild(0).GetComponent<Animator>().GetBool("SwingBool"));
+        }
     }
 
     public float GetRotationForAbilities()
     {
         Vector2 v = mainControls.Player.ActionRotation.ReadValue<Vector2>(); //-1, 1
-        Debug.Log(v);
         Vector2 inputVector = Camera.main.ScreenToWorldPoint(new Vector3(v.x, v.y, 0)) - (Vector3)gameObject.transform.position;
         //Vector2 dir = (gameObject.transform.) - gameObject.transform.position;
         return Mathf.Atan2(inputVector.y, inputVector.x) * Mathf.Rad2Deg - 90;

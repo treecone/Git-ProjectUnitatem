@@ -53,6 +53,15 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""UseAction"",
+                    ""type"": ""Button"",
+                    ""id"": ""b3c1736a-294e-443f-aac4-c435fa52a1ec"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -264,6 +273,39 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
                     ""action"": ""ActionRotation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d338ba1a-d6c6-4c95-96d0-e553387d03ba"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""UseAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""247f7052-0b3a-43b9-ab5c-e546cf240be2"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""UseAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""39fd97b8-d286-4361-b5fc-58842ac26ff2"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""UseAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -303,6 +345,7 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_ActionWheel = m_Player.FindAction("ActionWheel", throwIfNotFound: true);
         m_Player_ActionRotation = m_Player.FindAction("ActionRotation", throwIfNotFound: true);
+        m_Player_UseAction = m_Player.FindAction("UseAction", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -367,6 +410,7 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_ActionWheel;
     private readonly InputAction m_Player_ActionRotation;
+    private readonly InputAction m_Player_UseAction;
     public struct PlayerActions
     {
         private @MainControls m_Wrapper;
@@ -374,6 +418,7 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @ActionWheel => m_Wrapper.m_Player_ActionWheel;
         public InputAction @ActionRotation => m_Wrapper.m_Player_ActionRotation;
+        public InputAction @UseAction => m_Wrapper.m_Player_UseAction;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -392,6 +437,9 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
             @ActionRotation.started += instance.OnActionRotation;
             @ActionRotation.performed += instance.OnActionRotation;
             @ActionRotation.canceled += instance.OnActionRotation;
+            @UseAction.started += instance.OnUseAction;
+            @UseAction.performed += instance.OnUseAction;
+            @UseAction.canceled += instance.OnUseAction;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -405,6 +453,9 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
             @ActionRotation.started -= instance.OnActionRotation;
             @ActionRotation.performed -= instance.OnActionRotation;
             @ActionRotation.canceled -= instance.OnActionRotation;
+            @UseAction.started -= instance.OnUseAction;
+            @UseAction.performed -= instance.OnUseAction;
+            @UseAction.canceled -= instance.OnUseAction;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -445,5 +496,6 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnActionWheel(InputAction.CallbackContext context);
         void OnActionRotation(InputAction.CallbackContext context);
+        void OnUseAction(InputAction.CallbackContext context);
     }
 }
