@@ -154,10 +154,11 @@ public class PlayerScript : MonoBehaviour
 
     public float GetRotationForAbilities()
     {
-        Vector2 v = mainControls.Player.ActionRotation.ReadValue<Vector2>();
-        Vector2 inputVector = v - (Vector2)gameObject.transform.position;
+        Vector2 v = mainControls.Player.ActionRotation.ReadValue<Vector2>(); //-1, 1
+        Debug.Log(v);
+        Vector2 inputVector = Camera.main.ScreenToWorldPoint(new Vector3(v.x, v.y, 0)) - (Vector3)gameObject.transform.position;
         //Vector2 dir = (gameObject.transform.) - gameObject.transform.position;
-        return Mathf.Atan2(inputVector.y, inputVector.x) * Mathf.Rad2Deg;
+        return Mathf.Atan2(inputVector.y, inputVector.x) * Mathf.Rad2Deg - 90;
     }
 
     public void FixedUpdate()
