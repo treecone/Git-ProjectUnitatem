@@ -53,22 +53,43 @@ public class BulletManager : MonoBehaviour
         }
     }
 
-    public GameObject SpawnFromPool(BULLET_TYPE tag, Vector3 position, Quaternion rotation)
+    public GameObject SpawnFromPool(BulletDescription description)
     {
-        if(!poolDictionary.ContainsKey(tag))
+        if(!poolDictionary.ContainsKey(description.Tag))
         {
             Debug.LogWarning("Tried to spawn bullet type: " + System.Enum.GetName(typeof(BULLET_TYPE), tag) + ", but it has no pool!");
             return null;
         }
 
-        GameObject bulletToSpawn = poolDictionary[tag].Dequeue();
-
+        GameObject bulletToSpawn = poolDictionary[description.Tag].Dequeue();
+        // Set the description
+        bulletToSpawn.GetComponent<BulletBase>().Description = description;
+        poolDictionary[description.Tag].Enqueue(bulletToSpawn);
         bulletToSpawn.SetActive(true);
-        bulletToSpawn.transform.position = position;
-        bulletToSpawn.transform.rotation = rotation;
-
-        poolDictionary[tag].Enqueue(bulletToSpawn);
 
         return bulletToSpawn;
+    }
+
+}
+public class BulletDescription
+{
+    public BULLET_TYPE Tag;
+    public Vector3 Position;
+    public Quaternion Rotation;
+    public float Width;
+    public float Height;
+    public float FadeInDurationS;
+    public float ActiveDurationS;
+
+    public BulletDescription(BULLET_TYPE tag, Vector3 position, Quaternion rotation, float width = 1, float height = 1,
+         float activeDurationS = 5, float fadeInDurationS = 0)
+    {
+        Tag = tag;
+        Position = position;
+        Rotation = rotation;
+        Width = width;
+        Height = height;
+        FadeInDurationS = fadeInDurationS;
+        ActiveDurationS = activeDurationS;
     }
 }
