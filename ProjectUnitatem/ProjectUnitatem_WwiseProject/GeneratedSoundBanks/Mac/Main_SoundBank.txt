@@ -16,6 +16,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3638125099	Play_Player_Damage			\Default Work Unit\Play_Player_Damage	
 	3901001571	Set_8BitSwitch			\Default Work Unit\Switches\Set_8BitSwitch	
 	4003498308	Set_GuitarSwitch			\Default Work Unit\Switches\Set_GuitarSwitch	
+	4048499067	Sync_DoubleTime			\Default Work Unit\Sync_DoubleTime	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1445037870	MusicSwitch			\Default Work Unit\MusicSwitch	
@@ -45,7 +46,9 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	27547024	class_1hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\class_1hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Classical\class_1hearts_1		434664
+	72084117	LoD Landing	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\LoD Landing_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Empty Doubletime\DoubleTimeEmpty\LoD Landing		161212
 	90237330	class_2hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\class_2hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Classical\class_2hearts_1		178332
+	231310544	midtaiko	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\midtaiko_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Stingers\Death\midtaiko		355652
 	523750168	retrohit_2hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\retrohit_2hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Retro\retrohit_2hearts_1		183848
 	540432875	retrohit_3hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\retrohit_3hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Retro\retrohit_3hearts_1		178332
 	645680326	guitar_topline_solo	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\guitar_topline_solo_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Guitar1\042723 bullet fuck guitar playlist 1\guitar_topline_solo		2772096
@@ -55,6 +58,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	663987526	rock_1hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\rock_1hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Rock\rock_1hearts_1		259184
 	672768681	class_3hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\class_3hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Classical\class_3hearts_1		193032
 	758842039	042823 bullet fuck 8-bit playlist 1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\042823 bullet fuck 8-bit playlist 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\8-Bit1\042823 bullet fuck 8-bit playlist 1\042823 bullet fuck 8-bit playlist 1		2838952
+	854177119	woosh 2	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\woosh 2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Stingers\Death\woosh 2		180320
 	897376006	retrohit_1hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\retrohit_1hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Retro\retrohit_1hearts_1		353816
 	949661045	LoD Player hurt 3	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\LoD Player hurt 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\LoD Player hurt 3		192096
 	1058371040	rock_2hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\rock_2hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Rock\rock_2hearts_1		259184

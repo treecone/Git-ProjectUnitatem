@@ -29,6 +29,7 @@ namespace AK
         static const AkUniqueID SET_VIOLINSWITCH = 1399716893U;
         static const AkUniqueID START_GAME = 1114964412U;
         static const AkUniqueID STOP_ALL = 452547817U;
+        static const AkUniqueID SYNC_DOUBLETIME = 4048499067U;
         static const AkUniqueID VICTORY_STINGER = 2155888594U;
     } // namespace EVENTS
 

@@ -230,6 +230,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Sync_DoubleTime" ID="{501ED636-09FE-48EE-A4EC-F804F315909A}">
+					<ChildrenList>
+						<Action Name="" ID="{6E7286CC-CEA8-4684-878C-025404C7D84F}" ShortID="1015632205">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Empty Doubletime" ID="{95018016-C5A9-46DF-B26A-3EC8D3EEEA85}" WorkUnitID="{AF475F4C-17BB-4EAB-AD40-531018188FE6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

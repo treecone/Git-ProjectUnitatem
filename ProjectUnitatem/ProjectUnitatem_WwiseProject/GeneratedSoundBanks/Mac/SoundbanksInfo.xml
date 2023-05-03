@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{191D88E7-CE05-990E-4B2F-4D0CA52A134A}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{51991302-07A4-43B3-289F-98E83E972BFE}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -88,7 +88,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{F3D57E40-DA06-E113-A853-58D8D6449B83}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{591EC4D4-D7F0-D9F8-28DD-A80ABC334758}">
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<Media>
@@ -96,9 +96,17 @@
 					<ShortName>class_1hearts_1.wav</ShortName>
 					<CachePath>SFX/class_1hearts_1_10C4C929.wem</CachePath>
 				</File>
+				<File Id="72084117" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LoD Landing.wav</ShortName>
+					<CachePath>SFX/LoD Landing_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="90237330" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>class_2hearts_1.wav</ShortName>
 					<CachePath>SFX/class_2hearts_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="231310544" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>midtaiko.wav</ShortName>
+					<CachePath>SFX/midtaiko_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="523750168" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>retrohit_2hearts_1.wav</ShortName>
@@ -136,6 +144,10 @@
 					<ShortName>042823 bullet fuck 8-bit playlist 1.wav</ShortName>
 					<CachePath>SFX/042823 bullet fuck 8-bit playlist 1_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="854177119" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>woosh 2.wav</ShortName>
+					<CachePath>SFX/woosh 2_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="897376006" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>retrohit_1hearts_1.wav</ShortName>
 					<CachePath>SFX/retrohit_1hearts_1_10C4C929.wem</CachePath>
@@ -150,7 +162,11 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="779278001" Name="Death" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="779278001" Name="Death" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3762137787" Id="2044049779" Name="Dead"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="1781417190" Name="Enemy_Attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3011204530" Name="Move" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3422541661" Name="Pause_Menu" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -212,6 +228,28 @@
 													<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3063529226"/>
 													<MediaRefs>
 														<MediaRef Id="650076509"/>
+													</MediaRefs>
+												</SwitchContainer>
+											</Children>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3762137787" Id="2044049779"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="3630029033" Id="0"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="Switch" GroupId="2398231425" Id="0"/>
+											<Children>
+												<SwitchContainer>
+													<SwitchValue GroupType="Switch" GroupId="1445037870" Id="0"/>
+													<MediaRefs>
+														<MediaRef Id="231310544"/>
+														<MediaRef Id="854177119"/>
 													</MediaRefs>
 												</SwitchContainer>
 											</Children>
@@ -284,6 +322,11 @@
 				</Event>
 				<Event Id="1114964412" Name="Start_Game" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4048499067" Name="Sync_DoubleTime" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="72084117"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2155888594" Name="Victory_Stinger" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
@@ -322,5 +365,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0819C09E-78CB-8566-23C5-0367E6CF08C7}</FileHash>
+	<FileHash>{53C8A84D-1C51-2C15-492A-698482A3F0DB}</FileHash>
 </SoundBanksInfo>
