@@ -17,6 +17,21 @@ public class CanvasScript : MonoBehaviour
         
     }
 
+    public void ClickStart()
+    {
+
+    }
+
+    public void HoverStart()
+    {
+
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
     public void MoveToScene(int sceneNum)
     {
         SceneManager.LoadScene(sceneNum);
