@@ -80,9 +80,11 @@ public class BulletDescription
     public float Height;
     public float FadeInDurationS;
     public float ActiveDurationS;
+    public ROTATION_DIRECTION RotationDirection;
+    public float RotationSpeed;
 
     public BulletDescription(BULLET_TYPE tag, Vector3 position, Quaternion rotation, float width = 1, float height = 1,
-         float activeDurationS = 5, float fadeInDurationS = 0)
+         float activeDurationS = 5, float fadeInDurationS = 0, ROTATION_DIRECTION rotationDirection = ROTATION_DIRECTION.None, float rotationSpeed = 0)
     {
         Tag = tag;
         Position = position;
@@ -91,5 +93,7 @@ public class BulletDescription
         Height = height;
         FadeInDurationS = fadeInDurationS;
         ActiveDurationS = activeDurationS;
+        RotationDirection = rotationDirection;
+        RotationSpeed = rotationSpeed;
     }
 }

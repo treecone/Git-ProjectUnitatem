@@ -6,6 +6,7 @@ public class BulletSpawner : MonoBehaviour
 {
     private BulletManager _bulletManager;
     private GameObject _player;
+    private GameObject _boss;
 
     private int _beatsElasped = 0;
 
@@ -14,6 +15,7 @@ public class BulletSpawner : MonoBehaviour
     {
         _bulletManager = BulletManager.instance;
         _player = GameObject.Find("Player");
+        _boss = GameObject.Find("Boss");
     }
 
     // Update is called once per frame
@@ -29,10 +31,11 @@ public class BulletSpawner : MonoBehaviour
         _bulletManager.SpawnFromPool(baseDescription);
         
         _beatsElasped++;
-        if (_beatsElasped > 5)
+        if (_beatsElasped > 3)
         {
-            // spawn
-            BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, GetRandomPosition(), GetRandomSnapRotation(Mathf.PI / 2), GetRandomBeamWidth(), GetRandomBeamHeight(), 1f, 2f);
+            // Spawn rotating beam
+            BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, _boss.transform.position, GetRandomSnapRotation(Mathf.PI / 8), 
+                50, 1.0f, 2f, 0.5f, (ROTATION_DIRECTION)Random.Range(0,2), Random.Range(0.2f, 1.2f));
             _bulletManager.SpawnFromPool(beamDescription);
             _beatsElasped = 0;
         }

@@ -8,6 +8,13 @@ public enum BULLET_TYPE
     Beam,
 }
 
+public enum ROTATION_DIRECTION
+{
+    CounterClockwise = 0,
+    Clockwise,
+    None,
+}
+
 public class BulletBase : MonoBehaviour
 {
     [Header("Bullet Attributes")]
