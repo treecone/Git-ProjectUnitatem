@@ -240,6 +240,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec67859b960e1d42bc54e1b1930c06b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  click:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9b700bcc57c938141a10b656b3a84a7c, type: 2}
+  hover:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7c0a970dfd9290f4ebd0c4063fa40e37, type: 2}
 --- !u!1 &121141333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3789,6 +3797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1649130681}
   - component: {fileID: 1649130680}
+  - component: {fileID: 1649130682}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -3836,6 +3845,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1649130682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649130679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b61090924bf4a347af1628da3062cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0e0989aae785a6c42974002c2bf48871, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1700193092
 GameObject:
   m_ObjectHideFlags: 0

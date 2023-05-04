@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class CanvasScript : MonoBehaviour
 {
+
+    public AK.Wwise.Event click;
+    public AK.Wwise.Event hover;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +23,13 @@ public class CanvasScript : MonoBehaviour
 
     public void ClickStart()
     {
+        click.Post(gameObject);
 
     }
 
     public void HoverStart()
     {
+        hover.Post(gameObject);
 
     }
 

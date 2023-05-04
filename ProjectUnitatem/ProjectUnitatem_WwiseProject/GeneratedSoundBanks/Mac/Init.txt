@@ -37,6 +37,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Effect plug-ins	ID	Name	Type				Notes
+	83649599	Meter (Custom)	Wwise Meter			
 	585875790	Compressor (Custom)	Wwise Compressor			
 	990475134	Meter (Custom)	Wwise Meter			
 

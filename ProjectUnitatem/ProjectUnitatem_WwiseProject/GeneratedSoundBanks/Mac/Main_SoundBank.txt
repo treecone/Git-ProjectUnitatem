@@ -1,15 +1,19 @@
 Event	ID	Name			Wwise Object Path	Notes
+	77222993	Play_BowShots			\Default Work Unit\Player\Play_BowShots	
 	452547817	Stop_All			\Default Work Unit\Game\Stop_All	
 	779278001	Death			\Default Work Unit\Game\Death	
 	1114964412	Start_Game			\Default Work Unit\Game\Start_Game	
+	1191913973	Play_BulletReflect			\Default Work Unit\Play_BulletReflect	
 	1277381556	Set_HighScore			\Default Work Unit\Switches\Set_HighScore	
 	1399716893	Set_ViolinSwitch			\Default Work Unit\Switches\Set_ViolinSwitch	
 	1452016848	Set_RegularScore			\Default Work Unit\Set_RegularScore	
 	1565052233	Resume_Game			\Default Work Unit\Game\Resume_Game	
 	1781417190	Enemy_Attack			\Default Work Unit\Boss\Enemy_Attack	
 	2155888594	Victory_Stinger			\Default Work Unit\Music\Victory_Stinger	
+	2159539604	Play_Hover_SFX			\Default Work Unit\Play_Hover_SFX	
 	2752533807	Play_TestSound			\Default Work Unit\Play_TestSound	
 	2824512041	Player_Attack			\Default Work Unit\Player\Player_Attack	
+	2995851202	Play_Click_SFX			\Default Work Unit\Play_Click_SFX	
 	3011204530	Move			\Default Work Unit\Player\Move	
 	3126765036	Play_BGM			\Default Work Unit\Music\Play_BGM	
 	3422541661	Pause_Menu			\Default Work Unit\Game\Pause_Menu	
@@ -48,18 +52,32 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	27547024	class_1hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\class_1hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Classical\class_1hearts_1		434664
 	72084117	LoD Landing	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\LoD Landing_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Empty Doubletime\DoubleTimeEmpty\LoD Landing		161212
 	90237330	class_2hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\class_2hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Classical\class_2hearts_1		178332
+	104139717	hover3	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\hover3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MainMenu\Click SFX\hover3		182928
+	161537859	050323 keyboard volley 1_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\050323 keyboard volley 1_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BulletReflect\BulletReflect\050323 keyboard volley 1_1		331872
+	221970478	bowshot3_amin	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\bowshot3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bowshots\BowShots\bowshot3_amin		682860
 	231310544	midtaiko	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\midtaiko_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Stingers\Death\midtaiko		355652
+	238069379	bowshot1_emin	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\bowshot1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bowshots\BowShots\bowshot1_emin		695460
+	265884621	bowshot2_gmaj	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\bowshot2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bowshots\BowShots\bowshot2_gmaj		685220
+	402164404	hover1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\hover1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MainMenu\Click SFX\hover1		185684
+	417742145	bowshot4_cmaj	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\bowshot4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bowshots\BowShots\bowshot4_cmaj		689944
 	523750168	retrohit_2hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\retrohit_2hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Retro\retrohit_2hearts_1		183848
 	540432875	retrohit_3hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\retrohit_3hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Retro\retrohit_3hearts_1		178332
 	645680326	guitar_topline_solo	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\guitar_topline_solo_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Guitar1\042723 bullet fuck guitar playlist 1\guitar_topline_solo		2772096
 	648207739	rock_3hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\rock_3hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Rock\rock_3hearts_1		112184
 	650076509	050123 bullet fuck classical wav	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\050123 bullet fuck classical wav fixed_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Classical1\050123 bullet fuck classical wav\050123 bullet fuck classical wav		6253808
+	652585428	050323 keyboard volley 3	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\050323 keyboard volley 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BulletReflect\BulletReflect\050323 keyboard volley 3		332896
 	655935024	guitar background 1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\042723 bullet fuck guitar playlist 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Guitar1\042723 bullet fuck guitar playlist 1\guitar background 1		3044668
 	663987526	rock_1hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\rock_1hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Rock\rock_1hearts_1		259184
 	672768681	class_3hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\class_3hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Classical\class_3hearts_1		193032
 	758842039	042823 bullet fuck 8-bit playlist 1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\042823 bullet fuck 8-bit playlist 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\8-Bit1\042823 bullet fuck 8-bit playlist 1\042823 bullet fuck 8-bit playlist 1		2838952
+	814883910	click1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\click1_3ECE4AF3.wem		\Actor-Mixer Hierarchy\Default Work Unit\MainMenu\Hover SFX\click1		36776
+	847368009	bowshot5_bmin	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\bowshot5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bowshots\BowShots\bowshot5_bmin		679708
 	854177119	woosh 2	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\woosh 2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Stingers\Death\woosh 2		180320
 	897376006	retrohit_1hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\retrohit_1hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Retro\retrohit_1hearts_1		353816
 	949661045	LoD Player hurt 3	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\LoD Player hurt 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\LoD Player hurt 3		192096
+	956999226	click2	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\click2_77A033A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\MainMenu\Hover SFX\click2		25772
+	959499746	050323 keyboard volley 2	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\050323 keyboard volley 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BulletReflect\BulletReflect\050323 keyboard volley 2		287840
+	971318488	click3	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\click3_9B3F279C.wem		\Actor-Mixer Hierarchy\Default Work Unit\MainMenu\Hover SFX\click3		31308
+	1003448498	hover2	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\hover2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MainMenu\Click SFX\hover2		185684
 	1058371040	rock_2hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Mac\SFX\rock_2hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Rock\rock_2hearts_1		259184
 
