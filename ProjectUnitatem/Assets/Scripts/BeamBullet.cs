@@ -12,15 +12,23 @@ public class BeamBullet : BulletBase
         
     }
 
-    public override void OnEnable()
+    public void OnEnable()
     {
-        base.OnEnable();
-        SetAlpha(0.5f);
-        _timeAliveS = 0;
-        // TODO: SL disable collision
+        if(Description == null)
+        {
+            return;
+        }
+
+        Init();
     }
 
-    public override void OnDisable()
+    protected override void Init()
+    {
+        base.Init();
+        SetAlpha(0.5f);
+    }
+
+    public void OnDisable()
     {
     }
 

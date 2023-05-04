@@ -31,14 +31,19 @@ public class BulletBase : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public virtual void OnEnable()
+    public void OnEnable()
     {
+        // Bullet has been created for pool so skip initialization
         if(Description == null)
         {
-            Debug.Log("Trying to initialize bullet but Description is null!");
             return;
         }
 
+        Init();
+    }
+
+    protected virtual void Init()
+    {
         // Set basic info
         _timeAliveS = 0;
         transform.position = Description.Position;
@@ -47,7 +52,7 @@ public class BulletBase : MonoBehaviour
         _spriteRenderer.size = new Vector2(Description.Width, Description.Height);
     }
 
-    public virtual void OnDisable()
+    public void OnDisable()
     {
 
     }
