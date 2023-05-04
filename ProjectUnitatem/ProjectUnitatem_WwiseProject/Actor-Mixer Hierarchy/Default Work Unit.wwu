@@ -848,6 +848,76 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="BulletReflect" ID="{E24BAD83-4BB7-4E70-A751-BA8E693F4D4C}" ShortID="22038112">
+					<ChildrenList>
+						<Sound Name="bullet_reflect1_cmaj" ID="{365AC2D9-6746-49B2-AFEC-868CA66DF2EA}" ShortID="615025420">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bullet_reflect1_cmaj" ID="{B6E90243-8FD7-449D-AD25-E4939CA0DEE5}">
+									<Language>SFX</Language>
+									<AudioFile>bullet_reflect1_cmaj.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="727767483"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bullet_reflect1_cmaj" ID="{B6E90243-8FD7-449D-AD25-E4939CA0DEE5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bullet_reflect2_emin" ID="{A0A6C961-4A89-4371-8D33-1AD76963259F}" ShortID="882231535">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bullet_reflect2_emin" ID="{49530F83-F324-48D9-AB10-1EAFFBDA32F5}">
+									<Language>SFX</Language>
+									<AudioFile>bullet_reflect2_emin.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="949847397"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bullet_reflect2_emin" ID="{49530F83-F324-48D9-AB10-1EAFFBDA32F5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bullet_reflect3_gmaj" ID="{91451B97-6A40-4122-98E4-1BA07D20F868}" ShortID="229112370">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bullet_reflect3_gmaj" ID="{F828EABD-4FB7-48A7-A095-CDC471AABBBB}">
+									<Language>SFX</Language>
+									<AudioFile>bullet_reflect3_gmaj.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="786624323"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bullet_reflect3_gmaj" ID="{F828EABD-4FB7-48A7-A095-CDC471AABBBB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
