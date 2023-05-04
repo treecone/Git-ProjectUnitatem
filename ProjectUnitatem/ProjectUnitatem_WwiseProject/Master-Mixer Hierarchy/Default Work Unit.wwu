@@ -113,7 +113,22 @@
 								</ObjectList>
 							</ObjectLists>
 						</Bus>
-						<Bus Name="Player Attack Bus" ID="{8EB25FE0-39C5-4494-BC2D-7BE0FAB09891}"/>
+						<Bus Name="Player Attack Bus" ID="{8EB25FE0-39C5-4494-BC2D-7BE0FAB09891}">
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Meter (Custom)" ID="{469A5018-E727-43CC-A34F-75686C00DAF3}" ShortID="83649599" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+											<PropertyList>
+												<Property Name="Max" Type="Real32" Value="6"/>
+											</PropertyList>
+											<PluginData>
+	<GameParameter Name="DamageSideChain" ID="{6DB8BDFF-4271-4E21-B084-9291544F4D89}"/>
+</PluginData>
+										</Effect>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+						</Bus>
 						<Bus Name="Transitions Bus" ID="{7CD1BB95-0D46-4E9D-8675-764E1A3C3595}"/>
 						<Bus Name="Enemy Attack Bus" ID="{84E9558D-0D2F-41F2-9B7C-EBBD13FC77B5}"/>
 						<Bus Name="UI Bus" ID="{207E6894-D2D7-47AC-AC92-8B8C0DA2D198}"/>

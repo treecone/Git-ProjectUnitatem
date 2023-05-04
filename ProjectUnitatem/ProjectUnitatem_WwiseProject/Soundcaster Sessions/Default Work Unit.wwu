@@ -18,6 +18,10 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="BowShots" ID="{502280D4-476B-4070-92EA-675CAA3E0F76}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Set_8BitSwitch" ID="{B1380AFA-CDEB-4CDF-AE12-3A1EC99711D8}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -46,12 +50,12 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Combat" ID="{853A9C2C-693A-40A7-9288-79A66CCCDC11}"/>
-						<CurrentStateRef Name="Alive" ID="{1C3578F9-B866-454F-956E-B7C9F0396A3A}"/>
+						<CurrentStateRef Name="Dead" ID="{2DCE219F-0AE4-4C20-BC0D-7F4082740EA9}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="HighScore" ID="{A31FC5AF-F5D5-4D21-B7DA-C4EB302637DF}"/>
-						<CurrentSwitchRef Name="Guitar" ID="{AD8DA46D-2702-45FF-ACD2-D927869AA1F8}"/>
-						<CurrentSwitchRef Name="Dead" ID="{DFAD55A9-A861-43C0-BA21-0B5D19674236}"/>
+						<CurrentSwitchRef Name="Regular" ID="{567AC318-B62F-49EA-B905-CCA54B0DE61B}"/>
+						<CurrentSwitchRef Name="Retro" ID="{F9F81909-6EE3-4B50-A834-118170878645}"/>
+						<CurrentSwitchRef Name="Two" ID="{9CE9C2B7-65D4-459C-8009-F33B72AD2FC1}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

@@ -35,6 +35,17 @@
 								<Action Name="" ID="{5AE1A331-9C0C-4EFF-B91F-C969FD42EFDB}" ShortID="1046114294"/>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_BowShots" ID="{889C049C-D018-41E7-A7F4-6F38DC746B39}">
+							<ChildrenList>
+								<Action Name="" ID="{9083B735-95D6-4C05-A8D7-61A1C5B09468}" ShortID="249201628">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BowShots" ID="{502280D4-476B-4070-92EA-675CAA3E0F76}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="States" ID="{AA0F0531-F39D-4AB1-A147-F1359A0E33A2}" ShortID="997330721"/>
@@ -236,6 +247,39 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Empty Doubletime" ID="{95018016-C5A9-46DF-B26A-3EC8D3EEEA85}" WorkUnitID="{AF475F4C-17BB-4EAB-AD40-531018188FE6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_BulletReflect" ID="{80574F86-CA40-4557-879D-C41DD2B1D43E}">
+					<ChildrenList>
+						<Action Name="" ID="{F8BDB50E-79B9-444B-A758-4B42A33F7D51}" ShortID="785546035">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BulletReflect" ID="{346D76DD-7505-4B06-8223-BEFE6E3EB4A6}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Click_SFX" ID="{B102876D-FBA5-472D-A78F-6F41941520DA}">
+					<ChildrenList>
+						<Action Name="" ID="{4A0636CA-5E92-45CD-A798-36268839F3F7}" ShortID="245143808">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Click SFX" ID="{A49DA056-58FD-4B8A-BAC0-D046641A1229}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Hover_SFX" ID="{F2FED8C3-2644-448E-83C9-56A6AE4179EA}">
+					<ChildrenList>
+						<Action Name="" ID="{9E6F63CD-CE50-4DF7-A9F6-2269FD5F385B}" ShortID="663878104">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hover SFX" ID="{D5458781-0178-4557-BD18-827B7938CA17}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

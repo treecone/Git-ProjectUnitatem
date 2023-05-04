@@ -7,11 +7,15 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Player" ID="{094FF139-03CF-405F-A401-59DC2A383081}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BGM" ID="{2C4FBA63-D781-4165-95EB-4BD30C81AD53}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BowShots" ID="{889C049C-D018-41E7-A7F4-6F38DC746B39}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music" ID="{4302AC74-468D-4314-8CA1-AB913552908B}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Switches" ID="{289EC00B-38DD-436B-AB37-FF3C1EE4177E}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Boss" ID="{2D280A7B-3811-43A8-ABFC-B7ADC31C0CA0}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Hover_SFX" ID="{F2FED8C3-2644-448E-83C9-56A6AE4179EA}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BulletReflect" ID="{80574F86-CA40-4557-879D-C41DD2B1D43E}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Set_RegularScore" ID="{B0A71147-6751-456C-8569-C99CEDDB01C3}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TestSound" ID="{6AA67608-8C33-4676-A8B1-C80EAB8DBB46}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Click_SFX" ID="{B102876D-FBA5-472D-A78F-6F41941520DA}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Sync_DoubleTime" ID="{501ED636-09FE-48EE-A4EC-F804F315909A}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Game" ID="{5D2925EA-958E-497D-87DB-C4DAF0460532}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Set_GuitarSwitch" ID="{9EFF149C-5404-499D-BCB5-55D923E2CE76}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
