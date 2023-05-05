@@ -1115,6 +1115,142 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="TimingSounds" ID="{2C74DA37-E2D8-49C4-A8FE-E501B446FF05}" ShortID="667485794">
+					<ChildrenList>
+						<Sound Name="8bitsword_time_1_cmaj" ID="{F24F0807-CD60-469E-8EC1-C6390244A3D4}" ShortID="169260839">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="8bitsword_time_1_cmaj" ID="{3A5D709A-C357-410F-B8CC-93118F5D40FD}">
+									<Language>SFX</Language>
+									<AudioFile>8bitsword_time_1_cmaj.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="748047733"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="8bitsword_time_1_cmaj" ID="{3A5D709A-C357-410F-B8CC-93118F5D40FD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="8bitsword_time_2_emin" ID="{891869F9-F002-47F0-9F42-936362B1C4D7}" ShortID="70053359">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="8bitsword_time_2_emin" ID="{F956EACA-43C1-4B40-9E65-9401FDFA05D5}">
+									<Language>SFX</Language>
+									<AudioFile>8bitsword_time_2_emin.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="101857992"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="8bitsword_time_2_emin" ID="{F956EACA-43C1-4B40-9E65-9401FDFA05D5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="8bitsword_time_3_gmaj" ID="{14175E99-4ED5-4757-9AF0-0E7BA0664B36}" ShortID="252426441">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="8bitsword_time_3_gmaj" ID="{24B19BE5-718A-4746-84B9-5FB275437C0D}">
+									<Language>SFX</Language>
+									<AudioFile>8bitsword_time_3_gmaj.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="405125683"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="8bitsword_time_3_gmaj" ID="{24B19BE5-718A-4746-84B9-5FB275437C0D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="8bitsword_time_4_amin" ID="{30FCD453-5EC6-4733-A253-E132F2652556}" ShortID="61334687">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="8bitsword_time_4_amin" ID="{2FA0D6F2-E327-40F2-A6B0-79D017D880B2}">
+									<Language>SFX</Language>
+									<AudioFile>8bitsword_time_4_amin.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="907514971"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="8bitsword_time_4_amin" ID="{2FA0D6F2-E327-40F2-A6B0-79D017D880B2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="8bitsword_time_5_dmaj" ID="{9EE45BAE-31D6-4B79-A587-EC91310DC028}" ShortID="356791290">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="8bitsword_time_5_dmaj" ID="{4A320780-281B-48F4-92D7-6A82D791D575}">
+									<Language>SFX</Language>
+									<AudioFile>8bitsword_time_5_dmaj.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="625917642"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="8bitsword_time_5_dmaj" ID="{4A320780-281B-48F4-92D7-6A82D791D575}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="8bitsword_time_6_bmin" ID="{8A7F875A-A8C5-459C-95D3-FB5FEC2006CE}" ShortID="919798458">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="8bitsword_time_6_bmin" ID="{E2C2CC18-FE3E-4CB9-9CF3-BA317F4CC005}">
+									<Language>SFX</Language>
+									<AudioFile>8bitsword_time_6_bmin.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="105547845"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="8bitsword_time_6_bmin" ID="{E2C2CC18-FE3E-4CB9-9CF3-BA317F4CC005}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
