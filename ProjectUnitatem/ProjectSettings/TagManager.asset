@@ -44,6 +44,9 @@ TagManager:
   - name: Shadow
     uniqueID: 1266331101
     locked: 0
+  - name: Boss
+    uniqueID: 1436152391
+    locked: 0
   - name: Bullets
     uniqueID: 1959645793
     locked: 0

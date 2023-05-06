@@ -62,6 +62,33 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability1"",
+                    ""type"": ""Button"",
+                    ""id"": ""3844935a-9525-49a3-b901-094ced114f74"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability2"",
+                    ""type"": ""Button"",
+                    ""id"": ""96ed6705-364b-41db-8858-3d69488cc3d0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability3"",
+                    ""type"": ""Button"",
+                    ""id"": ""0dffa03b-e13d-468d-b3a5-05bc73d6d652"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -306,6 +333,39 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
                     ""action"": ""UseAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4765d908-5211-477e-9934-f6d038db0ff7"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Ability1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ad838ab7-8b18-4924-a9a8-8fbb57556297"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Ability2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""904c450b-6128-4e35-9019-bfe180774548"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Ability3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -346,6 +406,9 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
         m_Player_ActionWheel = m_Player.FindAction("ActionWheel", throwIfNotFound: true);
         m_Player_ActionRotation = m_Player.FindAction("ActionRotation", throwIfNotFound: true);
         m_Player_UseAction = m_Player.FindAction("UseAction", throwIfNotFound: true);
+        m_Player_Ability1 = m_Player.FindAction("Ability1", throwIfNotFound: true);
+        m_Player_Ability2 = m_Player.FindAction("Ability2", throwIfNotFound: true);
+        m_Player_Ability3 = m_Player.FindAction("Ability3", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -411,6 +474,9 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_ActionWheel;
     private readonly InputAction m_Player_ActionRotation;
     private readonly InputAction m_Player_UseAction;
+    private readonly InputAction m_Player_Ability1;
+    private readonly InputAction m_Player_Ability2;
+    private readonly InputAction m_Player_Ability3;
     public struct PlayerActions
     {
         private @MainControls m_Wrapper;
@@ -419,6 +485,9 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
         public InputAction @ActionWheel => m_Wrapper.m_Player_ActionWheel;
         public InputAction @ActionRotation => m_Wrapper.m_Player_ActionRotation;
         public InputAction @UseAction => m_Wrapper.m_Player_UseAction;
+        public InputAction @Ability1 => m_Wrapper.m_Player_Ability1;
+        public InputAction @Ability2 => m_Wrapper.m_Player_Ability2;
+        public InputAction @Ability3 => m_Wrapper.m_Player_Ability3;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -440,6 +509,15 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
             @UseAction.started += instance.OnUseAction;
             @UseAction.performed += instance.OnUseAction;
             @UseAction.canceled += instance.OnUseAction;
+            @Ability1.started += instance.OnAbility1;
+            @Ability1.performed += instance.OnAbility1;
+            @Ability1.canceled += instance.OnAbility1;
+            @Ability2.started += instance.OnAbility2;
+            @Ability2.performed += instance.OnAbility2;
+            @Ability2.canceled += instance.OnAbility2;
+            @Ability3.started += instance.OnAbility3;
+            @Ability3.performed += instance.OnAbility3;
+            @Ability3.canceled += instance.OnAbility3;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -456,6 +534,15 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
             @UseAction.started -= instance.OnUseAction;
             @UseAction.performed -= instance.OnUseAction;
             @UseAction.canceled -= instance.OnUseAction;
+            @Ability1.started -= instance.OnAbility1;
+            @Ability1.performed -= instance.OnAbility1;
+            @Ability1.canceled -= instance.OnAbility1;
+            @Ability2.started -= instance.OnAbility2;
+            @Ability2.performed -= instance.OnAbility2;
+            @Ability2.canceled -= instance.OnAbility2;
+            @Ability3.started -= instance.OnAbility3;
+            @Ability3.performed -= instance.OnAbility3;
+            @Ability3.canceled -= instance.OnAbility3;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -497,5 +584,8 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
         void OnActionWheel(InputAction.CallbackContext context);
         void OnActionRotation(InputAction.CallbackContext context);
         void OnUseAction(InputAction.CallbackContext context);
+        void OnAbility1(InputAction.CallbackContext context);
+        void OnAbility2(InputAction.CallbackContext context);
+        void OnAbility3(InputAction.CallbackContext context);
     }
 }
