@@ -3,28 +3,6 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="LoD Player hurt 3" ID="{3609F6F7-FB0E-48C1-A4A5-52C439230693}" ShortID="312371987">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="LoD Player hurt 3" ID="{52B2C746-23DA-413E-B417-A494FD59DCB1}">
-							<Language>SFX</Language>
-							<AudioFile>LoD Player hurt 3.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="949661045"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="LoD Player hurt 3" ID="{52B2C746-23DA-413E-B417-A494FD59DCB1}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<SwitchContainer Name="Player Damage" ID="{FF58C0B3-F149-4A8E-B68C-2309DD256850}" ShortID="184355018">
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
