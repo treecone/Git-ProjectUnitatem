@@ -31,6 +31,7 @@ public class PlayerScript : MonoBehaviour
     private GameObject BGMManager;
     public Sprite[] sprites;
     private SpriteRenderer playerSprite;
+    private ParticleSystem dirtParticle;
 
     [Header("Player Abilities")]
     public int currentWeapon;
@@ -62,6 +63,7 @@ public class PlayerScript : MonoBehaviour
         BGMManager = GameObject.Find("BGM Manager");
         playerArm = gameObject.transform.Find("PlayerArmRoot").gameObject;
         playerSprite = transform.Find("PlayerSprite").gameObject.GetComponent<SpriteRenderer>();
+        dirtParticle = gameObject.transform.Find("Dirt").GetComponent<ParticleSystem>();
 
         //Input
         mainControls.Player.UseAction.started += UseAction_started;
