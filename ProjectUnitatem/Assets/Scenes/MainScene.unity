@@ -38996,12 +38996,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3952013287317311049, guid: 6d62ac0bc1fac6d4ebf04ccf15f686ae, type: 3}
     - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: IFrameLength
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
       propertyPath: hammerHitbox
       value: 
       objectReference: {fileID: 5331087853165810922, guid: 730ed6d22ebea2f48ab5c4502395e9c2, type: 3}
     - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: currentHealth
+      value: 541
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
       propertyPath: movementSpeed
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: timeBetweenBlinks
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
       propertyPath: sprites.Array.size

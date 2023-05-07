@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Build;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -20,6 +21,10 @@ public class PlayerScript : MonoBehaviour
     public float movementSpeed;
     public int currentHealth;
     public int score;
+    public float IFrameLength;
+    public bool invincible;
+    public float timeBetweenBlinks;
+    private float timeCounter;
 
     private Rigidbody2D rb;
     private GameObject mainCanvas;
@@ -93,6 +98,9 @@ public class PlayerScript : MonoBehaviour
 
     public void TakeDamage()
     {
+        if (invincible)
+            return; 
+
         currentHealth -= 1;
         if(currentHealth <= 0)
         {
@@ -100,6 +108,7 @@ public class PlayerScript : MonoBehaviour
         }
         healthRTPC.SetGlobalValue(currentHealth);
         playerDamage.Post(BGMManager);
+        StartCoroutine(PlayerIFrames(IFrameLength));
     }
 
     public void EquipWeapon0(InputAction.CallbackContext context) { currentWeapon = 0; WeaponSwitch1.Post(BGMManager); Debug.Log("Switched to 1"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(false); }
@@ -138,6 +147,17 @@ public class PlayerScript : MonoBehaviour
             playerArm.transform.rotation = Quaternion.Lerp(playerArm.transform.rotation, Quaternion.Euler(0, 0, GetRotationForAbilities()+180), 20 * Time.deltaTime);
         }
 
+        //Blinking for I frames
+        if(invincible)
+        {
+            timeCounter += Time.deltaTime;
+            if(timeCounter >= timeBetweenBlinks)
+            {
+                playerSprite.enabled = !playerSprite.enabled;
+                timeCounter = 0;
+            }
+        }
+
         #region Debugging
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -163,6 +183,14 @@ public class PlayerScript : MonoBehaviour
         yield return new WaitForSeconds(timeToWait);
         abilityLocks[abilityID] = false;
         Debug.Log("Cooldown unlocked for " + abilityID);
+    }
+
+    IEnumerator PlayerIFrames(float time)
+    {
+        invincible = true;
+        yield return new WaitForSeconds(time);
+        invincible = false;
+        playerSprite.enabled = true;
     }
 
     private void UseAction_started(InputAction.CallbackContext context)
@@ -231,9 +259,10 @@ public class PlayerScript : MonoBehaviour
     {
         Vector2 inputMovement = mainControls.Player.Movement.ReadValue<Vector2>();
 
-        rb.velocity = inputMovement * Time.deltaTime * movementSpeed;   
+        rb.velocity = inputMovement * Time.deltaTime * movementSpeed;
 
-        if(rb.velocity.x < 0)
+        #region SpriteRotation
+        if (rb.velocity.x < 0)
         {
             playerSprite.flipX = true;
         }
@@ -250,5 +279,6 @@ public class PlayerScript : MonoBehaviour
         {
             playerSprite.sprite = sprites[1];
         }
+        #endregion
     }
 }
