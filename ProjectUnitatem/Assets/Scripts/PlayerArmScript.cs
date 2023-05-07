@@ -25,6 +25,9 @@ public class PlayerArmScript : MonoBehaviour
             case (0):
                 gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 break;
+            case (1):
+                gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                break;
         }
     }
 }

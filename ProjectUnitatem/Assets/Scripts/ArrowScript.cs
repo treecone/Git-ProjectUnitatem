@@ -44,7 +44,7 @@ public class ArrowScript : MonoBehaviour
 
         float tangent = Mathf.Atan(slope);
 
-        childSprite.transform.rotation = Quaternion.Euler(0, 0, tangent * Mathf.Rad2Deg);
+        childSprite.transform.rotation = Quaternion.Euler(0, 0, (tangent * Mathf.Rad2Deg) + 90);
 
     }
 

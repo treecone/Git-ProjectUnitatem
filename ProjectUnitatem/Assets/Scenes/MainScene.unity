@@ -38777,7 +38777,7 @@ SpriteRenderer:
   m_SortingLayerID: 1273986391
   m_SortingLayer: 4
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: de0c61fae26a9ef4bb30c1aa17a02f5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 83f4e6c166553c04c93ee16046188a16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -39020,6 +39020,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: swordHammerSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
       propertyPath: abilityCooldowns.Array.data[0]
       value: 5
       objectReference: {fileID: 0}
@@ -39035,6 +39039,14 @@ PrefabInstance:
       propertyPath: deathEvent.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: d2835af2ec37a5241a9eb0b047a6d728, type: 2}
+    - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: swordHammerSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 83f4e6c166553c04c93ee16046188a16, type: 3}
+    - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: swordHammerSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 46cd9ee153b0bbe45a494a92cb92248f, type: 3}
     - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
       propertyPath: playerDamage.WwiseObjectReference
       value: 

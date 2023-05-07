@@ -25,13 +25,14 @@ public class PlayerScript : MonoBehaviour
     private GameObject mainCanvas;
     private GameObject BGMManager;
     public Sprite[] sprites;
-    public SpriteRenderer playerSprite;
+    private SpriteRenderer playerSprite;
 
     [Header("Player Abilities")]
     public int currentWeapon;
     private GameObject playerArm;
     public GameObject hammerHitbox;
     public GameObject arrowPrefab;
+    public Sprite[] swordHammerSprites; 
 
     public float[] abilityCooldowns;
 
@@ -172,21 +173,28 @@ public class PlayerScript : MonoBehaviour
         }
 
         float inputValue = context.ReadValue<float>();
-
+        Transform HitboxSpawnPoint = playerArm.transform.Find("HitboxSpawnPoint").transform;
 
         switch (currentWeapon)
         {
             case 0:
+                playerArm.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().sprite = swordHammerSprites[currentWeapon];
                 playerArm.transform.rotation = Quaternion.Euler(0, 0, GetRotationForAbilities());
                 playerArm.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
                 playerArm.transform.GetChild(0).GetComponent<Animator>().SetBool("SwingBool", !playerArm.transform.GetChild(0).GetComponent<Animator>().GetBool("SwingBool"));
-                Transform HitboxSpawnPoint = playerArm.transform.Find("HitboxSpawnPoint").transform;
                 GameObject hitBox = Instantiate(hammerHitbox, HitboxSpawnPoint.position, HitboxSpawnPoint.rotation);
                 hitBox.GetComponent<HitboxScript>().pScript = this;
                 hitBox.GetComponent<HitboxScript>().hitType = HITBOX_TYPE.SWORD;
                 break;
 
             case 1:
+                playerArm.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().sprite = swordHammerSprites[currentWeapon];
+                playerArm.transform.rotation = Quaternion.Euler(0, 0, GetRotationForAbilities());
+                playerArm.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
+                playerArm.transform.GetChild(0).GetComponent<Animator>().SetBool("SwingBool", !playerArm.transform.GetChild(0).GetComponent<Animator>().GetBool("SwingBool"));
+                GameObject hitBox2 = Instantiate(hammerHitbox, HitboxSpawnPoint.position, HitboxSpawnPoint.rotation);
+                hitBox2.GetComponent<HitboxScript>().pScript = this;
+                hitBox2.GetComponent<HitboxScript>().hitType = HITBOX_TYPE.AXE;
                 break;
 
             case 2:
