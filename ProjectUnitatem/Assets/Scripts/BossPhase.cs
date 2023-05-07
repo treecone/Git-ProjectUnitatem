@@ -14,6 +14,11 @@ public class BossPhase
         }
     }
 
+
+    public int GetNumMoves()
+    {
+        return _bossMoves.Count;
+    }
     public BossMoveDescription GetMove()
     {
         int random = Random.Range(0, _totalWeight);
