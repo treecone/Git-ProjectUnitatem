@@ -53,7 +53,7 @@
 						<CurrentStateRef Name="Dead" ID="{2DCE219F-0AE4-4C20-BC0D-7F4082740EA9}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Regular" ID="{567AC318-B62F-49EA-B905-CCA54B0DE61B}"/>
+						<CurrentSwitchRef Name="HighScore" ID="{A31FC5AF-F5D5-4D21-B7DA-C4EB302637DF}"/>
 						<CurrentSwitchRef Name="Guitar" ID="{AD8DA46D-2702-45FF-ACD2-D927869AA1F8}"/>
 						<CurrentSwitchRef Name="Two" ID="{9CE9C2B7-65D4-459C-8009-F33B72AD2FC1}"/>
 					</CurrentSwitchList>
