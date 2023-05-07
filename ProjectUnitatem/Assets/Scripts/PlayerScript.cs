@@ -25,11 +25,13 @@ public class PlayerScript : MonoBehaviour
     private GameObject mainCanvas;
     private GameObject BGMManager;
     public Sprite[] sprites;
+    public SpriteRenderer playerSprite;
 
     [Header("Player Abilities")]
     public int currentWeapon;
     private GameObject playerArm;
     public GameObject hammerHitbox;
+    public GameObject arrowPrefab;
 
     public float[] abilityCooldowns;
 
@@ -53,6 +55,7 @@ public class PlayerScript : MonoBehaviour
         mainCanvas = GameObject.Find("MainCanvas");
         BGMManager = GameObject.Find("BGM Manager");
         playerArm = gameObject.transform.Find("PlayerArmRoot").gameObject;
+        playerSprite = transform.Find("PlayerSprite").gameObject.GetComponent<SpriteRenderer>();
 
         //Input
         mainControls.Player.UseAction.started += UseAction_started;
@@ -76,9 +79,15 @@ public class PlayerScript : MonoBehaviour
     private void OnDisable()
     {
         mainControls.Disable();
-        mainControls.Player.Ability1.started -= EquipWeapon0;
-        mainControls.Player.Ability2.started -= EquipWeapon1;
-        mainControls.Player.Ability3.started -= EquipWeapon2;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.GetComponent<BulletBase>() != null)
+        {
+            Debug.Log("Taking Damage");
+            TakeDamage();
+        }
     }
 
     public void TakeDamage()
@@ -92,9 +101,9 @@ public class PlayerScript : MonoBehaviour
         playerDamage.Post(BGMManager);
     }
 
-    public void EquipWeapon0(InputAction.CallbackContext context) { currentWeapon = 0; WeaponSwitch1.Post(BGMManager); }
-    public void EquipWeapon1(InputAction.CallbackContext context) { currentWeapon = 1; WeaponSwitch2.Post(BGMManager); }
-    public void EquipWeapon2(InputAction.CallbackContext context) { currentWeapon = 2; WeaponSwitch3.Post(BGMManager); }
+    public void EquipWeapon0(InputAction.CallbackContext context) { currentWeapon = 0; WeaponSwitch1.Post(BGMManager); Debug.Log("Switched to 1"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(false); }
+    public void EquipWeapon1(InputAction.CallbackContext context) { currentWeapon = 1; WeaponSwitch2.Post(BGMManager); Debug.Log("Switched to 2"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(false); }
+    public void EquipWeapon2(InputAction.CallbackContext context) { currentWeapon = 2; WeaponSwitch3.Post(BGMManager); Debug.Log("Switched to 3"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(true); }
 
     #region Death
 
@@ -123,6 +132,11 @@ public class PlayerScript : MonoBehaviour
             b.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 400);
         }
 
+        if(currentWeapon == 2)
+        {
+            playerArm.transform.rotation = Quaternion.Lerp(playerArm.transform.rotation, Quaternion.Euler(0, 0, GetRotationForAbilities()+180), 20 * Time.deltaTime);
+        }
+
         #region Debugging
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -139,17 +153,6 @@ public class PlayerScript : MonoBehaviour
             setRegularScore.Post(BGMManager);
         }
         #endregion
-
-        //Sprite transition
-        Vector3 v = mainControls.Player.ActionRotation.ReadValue<Vector2>();
-        if(Camera.main.ScreenToWorldPoint(new Vector3(v.x, v.y, 0)).y > gameObject.transform.position.y)
-        {
-            gameObject.transform.Find("PlayerSprite").GetComponent<SpriteRenderer>().sprite = sprites[1];
-        }
-        else
-        {
-            gameObject.transform.Find("PlayerSprite").GetComponent<SpriteRenderer>().sprite = sprites[0];
-        }
     }
 
     IEnumerator AbilityCooldown(int abilityID, float timeToWait)
@@ -168,18 +171,15 @@ public class PlayerScript : MonoBehaviour
             return;
         }
 
-        playerArm.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
-        playerArm.transform.rotation = Quaternion.Euler(0, 0, GetRotationForAbilities());
         float inputValue = context.ReadValue<float>();
 
 
         switch (currentWeapon)
         {
             case 0:
-                if (inputValue > 0)
-                {
-                    playerArm.transform.GetChild(0).GetComponent<Animator>().SetBool("SwingBool", !playerArm.transform.GetChild(0).GetComponent<Animator>().GetBool("SwingBool"));
-                }
+                playerArm.transform.rotation = Quaternion.Euler(0, 0, GetRotationForAbilities());
+                playerArm.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
+                playerArm.transform.GetChild(0).GetComponent<Animator>().SetBool("SwingBool", !playerArm.transform.GetChild(0).GetComponent<Animator>().GetBool("SwingBool"));
                 Transform HitboxSpawnPoint = playerArm.transform.Find("HitboxSpawnPoint").transform;
                 GameObject hitBox = Instantiate(hammerHitbox, HitboxSpawnPoint.position, HitboxSpawnPoint.rotation);
                 hitBox.GetComponent<HitboxScript>().pScript = this;
@@ -190,6 +190,10 @@ public class PlayerScript : MonoBehaviour
                 break;
 
             case 2:
+                GameObject arrow = Instantiate(arrowPrefab, gameObject.transform.position, Quaternion.identity);
+                Vector2 v = mainControls.Player.ActionRotation.ReadValue<Vector2>();
+                arrow.GetComponent<ArrowScript>().teleportPlayer = true;
+                arrow.GetComponent<ArrowScript>().endPoint = Camera.main.ScreenToWorldPoint(v);
                 break;
         }
 
@@ -220,5 +224,23 @@ public class PlayerScript : MonoBehaviour
         Vector2 inputMovement = mainControls.Player.Movement.ReadValue<Vector2>();
 
         rb.velocity = inputMovement * Time.deltaTime * movementSpeed;   
+
+        if(rb.velocity.x < 0)
+        {
+            playerSprite.flipX = true;
+        }
+        else if (rb.velocity.x > 0)
+        {
+            playerSprite.flipX = false;
+        }
+
+        if(rb.velocity.y < 0)
+        {
+            playerSprite.sprite = sprites[0];
+        }
+        else if(rb.velocity.y > 0)
+        {
+            playerSprite.sprite = sprites[1];
+        }
     }
 }

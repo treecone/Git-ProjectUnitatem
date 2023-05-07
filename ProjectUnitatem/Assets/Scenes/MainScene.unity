@@ -266,8 +266,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331662337}
   m_LocalRotation: {x: -0, y: -0, z: -0.99909586, w: 0.04251487}
-  m_LocalPosition: {x: 19.512383, y: 38.812412, z: -267.69357}
-  m_LocalScale: {x: 5.3475204, y: 5.3475204, z: 5.347521}
+  m_LocalPosition: {x: 21.31, y: 38.812412, z: -267.69357}
+  m_LocalScale: {x: 4.342775, y: 5.3475204, z: 5.347521}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391842995}
@@ -304,6 +304,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1372784128}
+  - {fileID: 642567512}
   m_Father: {fileID: 786745857}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37962,6 +37963,90 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &642567511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 642567512}
+  - component: {fileID: 642567513}
+  m_Layer: 0
+  m_Name: BowSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &642567512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642567511}
+  m_LocalRotation: {x: -0, y: -0, z: -0.086819865, w: 0.99622405}
+  m_LocalPosition: {x: 0.31, y: 0.24, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 369943303}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.961}
+--- !u!212 &642567513
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642567511}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1273986391
+  m_SortingLayer: 4
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: f93e7e330c84a74458812e1b50287f1c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &780543149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38143,8 +38228,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889468089}
   m_LocalRotation: {x: -0, y: -0, z: -0.70817673, w: 0.70603526}
-  m_LocalPosition: {x: -10.627616, y: 63.152412, z: -267.69357}
-  m_LocalScale: {x: 4.6514826, y: -7.854958, z: 4.6514826}
+  m_LocalPosition: {x: -10.627616, y: 65.79, z: -267.69357}
+  m_LocalScale: {x: 2.5565476, y: -7.854958, z: 4.6514826}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391842995}
@@ -38463,7 +38548,7 @@ Transform:
   m_GameObject: {fileID: 1163097609}
   m_LocalRotation: {x: -0, y: -0, z: 0.7298651, w: 0.68359125}
   m_LocalPosition: {x: -18.697617, y: -4.827591, z: -267.69357}
-  m_LocalScale: {x: 1.956612, y: 4.5708995, z: 4.5709}
+  m_LocalScale: {x: 1.4260962, y: 4.5708995, z: 4.5709}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391842995}
@@ -38630,7 +38715,7 @@ GameObject:
   - component: {fileID: 1372784128}
   - component: {fileID: 1372784129}
   m_Layer: 0
-  m_Name: TempHammerSprite
+  m_Name: HammerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38907,6 +38992,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 3952013287317311049, guid: 6d62ac0bc1fac6d4ebf04ccf15f686ae, type: 3}
+    - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
       propertyPath: hammerHitbox
       value: 
       objectReference: {fileID: 5331087853165810922, guid: 730ed6d22ebea2f48ab5c4502395e9c2, type: 3}
@@ -38942,6 +39031,22 @@ PrefabInstance:
       propertyPath: abilityCooldowns.Array.data[2]
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: deathEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: d2835af2ec37a5241a9eb0b047a6d728, type: 2}
+    - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: playerDamage.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 336542f1dfe4ca0438933931ae07bbdb, type: 2}
+    - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: highScoreEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 07a203f8746bd0444bbb80c72c74d543, type: 2}
+    - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: setRegularScore.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7179c8ed3f6a7614383e42a363007075, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
