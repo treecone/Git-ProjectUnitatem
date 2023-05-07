@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestTile
+  m_Name: TempleTiles_1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 3ada3eb754a90634a901f34c599fc71d, type: 3}
+  m_Sprite: {fileID: 1369392911, guid: 646adea58b74b94459d7787fc868a828, type: 3}
   m_Color: {r: 0.4716981, g: 0.46762332, b: 0.42942327, a: 1}
   m_Transform:
     e00: 1

@@ -48,8 +48,9 @@ public class BulletSpawner : MonoBehaviour
         int mod = _plopBeatCounter % _plopPeriod;
         if (mod == 0)
         {
+            float numSlices = 10.0f;
             float radius = 11.0f;
-            float angle = Mathf.PI * 2 * (_plopBeatCounter % (_plopPeriod * 6)) / (_plopPeriod * 6.0f);
+            float angle = Mathf.PI * 2 * (_plopBeatCounter % (_plopPeriod * numSlices)) / (_plopPeriod * numSlices);
             Vector3 bossPosition = _boss.transform.position;
             BulletDescription plopDescription = new BulletDescription(BULLET_TYPE.Plop, 
                 bossPosition + (radius * new Vector3(Mathf.Cos(angle), Mathf.Sin(angle))),
