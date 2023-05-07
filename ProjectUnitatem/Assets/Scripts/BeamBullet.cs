@@ -25,6 +25,7 @@ public class BeamBullet : BulletBase
     protected override void Init()
     {
         _timeAliveS = 0;
+        _collisionEnabled = false;
         // Set pivot to desired position
         transform.position = Description.Position;
         // Move child so the pivot is at the end
@@ -39,6 +40,14 @@ public class BeamBullet : BulletBase
 
     public void OnDisable()
     {
+        if (Description == null)
+        {
+            return;
+        }
+        Transform child = transform.GetChild(0);
+        child.position = Vector3.zero;
+        _spriteRenderer.size = new Vector2(1,1);
+        transform.rotation = Quaternion.identity;
     }
 
     // Update is called once per frame

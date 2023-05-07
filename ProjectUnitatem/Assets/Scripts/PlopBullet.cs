@@ -17,6 +17,7 @@ public class PlopBullet : BulletBase
         base.Init();
         SetAlpha(0.25f);
         transform.localScale = Vector3.one * Description.StartScale;
+        _collisionEnabled = false;
     }
 
     // Update is called once per frame
