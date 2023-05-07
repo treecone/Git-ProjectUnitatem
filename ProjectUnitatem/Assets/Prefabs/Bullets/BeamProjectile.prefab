@@ -31,7 +31,7 @@ Transform:
   m_Children:
   - {fileID: 3926575737695889494}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5396968113811110484
 MonoBehaviour:
@@ -101,7 +101,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ece7a2c5777760f41babb64668419f82, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -120,9 +120,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1959645793
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 72351386574956c40b610e849f5ef507, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 84ac0af8c8b3dd94ba736d3629a53653, type: 3}
   m_Color: {r: 1, g: 0.7944628, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
