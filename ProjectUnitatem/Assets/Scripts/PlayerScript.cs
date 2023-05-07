@@ -51,8 +51,8 @@ public class PlayerScript : MonoBehaviour
     public AK.Wwise.RTPC healthRTPC;
     public AK.Wwise.Event highScoreEvent;
     public AK.Wwise.Event playerDamage;
-    public AK.Wwise.Event deathEvent;
     public AK.Wwise.Event setRegularScore;
+    public GameObject deathEventObj;
     
 
     // Start is called before the first frame update
@@ -122,15 +122,9 @@ public class PlayerScript : MonoBehaviour
     //Call wise event to look for end of beat
     private void Death()
     {
-       // deathEvent.Post(BGMManager);
+       Instantiate(deathEventObj);
     }
 
-    //Actual death function, called from wise when beat ends
-    public void WiseDeath()
-    {
-        GameObject.Find("Main Camera").GetComponent<MainCameraScript>().cameraZoom = 4;
-        mainCanvas.transform.Find("DeathPanel").gameObject.SetActive(true);
-    }
 
     #endregion
 

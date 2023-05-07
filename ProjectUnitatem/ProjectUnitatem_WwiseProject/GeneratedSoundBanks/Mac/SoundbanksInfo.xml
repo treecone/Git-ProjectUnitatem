@@ -95,7 +95,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{C4D9494E-D4D2-2296-768B-7F86091207E6}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{037C4D14-1B15-27D9-BF26-B479244E1089}">
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<Media>
@@ -135,6 +135,10 @@
 					<ShortName>bowshot2.wav</ShortName>
 					<CachePath>SFX/bowshot2_10C4C929.wem</CachePath>
 				</File>
+				<File Id="330616110" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>050323 mozarella sticks.wav</ShortName>
+					<CachePath>SFX/050323 mozarella sticks_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="402164404" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hover1.wav</ShortName>
 					<CachePath>SFX/hover1_10C4C929.wem</CachePath>
@@ -151,25 +155,13 @@
 					<ShortName>retrohit_3hearts_1.wav</ShortName>
 					<CachePath>SFX/retrohit_3hearts_1_10C4C929.wem</CachePath>
 				</File>
-				<File Id="645680326" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>guitar_topline_solo.wav</ShortName>
-					<CachePath>SFX/guitar_topline_solo_D79FB2B7.wem</CachePath>
-				</File>
 				<File Id="648207739" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rock_3hearts_1.wav</ShortName>
 					<CachePath>SFX/rock_3hearts_1_10C4C929.wem</CachePath>
 				</File>
-				<File Id="650076509" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>050123 bullet fuck classical wav fixed.wav</ShortName>
-					<CachePath>SFX/050123 bullet fuck classical wav fixed_D79FB2B7.wem</CachePath>
-				</File>
 				<File Id="652585428" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>050323 keyboard volley 3.wav</ShortName>
 					<CachePath>SFX/050323 keyboard volley 3_10C4C929.wem</CachePath>
-				</File>
-				<File Id="655935024" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>042723 bullet fuck guitar playlist 1.wav</ShortName>
-					<CachePath>SFX/042723 bullet fuck guitar playlist 1_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="663987526" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rock_1hearts_1.wav</ShortName>
@@ -179,9 +171,9 @@
 					<ShortName>class_3hearts_1.wav</ShortName>
 					<CachePath>SFX/class_3hearts_1_10C4C929.wem</CachePath>
 				</File>
-				<File Id="758842039" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>042823 bullet fuck 8-bit playlist 1.wav</ShortName>
-					<CachePath>SFX/042823 bullet fuck 8-bit playlist 1_D79FB2B7.wem</CachePath>
+				<File Id="810500137" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>050323 8bit base version.wav</ShortName>
+					<CachePath>SFX/050323 8bit base version_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="814883910" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>click1.wav</ShortName>
@@ -199,10 +191,6 @@
 					<ShortName>retrohit_1hearts_1.wav</ShortName>
 					<CachePath>SFX/retrohit_1hearts_1_10C4C929.wem</CachePath>
 				</File>
-				<File Id="949661045" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>LoD Player hurt 3.wav</ShortName>
-					<CachePath>SFX/LoD Player hurt 3_10C4C929.wem</CachePath>
-				</File>
 				<File Id="956999226" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>click2.wav</ShortName>
 					<CachePath>SFX/click2_77A033A2.wem</CachePath>
@@ -210,6 +198,10 @@
 				<File Id="959499746" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>050323 keyboard volley 2.wav</ShortName>
 					<CachePath>SFX/050323 keyboard volley 2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="960057662" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>050723 classical bullet.wav</ShortName>
+					<CachePath>SFX/050723 classical bullet_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="971318488" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>click3.wav</ShortName>
@@ -247,8 +239,7 @@
 												<SwitchContainer>
 													<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3232836819"/>
 													<MediaRefs>
-														<MediaRef Id="645680326"/>
-														<MediaRef Id="655935024"/>
+														<MediaRef Id="330616110"/>
 													</MediaRefs>
 												</SwitchContainer>
 											</Children>
@@ -269,7 +260,7 @@
 												<SwitchContainer>
 													<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3496907731"/>
 													<MediaRefs>
-														<MediaRef Id="758842039"/>
+														<MediaRef Id="810500137"/>
 													</MediaRefs>
 												</SwitchContainer>
 											</Children>
@@ -290,7 +281,7 @@
 												<SwitchContainer>
 													<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3063529226"/>
 													<MediaRefs>
-														<MediaRef Id="650076509"/>
+														<MediaRef Id="960057662"/>
 													</MediaRefs>
 												</SwitchContainer>
 											</Children>
@@ -381,11 +372,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="2752533807" Name="Play_TestSound" DurationType="OneShot" DurationMin="1" DurationMax="1">
-					<MediaRefs>
-						<MediaRef Id="949661045"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="2752533807" Name="Play_TestSound" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2824512041" Name="Player_Attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1565052233" Name="Resume_Game" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3901001571" Name="Set_8BitSwitch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
@@ -458,5 +445,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3D3CAEDC-5B48-3BBB-379C-061D9665B7C6}</FileHash>
+	<FileHash>{725550B2-1A6E-D270-B096-766C4DAB4603}</FileHash>
 </SoundBanksInfo>
