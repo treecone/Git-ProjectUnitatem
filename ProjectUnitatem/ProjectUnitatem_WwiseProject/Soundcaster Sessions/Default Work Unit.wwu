@@ -41,7 +41,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Player_Health" ID="{56F5E44D-B494-4A70-990C-61721C32999B}"/>
-							<Value>0</Value>
+							<Value>3</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DamageSideChain" ID="{6DB8BDFF-4271-4E21-B084-9291544F4D89}"/>
@@ -54,7 +54,7 @@
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Regular" ID="{567AC318-B62F-49EA-B905-CCA54B0DE61B}"/>
-						<CurrentSwitchRef Name="Retro" ID="{F9F81909-6EE3-4B50-A834-118170878645}"/>
+						<CurrentSwitchRef Name="Guitar" ID="{AD8DA46D-2702-45FF-ACD2-D927869AA1F8}"/>
 						<CurrentSwitchRef Name="Two" ID="{9CE9C2B7-65D4-459C-8009-F33B72AD2FC1}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

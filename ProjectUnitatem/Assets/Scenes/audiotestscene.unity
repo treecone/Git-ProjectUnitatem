@@ -308,6 +308,10 @@ PrefabInstance:
       propertyPath: highScoreEvent.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 07a203f8746bd0444bbb80c72c74d543, type: 2}
+    - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: setRegularScore.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7179c8ed3f6a7614383e42a363007075, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
