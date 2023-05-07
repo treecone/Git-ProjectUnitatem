@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: grass_tileset_16x16_0
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: -573260286, guid: 5aa0c90495e01b4469c7bf76d15ec1ab, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6481031, g: 0.6084906, b: 1, a: 1}
   m_Transform:
     e00: 1
     e01: 0
