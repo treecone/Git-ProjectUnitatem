@@ -62,10 +62,4 @@ public class BeamBullet : BulletBase
            gameObject.transform.Rotate(new Vector3(0, 0, Time.deltaTime * 60 * Description.RotationSpeed * (Description.RotationDirection == ROTATION_DIRECTION.CounterClockwise ? 1 : -1)));
         }
     }
-
-    private void SetAlpha(float alpha)
-    {
-        Color color = _spriteRenderer.color;
-        _spriteRenderer.color = new Color(color.r, color.g, color.b, alpha);
-    }
 }

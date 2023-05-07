@@ -6,6 +6,7 @@ public enum BULLET_TYPE
 {
     Base = 0,
     Beam,
+    Plop,
 }
 
 public enum ROTATION_DIRECTION
@@ -73,5 +74,11 @@ public class BulletBase : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+
+    protected void SetAlpha(float alpha)
+    {
+        Color color = _spriteRenderer.color;
+        _spriteRenderer.color = new Color(color.r, color.g, color.b, alpha);
     }
 }

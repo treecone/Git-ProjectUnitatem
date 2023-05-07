@@ -8,7 +8,10 @@ public class BulletSpawner : MonoBehaviour
     private GameObject _player;
     private GameObject _boss;
 
-    private int _beatsElasped = 0;
+    private int _beamBeatCounter = 0;
+    private int _plopBeatCounter = 0;
+    // How many beats must elapse for a new plop
+    private int _plopPeriod = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -30,14 +33,28 @@ public class BulletSpawner : MonoBehaviour
         BulletDescription baseDescription = new BulletDescription(BULLET_TYPE.Base, gameObject.transform.position, Quaternion.Euler(0, 0, GetZRotationTowardsObj(_player)));
         _bulletManager.SpawnFromPool(baseDescription);
         
-        _beatsElasped++;
-        if (_beatsElasped > 3)
+        _beamBeatCounter++;
+        if (_beamBeatCounter > 3)
         {
             // Spawn rotating beam
             BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, _boss.transform.position, GetRandomSnapRotation(Mathf.PI / 8), 
                 50, 1.0f, 2f, 0.5f, (ROTATION_DIRECTION)Random.Range(0,2), Random.Range(0.2f, 1.2f));
             _bulletManager.SpawnFromPool(beamDescription);
-            _beatsElasped = 0;
+            _beamBeatCounter = 0;
+        }
+
+        _plopBeatCounter++;
+
+        int mod = _plopBeatCounter % _plopPeriod;
+        if (mod == 0)
+        {
+            float radius = 11.0f;
+            float angle = Mathf.PI * 2 * (_plopBeatCounter % (_plopPeriod * 6)) / (_plopPeriod * 6.0f);
+            Vector3 bossPosition = _boss.transform.position;
+            BulletDescription plopDescription = new BulletDescription(BULLET_TYPE.Plop, 
+                bossPosition + (radius * new Vector3(Mathf.Cos(angle), Mathf.Sin(angle))),
+                Quaternion.identity, 5.0f, 5.0f, 1.0f, 0.5f, startScale: 3.0f, endScale: 10.0f);
+            _bulletManager.SpawnFromPool(plopDescription);
         }
     }
 

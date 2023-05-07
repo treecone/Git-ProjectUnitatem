@@ -120,7 +120,7 @@ public class PlayerScript : MonoBehaviour
     //Call wise event to look for end of beat
     private void Death()
     {
-        deathEvent.Post(BGMManager);
+       // deathEvent.Post(BGMManager);
     }
 
     //Actual death function, called from wise when beat ends
