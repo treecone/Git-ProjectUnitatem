@@ -35,14 +35,17 @@ public class HitboxScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        BulletBase bBase = collision.gameObject.GetComponent<BulletBase>();
-        if (bBase != null)
+        if (collision.tag == "Bullet")
         {
-            switch(hitType)
+            switch (hitType)
             {
                 case HITBOX_TYPE.SWORD:
                     {
-                        bBase.Description.Speed *= 2;
+                        BulletBase bBase = collision.gameObject.GetComponent<BulletBase>();
+                        if (bBase != null)
+                        {
+                            bBase.Description.Speed *= 2;
+                        }
                         collision.transform.rotation = Quaternion.Euler(0, 0, pScript.GetRotationForAbilities());
                         Destroy(gameObject);
                         break;
