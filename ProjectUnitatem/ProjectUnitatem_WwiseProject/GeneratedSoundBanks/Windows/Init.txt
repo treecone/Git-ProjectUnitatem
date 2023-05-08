@@ -38,7 +38,6 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	83649599	Meter (Custom)	Wwise Meter			
-	585875790	Compressor (Custom)	Wwise Compressor			
 	990475134	Meter (Custom)	Wwise Meter			
 
 Audio Devices	ID	Name	Type				Notes

@@ -36,21 +36,29 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="DamageToBoss" ID="{92035F73-122A-423B-B073-23AC68BA4B10}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="BGM_Controller" ID="{AF6F93AD-7946-44FF-BBFD-CE28BDE5B961}"/>
 							<Value>92.5355450236967</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="Distortion" ID="{5E5161C6-0A89-49F5-9A28-B8C07D43F677}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="Player_Health" ID="{56F5E44D-B494-4A70-990C-61721C32999B}"/>
-							<Value>3</Value>
+							<Value>1.09</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DamageSideChain" ID="{6DB8BDFF-4271-4E21-B084-9291544F4D89}"/>
-							<Value>0</Value>
+							<Value>-48</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Combat" ID="{853A9C2C-693A-40A7-9288-79A66CCCDC11}"/>
-						<CurrentStateRef Name="Dead" ID="{2DCE219F-0AE4-4C20-BC0D-7F4082740EA9}"/>
+						<CurrentStateRef Name="Alive" ID="{1C3578F9-B866-454F-956E-B7C9F0396A3A}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="HighScore" ID="{A31FC5AF-F5D5-4D21-B7DA-C4EB302637DF}"/>
