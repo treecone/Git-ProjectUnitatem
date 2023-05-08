@@ -24,14 +24,14 @@ public class BossPhaseManager : MonoBehaviour
         _bossPhases[0] = new BossPhase(
             new List<BossMoveDescription>()
             {
-                new BossMoveDescription(Move_ShootInSpiral, 1),
+                //new BossMoveDescription(Move_ShootInSpiral, 1),
                 new BossMoveDescription(Move_CrossFireBeams, 1),
-                new BossMoveDescription(Move_CircularBlast, 1),
-                new BossMoveDescription(MOVE_BlowUpOnPlayer, 1),
-                new BossMoveDescription(Move_SpawnFragmentingCirclesAroundBoss, 1),
-                new BossMoveDescription(Move_RadialBulletsPattern1, 1),
-                new BossMoveDescription(Move_RadialBulletsPattern2, 1),
-                new BossMoveDescription(Move_RadialBulletsPattern3, 1),
+                //new BossMoveDescription(Move_CircularBlast, 1),
+                //new BossMoveDescription(MOVE_BlowUpOnPlayer, 1),
+                //new BossMoveDescription(Move_SpawnFragmentingCirclesAroundBoss, 1),
+                //new BossMoveDescription(Move_RadialBulletsPattern1, 1),
+                //new BossMoveDescription(Move_RadialBulletsPattern2, 1),
+                //new BossMoveDescription(Move_RadialBulletsPattern3, 1),
             }
         );
 

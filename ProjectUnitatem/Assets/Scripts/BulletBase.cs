@@ -20,23 +20,12 @@ public class BulletBase : MonoBehaviour
 {
     [Header("Bullet Attributes")]
     public float damage;
-    [SerializeField] private BULLET_TYPE type;
 
-    private float timeCounter;
     protected SpriteRenderer _spriteRenderer;
 
     public BulletDescription Description;
 
-    protected Rigidbody2D rigidBody;
-
     protected float _timeAliveS = 0;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        rigidBody = GetComponent<Rigidbody2D>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-    }
 
     public void OnEnable()
     {

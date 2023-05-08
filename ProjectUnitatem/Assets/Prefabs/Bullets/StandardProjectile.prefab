@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3393356023041857838}
   m_Layer: 0
   m_Name: StandardProjectile
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,9 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0128af524d85a343b225433886fb126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 15
   damage: 1
-  type: 0
 --- !u!50 &3207197224690347616
 Rigidbody2D:
   serializedVersion: 4
@@ -165,7 +163,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
