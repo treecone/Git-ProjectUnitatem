@@ -49,7 +49,6 @@ public class HitboxScript : MonoBehaviour
                             bBase.Hit = true;
                         }
                         collision.transform.rotation = Quaternion.Euler(0, 0, pScript.GetRotationForAbilities());
-                        Destroy(gameObject);
                         break;
                     }
 
@@ -57,7 +56,6 @@ public class HitboxScript : MonoBehaviour
                     {
                         Destroy(collision.gameObject);
                         Instantiate(breakingParticles, gameObject.transform.position, gameObject.transform.rotation);
-                        Destroy(gameObject);
                         break;
                     }
             }
