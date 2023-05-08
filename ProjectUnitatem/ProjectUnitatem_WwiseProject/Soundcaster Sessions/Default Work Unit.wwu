@@ -26,8 +26,16 @@
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="050723 evil bullet laugh2" ID="{6622C1CA-21BB-4A7F-AA2A-5AF57D1B5F2E}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Set_ViolinSwitch" ID="{4C357B8F-7CFD-40D9-BEBF-BC48C044892E}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}"/>
 							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Attack" ID="{D3A94977-4AC1-4A30-A2C8-EC8A1A8DB999}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}"/>
+							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Player Damage" ID="{FF58C0B3-F149-4A8E-B68C-2309DD256850}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>

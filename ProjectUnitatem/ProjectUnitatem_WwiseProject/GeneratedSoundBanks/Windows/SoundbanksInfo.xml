@@ -93,7 +93,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{6D80318F-5AC8-6577-4F50-ADC6CCC43B4A}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{95BEEF40-679C-BABD-6AA2-E4569A75319E}">
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<Media>
@@ -344,6 +344,9 @@
 							</Children>
 						</SwitchContainer>
 					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3762137787" Id="655265632" Name="Alive"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="77222993" Name="Play_BowShots" DurationType="OneShot" DurationMin="3.4840403" DurationMax="3.9419727">
 					<MediaRefs>
@@ -511,5 +514,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C1672D20-AE07-3BAD-E78A-0328F731FA69}</FileHash>
+	<FileHash>{3E3C3B94-60F0-F738-9B29-6F2DFD0233D3}</FileHash>
 </SoundBanksInfo>
