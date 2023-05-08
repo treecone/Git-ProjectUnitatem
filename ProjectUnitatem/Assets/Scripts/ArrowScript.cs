@@ -9,7 +9,11 @@ public class ArrowScript : MonoBehaviour
     public float height;
     float distance;
     float timeIncrementor;
+    private bool audioLock = false;
+    GameObject BGMManager;
     float time;
+
+    public AK.Wwise.Event landingEvent;
 
     public bool teleportPlayer;
     Rigidbody2D rb;
@@ -21,6 +25,8 @@ public class ArrowScript : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         childSprite = gameObject.transform.GetChild(0).gameObject;
         LaunchProjectile();
+        BGMManager = GameObject.Find("BGM Manager");
+
     }
 
     void LaunchProjectile ()
@@ -61,5 +67,6 @@ public class ArrowScript : MonoBehaviour
     void Landed ()
     {
         GameObject.Find("Player").transform.position = gameObject.transform.position;
+        landingEvent.Post(BGMManager);
     }
 }

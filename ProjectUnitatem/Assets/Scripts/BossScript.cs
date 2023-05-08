@@ -11,6 +11,11 @@ public class BossScript : MonoBehaviour
     bool tryToTransition;
     private GameObject player;
     public float phaseLength;
+    GameObject BGMManager;
+
+
+    public AK.Wwise.Event LaughingAudio;
+    public AK.Wwise.Event UCANTHURTME;
 
     bool start;
 
@@ -22,6 +27,8 @@ public class BossScript : MonoBehaviour
         BPM = GetComponent<BossPhaseManager>();
         BPM.SetInTransition(true);
         ChangeTheme(0);
+        BGMManager = GameObject.Find("BGM Manager");
+
     }
 
     // Update is called once per frame
@@ -29,8 +36,9 @@ public class BossScript : MonoBehaviour
     {
         if(start)
         {
-            if (Vector2.Distance(gameObject.transform.position, player.transform.position) < 10)
+            if (Vector2.Distance(gameObject.transform.position, player.transform.position) < 20)
             {
+                UCANTHURTME.Post(BGMManager);
                 start = false;
                 BPM.SetInTransition(false);
                 StartCoroutine("FirstPhase");
@@ -73,6 +81,8 @@ public class BossScript : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().Play("BossPoint");
             GameObject.Find("MainCanvas").GetComponent<CanvasScript>().CallTutorialPanel(newPhase);
+            player.GetComponent<PlayerScript>().RestoreHealth();
+            LaughingAudio.Post(BGMManager);
             StartCoroutine(Phase(newPhase));
         }
     }

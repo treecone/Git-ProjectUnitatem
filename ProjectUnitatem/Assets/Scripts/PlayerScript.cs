@@ -29,6 +29,7 @@ public class PlayerScript : MonoBehaviour
     public Sprite[] sprites;
     private SpriteRenderer playerSprite;
     private ParticleSystem dirtParticle;
+    public Image[] heartImage;
 
     [Header("Player Abilities")]
     public int currentWeapon;
@@ -100,10 +101,21 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    public void RestoreHealth()
+    {
+        currentHealth = 3;
+        foreach(Image h in heartImage)
+        {
+            h.enabled = true;
+        }
+    }
+
     public void TakeDamage()
     {
         if (invincible || dead)
-            return; 
+            return;
+
+        heartImage[currentHealth - 1].enabled = false;
 
         currentHealth -= 1;
         if(currentHealth <= 0)
@@ -134,10 +146,10 @@ public class PlayerScript : MonoBehaviour
     {
         foreach(Image i in abilityUI)
         {
-            i.rectTransform.anchoredPosition = new Vector2(i.rectTransform.anchoredPosition.x, -20);
+            i.rectTransform.anchoredPosition = new Vector2(i.rectTransform.anchoredPosition.x, -25);
         }
 
-        abilityUI[type].rectTransform.anchoredPosition = new Vector2(abilityUI[type].rectTransform.anchoredPosition.x, 10);
+        abilityUI[type].rectTransform.anchoredPosition = new Vector2(abilityUI[type].rectTransform.anchoredPosition.x, 25);
     }
 
     // Update is called once per frame

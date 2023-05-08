@@ -36,7 +36,7 @@ public class HitboxScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Bullet" && collision.GetComponent<BeamBullet>() == null)
+        if (collision.tag == "Bullet")
         {
             switch (hitType)
             {

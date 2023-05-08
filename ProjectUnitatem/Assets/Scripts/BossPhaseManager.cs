@@ -26,8 +26,8 @@ public class BossPhaseManager : MonoBehaviour
             new List<BossMoveDescription>()
             {
                 new BossMoveDescription(Move_ShootInSpiral, 1),
-                new BossMoveDescription(Move_CrossFireBeams, 1),
                 new BossMoveDescription(Move_HomingBullets, 1),
+                new BossMoveDescription(Move_RadialBulletsPattern1, 1),
             }
         );
         // Phase 2
@@ -142,7 +142,7 @@ public class BossPhaseManager : MonoBehaviour
                50, 1.0f, 1.0f, 0.5f, ROTATION_DIRECTION.CounterClockwise, .35f);
             _bulletManager.SpawnFromPool(beamDescription);
         }
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(1.5f);
         for (int i = 0; i < 4; i++)
         {
             BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, _boss.transform.position, Quaternion.Euler(0, 0, i * Mathf.PI / 2 * Mathf.Rad2Deg),
@@ -156,7 +156,7 @@ public class BossPhaseManager : MonoBehaviour
     public void Move_CircularBlast(BossMoveDescription desc)
     {
         float numSlices = 10.0f;
-        float radius = 11.0f;
+        float radius = 13.0f;
         for (int i = 0; i < numSlices; i++)
         {
             float angle = i * 2 * Mathf.PI / numSlices;
@@ -164,7 +164,7 @@ public class BossPhaseManager : MonoBehaviour
             BulletDescription plopDescription = new BulletDescription(BULLET_TYPE.Plop,
                 bossPosition + (radius * new Vector3(Mathf.Cos(angle), Mathf.Sin(angle))),
                 Quaternion.identity, 1.0f, 1.0f, 
-                activeDurationS: 1.5f, fadeInDurationS: 0.5f,
+                activeDurationS: 1.5f, fadeInDurationS: 0.8f,
                 startScale: 3.0f, endScale: 10.0f);
             _bulletManager.SpawnFromPool(plopDescription);
         }
@@ -243,7 +243,7 @@ public class BossPhaseManager : MonoBehaviour
             for(int i = 0; i < numSlices; i++)
             {
                 BulletDescription baseDescription = new BulletDescription(BULLET_TYPE.Base, _boss.transform.position, 
-                    Quaternion.Euler(0, 0, Mathf.Rad2Deg * ((angle) * i + offset)), speed: 5f);
+                    Quaternion.Euler(0, 0, Mathf.Rad2Deg * ((angle) * i + offset)), activeDurationS: 9f, speed: 5f);
                 _bulletManager.SpawnFromPool(baseDescription);
             }
             yield return new WaitForSeconds(0.75f);
@@ -269,7 +269,7 @@ public class BossPhaseManager : MonoBehaviour
             for (int i = 0; i < numSlices; i++)
             {
                 BulletDescription baseDescription = new BulletDescription(BULLET_TYPE.Base, _boss.transform.position,
-                    Quaternion.Euler(0, 0, Mathf.Rad2Deg * ((angle) * i + offset)), activeDurationS: 6.0f, speed: 5f);
+                    Quaternion.Euler(0, 0, Mathf.Rad2Deg * ((angle) * i + offset)), activeDurationS: 9.0f, speed: 5f);
                 _bulletManager.SpawnFromPool(baseDescription);
             }
             yield return new WaitForSeconds(0.25f);
@@ -295,7 +295,7 @@ public class BossPhaseManager : MonoBehaviour
             for (int i = 0; i < numSlices; i++)
             {
                 BulletDescription baseDescription = new BulletDescription(BULLET_TYPE.Base, _boss.transform.position,
-                    Quaternion.Euler(0, 0, Mathf.Rad2Deg * ((angle) * i + offset)), activeDurationS: 6.0f, speed: blasts % 2 == 1 ? 15f : 5f);
+                    Quaternion.Euler(0, 0, Mathf.Rad2Deg * ((angle) * i + offset)), activeDurationS: 9.0f, speed: blasts % 2 == 1 ? 15f : 5f);
                 _bulletManager.SpawnFromPool(baseDescription);
             }
             yield return new WaitForSeconds(0.25f);
@@ -399,12 +399,12 @@ public class BossPhaseManager : MonoBehaviour
         float angleToPlayer = GetZRotationTowardsObj(_player);
         float startAngle = angleToPlayer - (Mathf.PI / 4);
         float dAngle = Mathf.PI / (2 * numSlices);
-        float radius = 20.0f;
+        float radius = 40.0f;
         for(int i = 0; i < numSlices; i++)
         {
             float angle = startAngle + (dAngle * i);
-            BulletDescription baseDescription = new BulletDescription(BULLET_TYPE.Base, _boss.transform.position + radius * new Vector3(-Mathf.Cos(angle), -Mathf.Sin(angle)),
-                Quaternion.Euler(0, 0, angleToPlayer * Mathf.Rad2Deg), activeDurationS: 4.0f, speed: 9f, homing: true, playerRef: _player);
+            BulletDescription baseDescription = new BulletDescription(BULLET_TYPE.Base, _boss.transform.position + 1 * new Vector3(-Mathf.Cos(angle), -Mathf.Sin(angle)),
+                Quaternion.Euler(0, 0, angleToPlayer * Mathf.Rad2Deg), 3, 3, activeDurationS: 4.0f, speed: 9f, homing: true, playerRef: _player);
             _bulletManager.SpawnFromPool(baseDescription);
         }
         StartCoroutine(WaitAndMarkComplete(new object[] { 3.0f, desc }));
