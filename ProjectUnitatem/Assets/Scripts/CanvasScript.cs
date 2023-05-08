@@ -9,6 +9,8 @@ public class CanvasScript : MonoBehaviour
     public AK.Wwise.Event click;
     public AK.Wwise.Event hover;
 
+    public GameObject[] tutorialPanels; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,5 +43,17 @@ public class CanvasScript : MonoBehaviour
     public void MoveToScene(int sceneNum)
     {
         SceneManager.LoadScene(sceneNum);
+    }
+
+    public void CallTutorialPanel(int ID)
+    {
+        StartCoroutine(TutorialPanel(ID));
+    }
+
+    IEnumerator TutorialPanel(int panelID)
+    {
+        tutorialPanels[panelID].SetActive(true);
+        yield return new WaitForSeconds(5f);
+        tutorialPanels[panelID].SetActive(false);
     }
 }
