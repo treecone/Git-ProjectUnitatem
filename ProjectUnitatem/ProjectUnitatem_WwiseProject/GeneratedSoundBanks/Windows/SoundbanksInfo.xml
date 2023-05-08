@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E9807E0E-38ED-904B-A129-6A7DA6CA06D0}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2645B131-2EAC-5BA7-A407-93965BA9EDEE}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -40,6 +40,7 @@
 				</Bus>
 				<Bus Id="1664460283" Name="Enemy Attack Bus"/>
 				<Bus Id="1697111475" Name="BGM Bus"/>
+				<Bus Id="3170124113" Name="Voice"/>
 				<Bus Id="3600729941" Name="UI Bus"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
@@ -93,7 +94,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{123F33E7-7D34-742F-64E1-9B64E891C7D2}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{3AB122FE-C801-23EF-7E96-11B07CA5D35D}">
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<Media>
@@ -131,7 +132,7 @@
 				</File>
 				<File Id="164935982" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>050723 teleport.wav</ShortName>
-					<CachePath>SFX/050723 teleport_822D21DA.wem</CachePath>
+					<CachePath>SFX/050723 teleport_49FCFA78.wem</CachePath>
 				</File>
 				<File Id="221970478" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>bowshot3.wav</ShortName>
@@ -541,5 +542,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C015FABD-EDE7-3950-8E7B-F21842B73DFA}</FileHash>
+	<FileHash>{AEB0865B-B8F4-8E50-3F0A-F022A59ADDE1}</FileHash>
 </SoundBanksInfo>

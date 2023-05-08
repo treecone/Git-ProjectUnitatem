@@ -74,8 +74,8 @@
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="HighScore" ID="{A31FC5AF-F5D5-4D21-B7DA-C4EB302637DF}"/>
-						<CurrentSwitchRef Name="Violin" ID="{DA5C30DF-3D1C-4540-A104-48F02559CD6A}"/>
-						<CurrentSwitchRef Name="Two" ID="{9CE9C2B7-65D4-459C-8009-F33B72AD2FC1}"/>
+						<CurrentSwitchRef Name="Guitar" ID="{AD8DA46D-2702-45FF-ACD2-D927869AA1F8}"/>
+						<CurrentSwitchRef Name="One" ID="{E4F163D2-E9A2-42FF-AF7D-7CC7754FAFBA}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

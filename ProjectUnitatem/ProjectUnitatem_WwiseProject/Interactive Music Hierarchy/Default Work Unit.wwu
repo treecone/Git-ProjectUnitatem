@@ -748,6 +748,13 @@
 							</ChildrenList>
 						</Folder>
 						<MusicPlaylistContainer Name="Classical1" ID="{EB320EE1-31A1-49D6-BD03-FC689BD98A9A}" ShortID="313402070">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>

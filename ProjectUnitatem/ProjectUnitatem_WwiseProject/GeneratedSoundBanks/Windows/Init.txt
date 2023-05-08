@@ -33,6 +33,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	1578025756	Player Attack Bus			\Default Work Unit\Master Audio Bus\Player Attack Bus	
 	1664460283	Enemy Attack Bus			\Default Work Unit\Master Audio Bus\Enemy Attack Bus	
 	1697111475	BGM Bus			\Default Work Unit\Master Audio Bus\BGM Bus	
+	3170124113	Voice			\Default Work Unit\Master Audio Bus\Voice	
 	3600729941	UI Bus			\Default Work Unit\Master Audio Bus\UI Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 

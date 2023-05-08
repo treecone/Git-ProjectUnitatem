@@ -139,6 +139,7 @@ namespace AK
         static const AkUniqueID PLAYER_DAMAGE_BUS = 257282035U;
         static const AkUniqueID TRANSITIONS_BUS = 228317785U;
         static const AkUniqueID UI_BUS = 3600729941U;
+        static const AkUniqueID VOICE = 3170124113U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

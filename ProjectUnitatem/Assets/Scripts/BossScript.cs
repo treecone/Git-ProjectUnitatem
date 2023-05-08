@@ -16,6 +16,7 @@ public class BossScript : MonoBehaviour
 
     public AK.Wwise.Event LaughingAudio;
     public AK.Wwise.Event UCANTHURTME;
+    public AK.Wwise.Event stopEvent;
 
     bool start;
 
@@ -75,6 +76,7 @@ public class BossScript : MonoBehaviour
             //Win game!
             Debug.Log("------------------ Game win -----------------------------");
             SceneManager.LoadScene(2);
+            stopEvent.Post(BGMManager);
 
         }
         else
