@@ -93,7 +93,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{95BEEF40-679C-BABD-6AA2-E4569A75319E}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{123F33E7-7D34-742F-64E1-9B64E891C7D2}">
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<Media>
@@ -129,6 +129,10 @@
 					<ShortName>050323 keyboard volley 1_1.wav</ShortName>
 					<CachePath>SFX/050323 keyboard volley 1_1_10C4C929.wem</CachePath>
 				</File>
+				<File Id="164935982" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>050723 teleport.wav</ShortName>
+					<CachePath>SFX/050723 teleport_822D21DA.wem</CachePath>
+				</File>
 				<File Id="221970478" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>bowshot3.wav</ShortName>
 					<CachePath>SFX/bowshot3_10C4C929.wem</CachePath>
@@ -160,6 +164,10 @@
 				<File Id="417742145" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>bowshot4.wav</ShortName>
 					<CachePath>SFX/bowshot4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="479757779" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>050723 you cant hurt me.wav</ShortName>
+					<CachePath>SFX/050723 you cant hurt me_10C4C929.wem</CachePath>
 				</File>
 				<File Id="523750168" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>retrohit_2hearts_1.wav</ShortName>
@@ -208,6 +216,10 @@
 				<File Id="854177119" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>woosh 2.wav</ShortName>
 					<CachePath>SFX/woosh 2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="858642658" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>050723 evil bullet laugh2.wav</ShortName>
+					<CachePath>SFX/050723 evil bullet laugh2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="897376006" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>retrohit_1hearts_1.wav</ShortName>
@@ -371,6 +383,11 @@
 						<MediaRef Id="1003448498"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2542476594" Name="Play_evil_laugh" DurationType="OneShot" DurationMin="1.7414596" DurationMax="2.3245697">
+					<MediaRefs>
+						<MediaRef Id="858642658"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2159539604" Name="Play_Hover_SFX" DurationType="OneShot" DurationMin="0.07277477" DurationMax="0.10397004">
 					<MediaRefs>
 						<MediaRef Id="814883910"/>
@@ -411,7 +428,17 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="3785065891" Name="Play_teleport" DurationType="OneShot" DurationMin="1.1288255" DurationMax="1.1288255">
+					<MediaRefs>
+						<MediaRef Id="164935982"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2752533807" Name="Play_TestSound" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3039308865" Name="Play_you_cant_hurt_me" DurationType="OneShot" DurationMin="3.2853334" DurationMax="3.2853334">
+					<MediaRefs>
+						<MediaRef Id="479757779"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2824512041" Name="Player_Attack" DurationType="OneShot" DurationMin="1.3413334" DurationMax="3.9419727">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -514,5 +541,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3E3C3B94-60F0-F738-9B29-6F2DFD0233D3}</FileHash>
+	<FileHash>{C015FABD-EDE7-3950-8E7B-F21842B73DFA}</FileHash>
 </SoundBanksInfo>
