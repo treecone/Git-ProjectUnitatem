@@ -34,21 +34,35 @@ public class BossPhaseManager : MonoBehaviour
         _bossPhases[1] = new BossPhase(
             new List<BossMoveDescription>()
             {
-                new BossMoveDescription(Move_CircularBlast, 1),
-                new BossMoveDescription(MOVE_BlowUpOnPlayer, 1),
-                new BossMoveDescription(Move_BlockBreak, 1),
+                new BossMoveDescription(Move_ShootInSpiral, 1),
+                new BossMoveDescription(Move_CrossFireBeams, 1),
+                new BossMoveDescription(Move_HomingBullets, 1),
+
+                new BossMoveDescription(Move_CircularBlast, 2),
+                new BossMoveDescription(MOVE_BlowUpOnPlayer, 2),
+                new BossMoveDescription(Move_BlockBreak, 2),
             }
         );
         // Phase 3
         _bossPhases[2] = new BossPhase(
             new List<BossMoveDescription>()
             {
-                new BossMoveDescription(Move_SweepingBeam, 1),
-                new BossMoveDescription(Move_GridOfCircles, 1),
-                new BossMoveDescription(Move_SpawnFragmentingCirclesAroundBoss, 1),
-                new BossMoveDescription(Move_RadialBulletsPattern1, 1),
-                new BossMoveDescription(Move_RadialBulletsPattern2, 1),
-                new BossMoveDescription(Move_RadialBulletsPattern3, 1),
+                new BossMoveDescription(Move_ShootInSpiral, 1),
+                new BossMoveDescription(Move_CrossFireBeams, 1),
+                new BossMoveDescription(Move_HomingBullets, 1),
+
+
+                new BossMoveDescription(Move_CircularBlast, 1),
+                new BossMoveDescription(MOVE_BlowUpOnPlayer, 1),
+                new BossMoveDescription(Move_BlockBreak, 1),
+
+
+                new BossMoveDescription(Move_SweepingBeam, 2),
+                new BossMoveDescription(Move_GridOfCircles, 2),
+                new BossMoveDescription(Move_SpawnFragmentingCirclesAroundBoss, 2),
+                new BossMoveDescription(Move_RadialBulletsPattern1, 2),
+                new BossMoveDescription(Move_RadialBulletsPattern2, 2),
+                new BossMoveDescription(Move_RadialBulletsPattern3, 2),
             }
         );
 
@@ -125,7 +139,7 @@ public class BossPhaseManager : MonoBehaviour
         for(int i = 0; i < 4; i++)
         {
             BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, _boss.transform.position, Quaternion.Euler(0, 0, i * Mathf.PI / 2 * Mathf.Rad2Deg),
-               50, 1.0f, 1.0f, 0.5f, ROTATION_DIRECTION.CounterClockwise, .65f);
+               50, 1.0f, 1.0f, 0.5f, ROTATION_DIRECTION.CounterClockwise, .35f);
             _bulletManager.SpawnFromPool(beamDescription);
         }
         yield return new WaitForSeconds(1.0f);
@@ -313,7 +327,7 @@ public class BossPhaseManager : MonoBehaviour
         Vector2 position = new Vector2(random == 0 || random == 2 ? 0 : random == 1 ? 40 : -40,
                                        random == 1 || random == 3 ? 0 : random == 0 ? -30 : 30);
         BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, position, Quaternion.Euler(0, 0, angle),
-          width: 90, height: 1, activeDurationS: 7f, fadeInDurationS: 0, speed: 10);
+          width: 90, height: 1, activeDurationS: 3f, fadeInDurationS: 0, speed: 10);
         _bulletManager.SpawnFromPool(beamDescription);
         //for (int i = 0; i < 4; i++)
         //{

@@ -54,7 +54,7 @@ public class CanvasScript : MonoBehaviour
     {
         float a = 5;
         if (panelID == 0)
-            a = 10;
+            a = 15;
         tutorialPanels[panelID].SetActive(true);
         yield return new WaitForSeconds(a);
         tutorialPanels[panelID].SetActive(false);
