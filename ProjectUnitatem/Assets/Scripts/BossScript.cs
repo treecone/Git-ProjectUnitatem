@@ -54,9 +54,9 @@ public class BossScript : MonoBehaviour
 
     public void SetNewTransition()
     {
-        Debug.Log("------------------- NEW PHASE --------------------");
         tryToTransition = false;
         int newPhase = BPM.IncrementPhase();
+        Debug.Log("------------------- NEW PHASE (" + newPhase + ") --------------------");
         ChangeTheme(newPhase);
 
         if(newPhase > 2)

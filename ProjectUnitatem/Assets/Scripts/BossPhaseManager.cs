@@ -6,7 +6,7 @@ public class BossPhaseManager : MonoBehaviour
 {
     private BossPhase[] _bossPhases = new BossPhase[5];
     private BossMoveDescription _currentMove;
-    private int _currentPhase = 1;
+    private int _currentPhase = 0;
 
     private BulletManager _bulletManager;
     private GameObject _player;
