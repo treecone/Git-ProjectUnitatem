@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossPhaseManager : MonoBehaviour
 {
-    private BossPhase[] _bossPhases = new BossPhase[5];
+    private BossPhase[] _bossPhases = new BossPhase[3];
     private BossMoveDescription _currentMove;
     private int _currentPhase = 0;
 
@@ -42,28 +42,8 @@ public class BossPhaseManager : MonoBehaviour
         _bossPhases[2] = new BossPhase(
             new List<BossMoveDescription>()
             {
-                new BossMoveDescription(Move_RadialBulletsPattern1, 1),
-                new BossMoveDescription(Move_RadialBulletsPattern2, 1),
-                new BossMoveDescription(Move_RadialBulletsPattern3, 1),
                 new BossMoveDescription(Move_SweepingBeam, 1),
-            }
-        );
-        // Phase 4
-        _bossPhases[3] = new BossPhase(
-            new List<BossMoveDescription>()
-            {
-                new BossMoveDescription(Move_SpawnFragmentingCirclesAroundBoss, 1),
-                new BossMoveDescription(MOVE_BlowUpOnPlayer, 1),
-            }
-        );
-        // Testing phase not for realsies
-        _bossPhases[4] = new BossPhase(
-            new List<BossMoveDescription>()
-            {
-                new BossMoveDescription(Move_ShootInSpiral, 1),
-                new BossMoveDescription(Move_CrossFireBeams, 1),
-                new BossMoveDescription(Move_CircularBlast, 1),
-                new BossMoveDescription(MOVE_BlowUpOnPlayer, 1),
+                new BossMoveDescription(Move_GridOfCircles, 1),
                 new BossMoveDescription(Move_SpawnFragmentingCirclesAroundBoss, 1),
                 new BossMoveDescription(Move_RadialBulletsPattern1, 1),
                 new BossMoveDescription(Move_RadialBulletsPattern2, 1),
@@ -168,14 +148,14 @@ public class BossPhaseManager : MonoBehaviour
         for(int i = 0; i < 4; i++)
         {
             BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, _boss.transform.position, Quaternion.Euler(0, 0, i * Mathf.PI / 2 * Mathf.Rad2Deg),
-               50, 1.0f, 1.0f, 0.5f, ROTATION_DIRECTION.CounterClockwise, 0.75f);
+               50, 1.0f, 1.0f, 0.5f, ROTATION_DIRECTION.CounterClockwise, .65f);
             _bulletManager.SpawnFromPool(beamDescription);
         }
         yield return new WaitForSeconds(1.0f);
         for (int i = 0; i < 4; i++)
         {
             BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, _boss.transform.position, Quaternion.Euler(0, 0, i * Mathf.PI / 2 * Mathf.Rad2Deg),
-               50, 1.0f, 1.5f, 0.5f, ROTATION_DIRECTION.Clockwise, 0.75f);
+               50, 1.0f, 1.5f, 0.5f, ROTATION_DIRECTION.Clockwise, .65f);
             _bulletManager.SpawnFromPool(beamDescription);
         }
 
@@ -383,6 +363,43 @@ public class BossPhaseManager : MonoBehaviour
         BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, _boss.transform.position + radius * new Vector3(-Mathf.Cos(angle), -Mathf.Sin(angle)), Quaternion.Euler(0, 0, (angle * Mathf.Rad2Deg) - 90),
             width: 70, height: radius, activeDurationS: 10f, fadeInDurationS: 0, speed: 5);
         _bulletManager.SpawnFromPool(beamDescription);
+        StartCoroutine(WaitAndMarkComplete(new object[] { 1.0f, desc }));
+    }
+
+    public void Move_GridOfCircles(BossMoveDescription desc)
+    {
+        StartCoroutine(GridOfCircles(desc));
+    }
+
+    public IEnumerator GridOfCircles(BossMoveDescription desc)
+    {
+        int radius = 5;
+        for (int x = -45 + radius; x <= 50 - radius; x += radius * 2 - 1)
+        {
+            for (int y = -30 + radius; y <= 35 - radius; y += radius * 2 - 1)
+            {
+                BulletDescription plopDescription = new BulletDescription(BULLET_TYPE.Plop,
+                    new Vector2(x, y),
+                    Quaternion.identity, 1.0f, 1.0f,
+                    activeDurationS: 10.0f, fadeInDurationS: 1.0f,
+                    startScale: radius * 2, endScale: radius * 2);
+                _bulletManager.SpawnFromPool(plopDescription);
+            }
+        }
+        yield return new WaitForSeconds(1.0f);
+        for (int x = -45 + radius; x <= 50 - radius; x += radius * 2 - 1)
+        {
+            for (int y = -30 + radius; y <= 35 - radius; y += radius * 2 - 1)
+            {
+                BulletDescription plopDescription = new BulletDescription(BULLET_TYPE.Plop,
+                    new Vector2(x + ((radius * 2 - 1 ) / 2.0f), y + ((radius * 2 - 1) / 2.0f)),
+                    Quaternion.identity, 1.0f, 1.0f,
+                    activeDurationS: 0.7f, fadeInDurationS: 0.8f,
+                    startScale: 4, endScale: 4);
+                _bulletManager.SpawnFromPool(plopDescription);
+            }
+            yield return new WaitForSeconds(.8f);
+        }
         StartCoroutine(WaitAndMarkComplete(new object[] { 1.0f, desc }));
     }
 

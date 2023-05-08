@@ -57282,6 +57282,10 @@ PrefabInstance:
       propertyPath: pools.Array.data[1].size
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 5529561106172422881, guid: 4bb190983a3e0ad49af8270fd5ecb28a, type: 3}
+      propertyPath: pools.Array.data[2].size
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
