@@ -81,6 +81,11 @@ public class BossPhaseManager : MonoBehaviour
         }
     }
 
+    public bool IsCurrentMoveComplete()
+    {
+        return _currentMove.Complete;
+    }
+
     public void SetInTransition(bool inTransition)
     {
         _inTransition = inTransition;
