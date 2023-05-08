@@ -1395,7 +1395,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+									<ObjectRef Name="Voice" ID="{1DA91511-9A7E-467A-AB0E-E58B39DA0B84}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1424,13 +1424,18 @@
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+									<ObjectRef Name="Voice" ID="{1DA91511-9A7E-467A-AB0E-E58B39DA0B84}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1456,7 +1461,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+									<ObjectRef Name="Player Attack Bus" ID="{8EB25FE0-39C5-4494-BC2D-7BE0FAB09891}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>

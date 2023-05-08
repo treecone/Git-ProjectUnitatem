@@ -15263,6 +15263,14 @@ PrefabInstance:
       propertyPath: GenreColors.Array.data[3].r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
+      propertyPath: UCANTHURTME.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 199bca887bf7fff4581c4f9f169af225, type: 2}
+    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
+      propertyPath: LaughingAudio.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a3dd286d39e68847995cdd2deddde54, type: 2}
     - target: {fileID: 5925333015214396055, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
       propertyPath: m_RootOrder
       value: 1

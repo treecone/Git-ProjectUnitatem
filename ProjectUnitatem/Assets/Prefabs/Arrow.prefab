@@ -248,6 +248,10 @@ MonoBehaviour:
   projectileSpeed: 14
   endPoint: {x: 0, y: 0}
   height: 25
+  landingEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 52d0394376dc5ef4c81b90e854338913, type: 2}
   teleportPlayer: 1
 --- !u!50 &6917758983557679584
 Rigidbody2D:

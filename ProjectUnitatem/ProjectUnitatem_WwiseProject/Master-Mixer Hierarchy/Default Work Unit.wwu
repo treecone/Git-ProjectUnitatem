@@ -148,6 +148,22 @@
 								</Reference>
 							</ReferenceList>
 						</Bus>
+						<Bus Name="Voice" ID="{1DA91511-9A7E-467A-AB0E-E58B39DA0B84}">
+							<PropertyList>
+								<Property Name="RecoveryTime" Type="Real64" Value="0"/>
+							</PropertyList>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="BGM Bus" ID="{A7E89C1E-2D42-4FA2-BDC7-74C6D66C7099}"/>
+									<DuckingParam>
+										<Volume>-6</Volume>
+										<FadeInTime>0.5</FadeInTime>
+										<FadeOutTime>0</FadeOutTime>
+										<FadeCurve>FadeLinear</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
+						</Bus>
 					</ChildrenList>
 					<ObjectLists>
 						<ObjectList Name="RTPC">
