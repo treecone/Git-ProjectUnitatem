@@ -224,6 +224,18 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{FCDE6CB0-909D-465A-B382-2CCDECBA5B52}" ShortID="141496936">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MusicSwitchContainer" ID="{E5C0983D-D718-45ED-9AAD-7A40405E4628}" WorkUnitID="{AF475F4C-17BB-4EAB-AD40-531018188FE6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>

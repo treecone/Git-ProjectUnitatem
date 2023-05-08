@@ -5,10 +5,11 @@
 			<ChildrenList>
 				<MusicSwitchContainer Name="MusicSwitchContainer" ID="{E5C0983D-D718-45ED-9AAD-7A40405E4628}" ShortID="482187287">
 					<PropertyList>
+						<Property Name="ContinuePlay" Type="bool" Value="False"/>
 						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
-								<Value>2</Value>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Tempo" Type="Real64" Value="140"/>
@@ -526,9 +527,9 @@
 																				<MusicClip Name="midtaiko" ID="{82FD7462-EA6E-49ED-93A5-66F7525D08A8}">
 																					<PropertyList>
 																						<Property Name="BeginTrimOffset" Type="Real64" Value="-4.90051165836115"/>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="2015.62358276644"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="990.599481516471"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="738.281024694511"/>
 																						<Property Name="PlayAt" Type="Real64" Value="4.90051165836115"/>
 																					</PropertyList>
 																					<AudioSourceRef Name="midtaiko" ID="{84862B65-B8F5-4001-8E08-231F18461CAD}"/>
@@ -545,7 +546,7 @@
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>2.01562358276644</XPos>
+																										<XPos>0.9906</XPos>
 																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
@@ -564,7 +565,7 @@
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>2.01562358276644</XPos>
+																										<XPos>0.9906</XPos>
 																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
@@ -583,7 +584,7 @@
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>2.01562358276644</XPos>
+																										<XPos>0.9906</XPos>
 																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
