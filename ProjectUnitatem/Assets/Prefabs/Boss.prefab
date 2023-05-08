@@ -132,8 +132,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432f0aeb92297854e94e82c53cc49c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangingColorSprites: []
-  GenreColors: []
+  ChangingColorSprites:
+  - {fileID: 1059234930170189680}
+  - {fileID: 2666676617407456476}
+  - {fileID: 5716897193967633990}
+  GenreColors:
+  - {r: 0, g: 0.8721261, b: 1, a: 1}
+  - {r: 1, g: 0.19144285, b: 0, a: 1}
+  - {r: 0.63196665, g: 1, b: 0.24056602, a: 1}
+  phaseLength: 40
 --- !u!114 &4937108694115743901
 MonoBehaviour:
   m_ObjectHideFlags: 0

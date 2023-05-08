@@ -6,7 +6,7 @@ public class BossPhaseManager : MonoBehaviour
 {
     private BossPhase[] _bossPhases = new BossPhase[5];
     private BossMoveDescription _currentMove;
-    private int _currentPhase = 0;
+    private int _currentPhase = 1;
 
     private BulletManager _bulletManager;
     private GameObject _player;
@@ -35,6 +35,7 @@ public class BossPhaseManager : MonoBehaviour
             {
                 new BossMoveDescription(Move_CircularBlast, 1),
                 new BossMoveDescription(MOVE_BlowUpOnPlayer, 1),
+                new BossMoveDescription(Move_BlockBreak, 1),
             }
         );
         // Phase 3
@@ -94,6 +95,11 @@ public class BossPhaseManager : MonoBehaviour
     public void SetPhase(int phase)
     {
         _currentPhase = phase;
+    }
+
+    public int IncrementPhase()
+    {
+        return (++_currentPhase);
     }
 
     // Update is called once per frame
@@ -372,8 +378,12 @@ public class BossPhaseManager : MonoBehaviour
     public void Move_BlockBreak(BossMoveDescription desc)
     {
         float angle = GetZRotationTowardsObj(_player);
-      //  BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, position, Quaternion.Euler(0, 0, angle),
-         //   width: 90, height: 1, activeDurationS: 7f, fadeInDurationS: 0, speed: 10);
+        Debug.LogError(angle);
+        float radius = 10f;
+        BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, _boss.transform.position + radius * new Vector3(-Mathf.Cos(angle), -Mathf.Sin(angle)), Quaternion.Euler(0, 0, (angle * Mathf.Rad2Deg) - 90),
+            width: 70, height: radius, activeDurationS: 10f, fadeInDurationS: 0, speed: 5);
+        _bulletManager.SpawnFromPool(beamDescription);
+        StartCoroutine(WaitAndMarkComplete(new object[] { 1.0f, desc }));
     }
 
     private IEnumerator WaitAndMarkComplete(object[] param)
@@ -389,7 +399,7 @@ public class BossPhaseManager : MonoBehaviour
     private float GetZRotationTowardsObj(GameObject ToObj)
     {
         Vector2 dir = ToObj.transform.position - gameObject.transform.position;
-        return Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
+        return Mathf.Atan2(dir.y, dir.x);
     }
 
     private Vector2 GetRandomPosition()
