@@ -27,7 +27,13 @@
 					<ChildrenList>
 						<Event Name="Player_Attack" ID="{D3A94977-4AC1-4A30-A2C8-EC8A1A8DB999}">
 							<ChildrenList>
-								<Action Name="" ID="{06080C0F-A22E-49AF-90EA-E35A0B8E72BD}" ShortID="768114992"/>
+								<Action Name="" ID="{06080C0F-A22E-49AF-90EA-E35A0B8E72BD}" ShortID="768114992">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player Attack" ID="{A16FA47E-843C-4045-AD93-AD65E0052195}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Move" ID="{A08C0235-2475-4BD8-AF16-D511452C3D61}">

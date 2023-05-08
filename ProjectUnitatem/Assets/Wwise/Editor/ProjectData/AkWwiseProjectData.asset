@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 64256cb5947fe945ba3ae7756291f256
     GuidInternal: 
-    m_lastTime: -8585184328225152139
+    m_lastTime: -8585180987534180584
     List:
     - name: BGM Bus
       guid: 1e9ce8a7422da24fbdc774c6d66c7099
@@ -200,7 +200,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ef80d5b12813f445b45e212240442c8f
     GuidInternal: 
-    m_lastTime: -8585183474567531588
+    m_lastTime: -8585180987534090563
     List:
     - name: Boss
       guid: 7b0a282d1138a843abfcb7adc31c0ca0

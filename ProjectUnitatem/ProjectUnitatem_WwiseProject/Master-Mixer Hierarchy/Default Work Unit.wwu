@@ -43,18 +43,18 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>-26.36815</XPos>
-																		<YPos>0.03961</YPos>
+																		<XPos>-37.37618</XPos>
+																		<YPos>-0.15487</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>-7.5</XPos>
-																		<YPos>-1.39755</YPos>
+																		<XPos>-8.88684</XPos>
+																		<YPos>-3.15003</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>6</XPos>
-																		<YPos>-1.92969</YPos>
+																		<YPos>-3.08831</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -93,8 +93,8 @@
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>-23.85548</XPos>
-																		<YPos>25</YPos>
+																		<XPos>-24.46222</XPos>
+																		<YPos>26</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -134,17 +134,6 @@
 						<Bus Name="UI Bus" ID="{207E6894-D2D7-47AC-AC92-8B8C0DA2D198}"/>
 						<Bus Name="Player Damage Bus" ID="{51A51C98-EE11-454E-886F-58CC6AC030AB}">
 							<ReferenceList>
-								<Reference Name="Effect0">
-									<Custom>
-										<Effect Name="Compressor (Custom)" ID="{1AC480C3-B1FB-456E-85AF-A9FF851AFBD9}" ShortID="585875790" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
-											<PropertyList>
-												<Property Name="AttackTime" Type="Real32" Value="0"/>
-												<Property Name="Ratio" Type="Real32" Value="6.9"/>
-												<Property Name="Threshold" Type="Real32" Value="-6.6"/>
-											</PropertyList>
-										</Effect>
-									</Custom>
-								</Reference>
 								<Reference Name="Effect1">
 									<Custom>
 										<Effect Name="Meter (Custom)" ID="{9B0A4E6F-EA47-438D-92DC-C45D6520E8C5}" ShortID="990475134" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
