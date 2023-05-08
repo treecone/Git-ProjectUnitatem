@@ -1,13 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Build;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
-using UnityEngine.Windows;
 using Input = UnityEngine.Input;
 
 public class PlayerScript : MonoBehaviour
@@ -149,12 +143,6 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GameObject b = Instantiate(bullet);
-            b.transform.position = gameObject.transform.position;
-            b.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 400);
-        }
 
         if(currentWeapon == 2)
         {

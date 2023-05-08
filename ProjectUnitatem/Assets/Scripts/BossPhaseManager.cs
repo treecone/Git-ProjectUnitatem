@@ -82,30 +82,6 @@ public class BossPhaseManager : MonoBehaviour
         return (++_currentPhase);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            _currentPhase = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            _currentPhase = 1;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            _currentPhase = 2;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            _currentPhase = 3;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            _currentPhase = 4;
-        }
-    }
     public void OnBeat()
     {
         if(!_inTransition && (_currentMove == null || _currentMove.Complete))

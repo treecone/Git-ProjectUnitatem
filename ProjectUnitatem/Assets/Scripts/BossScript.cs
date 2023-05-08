@@ -47,6 +47,7 @@ public class BossScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.KeypadPlus))
         {
             int a = BPM.IncrementPhase();
+            player.GetComponent<PlayerScript>().currentPhase = a;
             Debug.Log("NEW PHASE DEBUG Phase: " + a);
             ChangeTheme(a);
         }

@@ -15230,7 +15230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
       propertyPath: phaseLength
-      value: 5
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
       propertyPath: GenreColors.Array.size
