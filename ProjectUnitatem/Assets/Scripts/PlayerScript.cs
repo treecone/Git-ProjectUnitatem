@@ -27,6 +27,7 @@ public class PlayerScript : MonoBehaviour
     public float timeBetweenBlinks;
     private float timeCounter;
     public bool dead;
+    public int currentPhase;
 
     private Rigidbody2D rb;
     private GameObject mainCanvas;
@@ -120,9 +121,9 @@ public class PlayerScript : MonoBehaviour
         StartCoroutine(PlayerIFrames(IFrameLength));
     }
 
-    public void EquipWeapon0(InputAction.CallbackContext context) { currentWeapon = 0; WeaponSwitch1.Post(BGMManager); Debug.Log("Switched to 1"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(false); UpdateUIButtons(currentWeapon); }
-    public void EquipWeapon1(InputAction.CallbackContext context) { currentWeapon = 1; WeaponSwitch2.Post(BGMManager); Debug.Log("Switched to 2"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(false); UpdateUIButtons(currentWeapon); }
-    public void EquipWeapon2(InputAction.CallbackContext context) { currentWeapon = 2; WeaponSwitch3.Post(BGMManager); Debug.Log("Switched to 3"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(true); UpdateUIButtons(currentWeapon); }
+    public void EquipWeapon0(InputAction.CallbackContext context) { if (currentPhase < 0) { return; } currentWeapon = 0; WeaponSwitch1.Post(BGMManager); Debug.Log("Switched to 1"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(false); UpdateUIButtons(currentWeapon); }
+    public void EquipWeapon1(InputAction.CallbackContext context) { if (currentPhase < 1) { return; } currentWeapon = 1; WeaponSwitch2.Post(BGMManager); Debug.Log("Switched to 2"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(false); UpdateUIButtons(currentWeapon); }
+    public void EquipWeapon2(InputAction.CallbackContext context) { if (currentPhase < 2) { return; } currentWeapon = 2; WeaponSwitch3.Post(BGMManager); Debug.Log("Switched to 3"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(true); UpdateUIButtons(currentWeapon); }
 
     #region Death
 

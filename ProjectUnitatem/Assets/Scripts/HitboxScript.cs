@@ -14,6 +14,7 @@ public class HitboxScript : MonoBehaviour
     public PlayerScript pScript;
     public float timeToDeath;
     public HITBOX_TYPE hitType;
+    public GameObject breakingParticles;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +55,7 @@ public class HitboxScript : MonoBehaviour
                 case HITBOX_TYPE.AXE:
                     {
                         Destroy(collision.gameObject);
+                        Instantiate(breakingParticles, gameObject.transform.position, gameObject.transform.rotation);
                         Destroy(gameObject);
                         break;
                     }

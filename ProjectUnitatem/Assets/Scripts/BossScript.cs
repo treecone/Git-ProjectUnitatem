@@ -56,17 +56,20 @@ public class BossScript : MonoBehaviour
     {
         tryToTransition = false;
         int newPhase = BPM.IncrementPhase();
+        player.GetComponent<PlayerScript>().currentPhase = newPhase;
         Debug.Log("------------------- NEW PHASE (" + newPhase + ") --------------------");
         ChangeTheme(newPhase);
 
         if(newPhase > 2)
         {
             //Win game!
+            Debug.Log("------------------ Game win -----------------------------");
 
         }
         else
         {
             gameObject.GetComponent<Animator>().Play("BossPoint");
+            GameObject.Find("MainCanvas").GetComponent<CanvasScript>().CallTutorialPanel(newPhase);
             StartCoroutine("Phase");
         }
     }
