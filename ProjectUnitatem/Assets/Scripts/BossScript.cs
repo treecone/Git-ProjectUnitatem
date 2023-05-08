@@ -20,6 +20,7 @@ public class BossScript : MonoBehaviour
         start = true;
         BPM = GetComponent<BossPhaseManager>();
         BPM.SetInTransition(true);
+        ChangeTheme(0);
     }
 
     // Update is called once per frame
@@ -46,7 +47,7 @@ public class BossScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.KeypadPlus))
         {
             int a = BPM.IncrementPhase();
-            Debug.Log("NEW PHASE DEBUG");
+            Debug.Log("NEW PHASE DEBUG Phase: " + a);
             ChangeTheme(a);
         }
     }

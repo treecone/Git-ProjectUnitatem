@@ -15089,50 +15089,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
-      propertyPath: phaseLength
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
-      propertyPath: GenreColors.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
-      propertyPath: GenreColors.Array.data[0].b
-      value: 0.7264151
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
-      propertyPath: GenreColors.Array.data[0].g
-      value: 0.54168105
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
-      propertyPath: GenreColors.Array.data[0].r
-      value: 0.2706924
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
-      propertyPath: GenreColors.Array.data[1].b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
-      propertyPath: GenreColors.Array.data[1].g
-      value: 0.19144285
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
-      propertyPath: GenreColors.Array.data[1].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
-      propertyPath: GenreColors.Array.data[2].b
-      value: 0.32872015
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
-      propertyPath: GenreColors.Array.data[2].g
-      value: 0.8396226
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
-      propertyPath: GenreColors.Array.data[2].r
-      value: 0.59221256
-      objectReference: {fileID: 0}
     - target: {fileID: 5925333015214396055, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -17097,10 +17053,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7759968002795631228, guid: fb4c21c928a48b943be8189cb709b528, type: 3}
-      propertyPath: data.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: ffe2dc44428b19040862f2c1c3eb2595, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
