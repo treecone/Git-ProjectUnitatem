@@ -7,6 +7,26 @@
 					<ChildrenList>
 						<Event Name="Play_BGM" ID="{2C4FBA63-D781-4165-95EB-4BD30C81AD53}">
 							<ChildrenList>
+								<Action Name="" ID="{56262CFE-8D94-4CBE-B791-D310C886E94B}" ShortID="1007741825">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MusicSwitchContainer" ID="{E5C0983D-D718-45ED-9AAD-7A40405E4628}" WorkUnitID="{AF475F4C-17BB-4EAB-AD40-531018188FE6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4CD86952-6F7F-4920-AC58-23473970DB14}" ShortID="614259219">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Alive" ID="{1C3578F9-B866-454F-956E-B7C9F0396A3A}" WorkUnitID="{291FBA07-EFE2-4C1F-9AB7-BF2D46B4338A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{A166526B-10E7-49EF-B9CC-EC83A7371468}" ShortID="636496761">
 									<ReferenceList>
 										<Reference Name="Target">
@@ -174,7 +194,6 @@
 								<Action Name="" ID="{94E741B2-C8F5-442B-94F4-C9563FBDB804}" ShortID="663122772">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="Delay" Type="Real64" Value="1"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -186,7 +205,6 @@
 								<Action Name="" ID="{22490993-2860-4229-8D64-061156C54AD7}" ShortID="376539277">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="Delay" Type="Real64" Value="1"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -198,7 +216,6 @@
 								<Action Name="" ID="{F9C8DAAD-66EF-4CCF-ACB9-F9F798B1D9C4}" ShortID="549593241">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="Delay" Type="Real64" Value="1"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
