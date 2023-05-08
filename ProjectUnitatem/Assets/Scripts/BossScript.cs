@@ -105,7 +105,7 @@ public class BossScript : MonoBehaviour
         switch(phaseID)
         {
             case 0:
-                yield return new WaitForSeconds(30);
+                yield return new WaitForSeconds(25);
                 break;
             case 1:
                 yield return new WaitForSeconds(50);

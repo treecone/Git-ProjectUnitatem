@@ -15264,9 +15264,13 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
+      propertyPath: stopEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: d2835af2ec37a5241a9eb0b047a6d728, type: 2}
+    - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
       propertyPath: UCANTHURTME.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: 199bca887bf7fff4581c4f9f169af225, type: 2}
+      objectReference: {fileID: 11400000, guid: 7a3dd286d39e68847995cdd2deddde54, type: 2}
     - target: {fileID: 4637084548866804581, guid: 290f5c78a686e984ea20e737cb36d08f, type: 3}
       propertyPath: LaughingAudio.WwiseObjectReference
       value: 
@@ -57469,7 +57473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5529561106172422881, guid: 4bb190983a3e0ad49af8270fd5ecb28a, type: 3}
       propertyPath: pools.Array.data[1].size
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5529561106172422881, guid: 4bb190983a3e0ad49af8270fd5ecb28a, type: 3}
       propertyPath: pools.Array.data[2].size
@@ -57488,6 +57492,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53646377761952870, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 72.9
+      objectReference: {fileID: 0}
     - target: {fileID: 234219330701286098, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
       propertyPath: m_Pivot.x
       value: 0

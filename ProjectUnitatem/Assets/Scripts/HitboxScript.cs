@@ -54,7 +54,7 @@ public class HitboxScript : MonoBehaviour
 
                 case HITBOX_TYPE.AXE:
                     {
-                        Destroy(collision.gameObject);
+                        collision.gameObject.SetActive(false);
                         Instantiate(breakingParticles, gameObject.transform.position, gameObject.transform.rotation);
                         break;
                     }
