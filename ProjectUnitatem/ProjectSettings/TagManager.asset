@@ -57,12 +57,12 @@ TagManager:
   - name: Player
     uniqueID: 1273986391
     locked: 0
-  - name: UI
-    uniqueID: 2914412365
-    locked: 0
   - name: Walls
     uniqueID: 2539194577
     locked: 0
   - name: Ground
     uniqueID: 2748239573
+    locked: 0
+  - name: UI
+    uniqueID: 2914412365
     locked: 0

@@ -78,6 +78,7 @@ public class PlayerScript : MonoBehaviour
 
         abilityLocks = new bool[3];
         UpdateUIButtons(0);
+        mainCanvas.GetComponent<CanvasScript>().CallTutorialPanel(0);
     }
 
     private void Awake() 
