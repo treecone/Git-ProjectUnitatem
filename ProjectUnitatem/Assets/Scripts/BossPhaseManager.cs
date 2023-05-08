@@ -395,11 +395,11 @@ public class BossPhaseManager : MonoBehaviour
 
     public void Move_HomingBullets(BossMoveDescription desc)
     {
-        int numSlices = 8;
+        int numSlices = 1;
         float angleToPlayer = GetZRotationTowardsObj(_player);
         float startAngle = angleToPlayer - (Mathf.PI / 4);
         float dAngle = Mathf.PI / (2 * numSlices);
-        float radius = 5.0f;
+        float radius = 20.0f;
         for(int i = 0; i < numSlices; i++)
         {
             float angle = startAngle + (dAngle * i);
