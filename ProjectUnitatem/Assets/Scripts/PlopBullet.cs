@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class PlopBullet : BulletBase
 {
-
     private bool _collisionEnabled;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private CircleCollider2D _circleCollider2D;
 
     protected override void Init()
     {
         base.Init();
         SetAlpha(0.25f);
         transform.localScale = Vector3.one * Description.StartScale;
+        _circleCollider2D = GetComponent<CircleCollider2D>();
+        _circleCollider2D.enabled = false;
         _collisionEnabled = false;
     }
 
@@ -34,7 +31,7 @@ public class PlopBullet : BulletBase
         {
             SetAlpha(1.0f);
             _collisionEnabled = true;
-            // TODO: SL enable collision
+            _circleCollider2D.enabled = true;
         }
         else if (_collisionEnabled)
         {

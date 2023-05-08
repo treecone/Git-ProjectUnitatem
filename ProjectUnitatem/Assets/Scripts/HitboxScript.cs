@@ -41,15 +41,19 @@ public class HitboxScript : MonoBehaviour
             switch(hitType)
             {
                 case HITBOX_TYPE.SWORD:
-                    bBase.baseSpeed *= 2;
-                    collision.transform.rotation = Quaternion.Euler(0, 0, pScript.GetRotationForAbilities());
-                    Destroy(gameObject);
-                    break;
+                    {
+                        bBase.Description.Speed *= 2;
+                        collision.transform.rotation = Quaternion.Euler(0, 0, pScript.GetRotationForAbilities());
+                        Destroy(gameObject);
+                        break;
+                    }
 
                 case HITBOX_TYPE.AXE:
-                    Destroy(collision.gameObject);
-                    Destroy(gameObject);
-                    break;
+                    {
+                        Destroy(collision.gameObject);
+                        Destroy(gameObject);
+                        break;
+                    }
             }
         }
     }

@@ -96,7 +96,7 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponent<BulletBase>() != null)
+        if(collision.tag == "Bullet")
         {
             Debug.Log("Taking Damage");
             TakeDamage();

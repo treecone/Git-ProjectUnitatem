@@ -19,25 +19,13 @@ public enum ROTATION_DIRECTION
 public class BulletBase : MonoBehaviour
 {
     [Header("Bullet Attributes")]
-    public float baseSpeed;
     public float damage;
-    [SerializeField] private BULLET_TYPE type;
 
-    private float timeCounter;
     protected SpriteRenderer _spriteRenderer;
 
     public BulletDescription Description;
 
-    protected Rigidbody2D rigidBody;
-
     protected float _timeAliveS = 0;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        rigidBody = GetComponent<Rigidbody2D>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-    }
 
     public void OnEnable()
     {
@@ -69,7 +57,7 @@ public class BulletBase : MonoBehaviour
     public virtual void Update()
     {
         _timeAliveS += Time.deltaTime;
-        gameObject.transform.Translate(gameObject.transform.up * Time.deltaTime * baseSpeed, Space.World);
+        gameObject.transform.Translate(gameObject.transform.up * Time.deltaTime * Description.Speed, Space.World);
         if(_timeAliveS > Description.ActiveDurationS)
         {
             gameObject.SetActive(false);
