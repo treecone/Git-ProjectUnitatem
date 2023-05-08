@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 using UnityEngine.Windows;
 using Input = UnityEngine.Input;
 
@@ -25,6 +26,7 @@ public class PlayerScript : MonoBehaviour
     public bool invincible;
     public float timeBetweenBlinks;
     private float timeCounter;
+    public bool dead;
 
     private Rigidbody2D rb;
     private GameObject mainCanvas;
@@ -43,6 +45,7 @@ public class PlayerScript : MonoBehaviour
     public float[] abilityCooldowns;
 
     private bool[] abilityLocks;
+    public Image[] abilityUI;
 
     //Audio ---------------------
     public AK.Wwise.Event WeaponSwitch1;
@@ -58,6 +61,7 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dead = false;
         rb = GetComponent<Rigidbody2D>();
         mainCanvas = GameObject.Find("MainCanvas");
         BGMManager = GameObject.Find("BGM Manager");
@@ -72,6 +76,7 @@ public class PlayerScript : MonoBehaviour
         mainControls.Player.Ability3.started += EquipWeapon2;
 
         abilityLocks = new bool[3];
+        UpdateUIButtons(0);
     }
 
     private void Awake() 
@@ -100,7 +105,7 @@ public class PlayerScript : MonoBehaviour
 
     public void TakeDamage()
     {
-        if (invincible)
+        if (invincible || dead)
             return; 
 
         currentHealth -= 1;
@@ -113,9 +118,9 @@ public class PlayerScript : MonoBehaviour
         StartCoroutine(PlayerIFrames(IFrameLength));
     }
 
-    public void EquipWeapon0(InputAction.CallbackContext context) { currentWeapon = 0; WeaponSwitch1.Post(BGMManager); Debug.Log("Switched to 1"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(false); }
-    public void EquipWeapon1(InputAction.CallbackContext context) { currentWeapon = 1; WeaponSwitch2.Post(BGMManager); Debug.Log("Switched to 2"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(false); }
-    public void EquipWeapon2(InputAction.CallbackContext context) { currentWeapon = 2; WeaponSwitch3.Post(BGMManager); Debug.Log("Switched to 3"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(true); }
+    public void EquipWeapon0(InputAction.CallbackContext context) { currentWeapon = 0; WeaponSwitch1.Post(BGMManager); Debug.Log("Switched to 1"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(false); UpdateUIButtons(currentWeapon); }
+    public void EquipWeapon1(InputAction.CallbackContext context) { currentWeapon = 1; WeaponSwitch2.Post(BGMManager); Debug.Log("Switched to 2"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(false); UpdateUIButtons(currentWeapon); }
+    public void EquipWeapon2(InputAction.CallbackContext context) { currentWeapon = 2; WeaponSwitch3.Post(BGMManager); Debug.Log("Switched to 3"); playerArm.transform.GetChild(0).Find("BowSprite").gameObject.SetActive(true); UpdateUIButtons(currentWeapon); }
 
     #region Death
 
@@ -127,6 +132,16 @@ public class PlayerScript : MonoBehaviour
 
 
     #endregion
+
+    void UpdateUIButtons(int type)
+    {
+        foreach(Image i in abilityUI)
+        {
+            i.rectTransform.anchoredPosition = new Vector2(i.rectTransform.anchoredPosition.x, -7);
+        }
+
+        abilityUI[type].rectTransform.anchoredPosition = new Vector2(abilityUI[type].rectTransform.anchoredPosition.x, 10);
+    }
 
     // Update is called once per frame
     void Update()
@@ -176,8 +191,10 @@ public class PlayerScript : MonoBehaviour
     {
         Debug.Log("Cooldown locked for " + abilityID);
         abilityLocks[abilityID] = true;
+        abilityUI[abilityID].color = Color.grey;
         yield return new WaitForSeconds(timeToWait);
         abilityLocks[abilityID] = false;
+        abilityUI[abilityID].color = Color.white;
         Debug.Log("Cooldown unlocked for " + abilityID);
     }
 

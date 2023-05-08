@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 8e40825a53652c4999a2a7181a43beec
     GuidInternal: 
-    m_lastTime: -8585197681665745740
+    m_lastTime: -8585196780149936222
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 64256cb5947fe945ba3ae7756291f256
     GuidInternal: 
-    m_lastTime: -8585184328225152139
+    m_lastTime: -8585183687027984270
     List:
     - name: BGM Bus
       guid: 1e9ce8a7422da24fbdc774c6d66c7099
@@ -172,7 +172,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 52f3de0e45781d45abd578999dcfb3c8
     GuidInternal: 
-    m_lastTime: -8585184328225222151
+    m_lastTime: -8585183687027455446
     List:
     - name: Main_SoundBank
       guid: 637a242824bf4540920312da923301ee
@@ -200,7 +200,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ef80d5b12813f445b45e212240442c8f
     GuidInternal: 
-    m_lastTime: -8585183474567531588
+    m_lastTime: -8585183687031919858
     List:
     - name: Boss
       guid: 7b0a282d1138a843abfcb7adc31c0ca0
@@ -769,7 +769,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 9d204d6b9be93a4681b2fa6e0d981078
     GuidInternal: 
-    m_lastTime: -8585186955726832826
+    m_lastTime: -8585185459278866399
     List:
     - name: BGM_Controller
       guid: ad936faf4679ff44bbfdce28bde5b961
@@ -881,7 +881,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 07ba1f29e2ef1f4c9ab7bf2d46b4338a
     GuidInternal: 
-    m_lastTime: -8585190628476432802
+    m_lastTime: -8585188980428072057
     List:
     - name: Phases
       guid: cb8c5944fa487447a6eaa6fbc58bdf3a
@@ -1027,7 +1027,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: b32cbf833bbdcf46af10aeec699beeaa
     GuidInternal: 
-    m_lastTime: -8585185593911957565
+    m_lastTime: -8585185459271321806
     List:
     - name: MusicSwitch
       guid: 84ec9f710a7bb34aba74666bfc2d752a
@@ -1239,7 +1239,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 1d41b547c9208d408011de061c568cda
     GuidInternal: 
-    m_lastTime: -8585188601312127013
+    m_lastTime: -8585188168621982701
     List:
     - name: Wooshtransition
       guid: 090642a324ec9a4e830a177d0a234a10
@@ -1256,7 +1256,7 @@ MonoBehaviour:
         guid: 090642a324ec9a4e830a177d0a234a10
       Path: Triggers\Default Work Unit\Wooshtransition
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 060000000700000009000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
