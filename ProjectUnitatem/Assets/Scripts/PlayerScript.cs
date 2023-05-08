@@ -134,7 +134,7 @@ public class PlayerScript : MonoBehaviour
     {
         foreach(Image i in abilityUI)
         {
-            i.rectTransform.anchoredPosition = new Vector2(i.rectTransform.anchoredPosition.x, -7);
+            i.rectTransform.anchoredPosition = new Vector2(i.rectTransform.anchoredPosition.x, -20);
         }
 
         abilityUI[type].rectTransform.anchoredPosition = new Vector2(abilityUI[type].rectTransform.anchoredPosition.x, 10);

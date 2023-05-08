@@ -73,7 +73,7 @@ public class BossScript : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().Play("BossPoint");
             GameObject.Find("MainCanvas").GetComponent<CanvasScript>().CallTutorialPanel(newPhase);
-            StartCoroutine("Phase");
+            StartCoroutine(Phase(newPhase));
         }
     }
 
@@ -83,13 +83,26 @@ public class BossScript : MonoBehaviour
         tryToTransition = true;
     }
 
-    IEnumerator Phase()
+    IEnumerator Phase(int phaseID)
     {
         BPM.SetInTransition(true);
         yield return new WaitForSeconds(5f);
         
         BPM.SetInTransition(false);
-        yield return new WaitForSeconds(phaseLength);
+
+        switch(phaseID)
+        {
+            case 0:
+                yield return new WaitForSeconds(30);
+                break;
+            case 1:
+                yield return new WaitForSeconds(50);
+                break;
+            case 2:
+                yield return new WaitForSeconds(110);
+                break;
+        }
+
         tryToTransition = true;
     }
 

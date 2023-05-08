@@ -247,7 +247,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -52.1, y: 42}
+  m_AnchoredPosition: {x: -52.099976, y: 42}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &61180734
@@ -15563,7 +15563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 171.3, y: -1.2}
+  m_AnchoredPosition: {x: 171.29999, y: -1.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621394365
@@ -17373,6 +17373,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3938045708955636836, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2201157
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938045708955636836, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.84461975
+      objectReference: {fileID: 0}
     - target: {fileID: 5614346196796053201, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -17452,6 +17460,18 @@ PrefabInstance:
     - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
       propertyPath: abilityCooldowns.Array.data[2]
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734036475126091872, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734036475126091872, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734036475126091872, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -57591,6 +57611,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 98500885797156775, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 208851874611834961, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
+      propertyPath: m_text
+      value: 'Mouse to aim, click to swing
+
+        Reflect: Bounce bullets back'
+      objectReference: {fileID: 0}
     - target: {fileID: 234219330701286098, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -57675,13 +57705,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 627824562522464359, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
+      propertyPath: m_text
+      value: 'Use Ability
+
+        Break: Break Projectiles In Front of You'
+      objectReference: {fileID: 0}
+    - target: {fileID: 987254886261272618, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574579269768337566, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
+      propertyPath: m_text
+      value: Equip Bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744080071710017792, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
+      propertyPath: m_text
+      value: Equip Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891952726149818258, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
+      propertyPath: m_text
+      value: Equip Axe
+      objectReference: {fileID: 0}
     - target: {fileID: 3922399323491067844, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
       propertyPath: m_Name
       value: MainCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4744676300759905723, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
+      propertyPath: m_text
+      value: 'Use Ability
+
+        Teleport: Launch a projectile, teleports you upon
+        landing'
+      objectReference: {fileID: 0}
     - target: {fileID: 6575810448767620751, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8955438547835984021, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
       propertyPath: m_Camera

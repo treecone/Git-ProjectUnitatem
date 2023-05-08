@@ -164,7 +164,7 @@ public class BossPhaseManager : MonoBehaviour
             BulletDescription plopDescription = new BulletDescription(BULLET_TYPE.Plop,
                 bossPosition + (radius * new Vector3(Mathf.Cos(angle), Mathf.Sin(angle))),
                 Quaternion.identity, 1.0f, 1.0f, 
-                activeDurationS: 1.0f, fadeInDurationS: 0.5f,
+                activeDurationS: 1.5f, fadeInDurationS: 0.5f,
                 startScale: 3.0f, endScale: 10.0f);
             _bulletManager.SpawnFromPool(plopDescription);
         }
@@ -371,7 +371,7 @@ public class BossPhaseManager : MonoBehaviour
                 BulletDescription plopDescription = new BulletDescription(BULLET_TYPE.Plop,
                     new Vector2(x, y),
                     Quaternion.identity, 1.0f, 1.0f,
-                    activeDurationS: 10.0f, fadeInDurationS: 1.0f,
+                    activeDurationS: 10.0f, fadeInDurationS: 2f,
                     startScale: radius * 2, endScale: radius * 2);
                 _bulletManager.SpawnFromPool(plopDescription);
             }
@@ -384,11 +384,11 @@ public class BossPhaseManager : MonoBehaviour
                 BulletDescription plopDescription = new BulletDescription(BULLET_TYPE.Plop,
                     new Vector2(x + ((radius * 2 - 1 ) / 2.0f), y + ((radius * 2 - 1) / 2.0f)),
                     Quaternion.identity, 1.0f, 1.0f,
-                    activeDurationS: 0.7f, fadeInDurationS: 0.8f,
+                    activeDurationS: 0.7f, fadeInDurationS: 1f,
                     startScale: 4, endScale: 4);
                 _bulletManager.SpawnFromPool(plopDescription);
             }
-            yield return new WaitForSeconds(.8f);
+            yield return new WaitForSeconds(1.25f);
         }
         StartCoroutine(WaitAndMarkComplete(new object[] { 1.0f, desc }));
     }
