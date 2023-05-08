@@ -6,21 +6,7 @@ public class BeamBullet : BulletBase
 
 {
     private bool _collisionEnabled;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    public void OnEnable()
-    {
-        if(Description == null)
-        {
-            return;
-        }
-
-        Init();
-    }
+    private BoxCollider2D _boxCollider2D;
 
     protected override void Init()
     {
@@ -35,6 +21,9 @@ public class BeamBullet : BulletBase
         transform.rotation = Description.Rotation;
         _spriteRenderer = child.GetComponent<SpriteRenderer>();
         _spriteRenderer.size = new Vector2(Description.Width, Description.Height);
+        _boxCollider2D = child.GetComponent<BoxCollider2D>();
+        _boxCollider2D.size = new Vector2(Description.Width, Description.Height);
+        _boxCollider2D.enabled = false;
         SetAlpha(0.25f);
     }
 
@@ -46,7 +35,8 @@ public class BeamBullet : BulletBase
         }
         Transform child = transform.GetChild(0);
         child.position = Vector3.zero;
-        _spriteRenderer.size = new Vector2(1,1);
+        _spriteRenderer.size = Vector2.one;
+        _boxCollider2D.size = Vector2.one;
         transform.rotation = Quaternion.identity;
     }
 
@@ -64,7 +54,7 @@ public class BeamBullet : BulletBase
         {
              SetAlpha(1.0f);
              _collisionEnabled = true;
-            // TODO: SL enable collision
+             _boxCollider2D.enabled = true;
         }
         else if (_collisionEnabled)
         {
