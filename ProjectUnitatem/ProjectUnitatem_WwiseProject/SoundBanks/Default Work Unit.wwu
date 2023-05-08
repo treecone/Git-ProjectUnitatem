@@ -14,6 +14,7 @@
 						<ObjectRef Name="Play_Hover_SFX" ID="{F2FED8C3-2644-448E-83C9-56A6AE4179EA}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BulletReflect" ID="{80574F86-CA40-4557-879D-C41DD2B1D43E}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Set_RegularScore" ID="{B0A71147-6751-456C-8569-C99CEDDB01C3}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_you_cant_hurt_me" ID="{43CC7DC0-927E-4616-815C-52065B3299C9}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TestSound" ID="{6AA67608-8C33-4676-A8B1-C80EAB8DBB46}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Click_SFX" ID="{B102876D-FBA5-472D-A78F-6F41941520DA}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Sync_DoubleTime" ID="{501ED636-09FE-48EE-A4EC-F804F315909A}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
@@ -22,8 +23,10 @@
 						<ObjectRef Name="Play_Player_Damage" ID="{10B7379A-04A2-4A2B-BBBB-CF93CE946ED0}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="States" ID="{AA0F0531-F39D-4AB1-A147-F1359A0E33A2}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Death" ID="{5F92D11C-4E29-4AC2-9398-8C56B254F3F0}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_teleport" ID="{877539F8-A9A3-4BB5-A40A-912BD46A24F7}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Set_8BitSwitch" ID="{B1380AFA-CDEB-4CDF-AE12-3A1EC99711D8}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="UI" ID="{69B4E096-FB70-4D23-B182-699B947A0396}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_evil_laugh" ID="{E8F96C84-208B-4E8C-BA05-A7E632686D81}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="RTPCs" ID="{4DE83CB3-7603-4F29-8DCC-F7BE23D3840C}" WorkUnitID="{B1D580EF-1328-45F4-B45E-212240442C8F}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

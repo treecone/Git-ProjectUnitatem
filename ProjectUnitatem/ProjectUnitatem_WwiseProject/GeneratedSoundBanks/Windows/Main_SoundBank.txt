@@ -11,13 +11,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	1781417190	Enemy_Attack			\Default Work Unit\Boss\Enemy_Attack	
 	2155888594	Victory_Stinger			\Default Work Unit\Music\Victory_Stinger	
 	2159539604	Play_Hover_SFX			\Default Work Unit\Play_Hover_SFX	
+	2542476594	Play_evil_laugh			\Default Work Unit\Play_evil_laugh	
 	2752533807	Play_TestSound			\Default Work Unit\Play_TestSound	
 	2824512041	Player_Attack			\Default Work Unit\Player\Player_Attack	
 	2995851202	Play_Click_SFX			\Default Work Unit\Play_Click_SFX	
 	3011204530	Move			\Default Work Unit\Player\Move	
+	3039308865	Play_you_cant_hurt_me			\Default Work Unit\Play_you_cant_hurt_me	
 	3126765036	Play_BGM			\Default Work Unit\Music\Play_BGM	
 	3422541661	Pause_Menu			\Default Work Unit\Game\Pause_Menu	
 	3638125099	Play_Player_Damage			\Default Work Unit\Play_Player_Damage	
+	3785065891	Play_teleport			\Default Work Unit\Play_teleport	
 	3901001571	Set_8BitSwitch			\Default Work Unit\Switches\Set_8BitSwitch	
 	4003498308	Set_GuitarSwitch			\Default Work Unit\Switches\Set_GuitarSwitch	
 	4048499067	Sync_DoubleTime			\Default Work Unit\Sync_DoubleTime	
@@ -60,6 +63,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	104139717	hover3	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\hover3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MainMenu\Click SFX\hover3		182928
 	105547845	8bitsword_time_6_bmin	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\8bitsword_time_6_bmin_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Attack\Sword Container\8bitsword_time_6_bmin		423640
 	161537859	050323 keyboard volley 1_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\050323 keyboard volley 1_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BulletReflect\BulletReflect\050323 keyboard volley 1_1		331872
+	164935982	050723 teleport	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\050723 teleport_822D21DA.wem		\Actor-Mixer Hierarchy\Default Work Unit\BowLand\050723 teleport		216832
 	221970478	bowshot3_amin	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\bowshot3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Attack\BowShots\bowshot3_amin		682860
 	231310544	midtaiko	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\midtaiko_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Stingers\Death\midtaiko		355652
 	238069379	bowshot1_emin	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\bowshot1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Attack\BowShots\bowshot1_emin		695460
@@ -68,6 +72,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	402164404	hover1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\hover1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MainMenu\Click SFX\hover1		185684
 	405125683	8bitsword_time_3_gmaj	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\8bitsword_time_3_gmaj_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Attack\Sword Container\8bitsword_time_3_gmaj		420884
 	417742145	bowshot4_cmaj	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\bowshot4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Attack\BowShots\bowshot4_cmaj		689944
+	479757779	050723 you cant hurt me	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\050723 you cant hurt me_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Evil Laugh\050723 you cant hurt me		630880
 	523750168	retrohit_2hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\retrohit_2hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Retro\retrohit_2hearts_1		183848
 	540432875	retrohit_3hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\retrohit_3hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Retro\retrohit_3hearts_1		178332
 	625917642	8bitsword_time_5_dmaj	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\8bitsword_time_5_dmaj_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Attack\Sword Container\8bitsword_time_5_dmaj		420884
@@ -80,6 +85,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	814883910	click1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\click1_3ECE4AF3.wem		\Actor-Mixer Hierarchy\Default Work Unit\MainMenu\Hover SFX\click1		36776
 	847368009	bowshot5_bmin	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\bowshot5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Attack\BowShots\bowshot5_bmin		679708
 	854177119	woosh 2	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\woosh 2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitchContainer\Stingers\Death\woosh 2		180320
+	858642658	050723 evil bullet laugh2	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\050723 evil bullet laugh2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Evil Laugh\050723 evil bullet laugh2		386400
 	897376006	retrohit_1hearts_1	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\retrohit_1hearts_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Damage\Retro\retrohit_1hearts_1		353816
 	907514971	8bitsword_time_4_amin	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\8bitsword_time_4_amin_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Attack\Sword Container\8bitsword_time_4_amin		439260
 	956999226	click2	C:\Users\Admin\Desktop\Unity Projects\Git-ProjectUnitatem\ProjectUnitatem\ProjectUnitatem_WwiseProject\.cache\Windows\SFX\click2_77A033A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\MainMenu\Hover SFX\click2		25772

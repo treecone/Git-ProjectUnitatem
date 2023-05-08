@@ -21,9 +21,12 @@ namespace AK
         static const AkUniqueID PLAY_BOWSHOTS = 77222993U;
         static const AkUniqueID PLAY_BULLETREFLECT = 1191913973U;
         static const AkUniqueID PLAY_CLICK_SFX = 2995851202U;
+        static const AkUniqueID PLAY_EVIL_LAUGH = 2542476594U;
         static const AkUniqueID PLAY_HOVER_SFX = 2159539604U;
         static const AkUniqueID PLAY_PLAYER_DAMAGE = 3638125099U;
+        static const AkUniqueID PLAY_TELEPORT = 3785065891U;
         static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
+        static const AkUniqueID PLAY_YOU_CANT_HURT_ME = 3039308865U;
         static const AkUniqueID PLAYER_ATTACK = 2824512041U;
         static const AkUniqueID RESUME_GAME = 1565052233U;
         static const AkUniqueID SET_8BITSWITCH = 3901001571U;

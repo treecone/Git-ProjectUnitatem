@@ -1411,6 +1411,74 @@
 								<ActiveSource Name="050723 evil bullet laugh2" ID="{912DFACF-B793-4201-8773-463523E50D43}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="050723 you cant hurt me" ID="{B04BE1AF-2029-4B65-B456-5E2735DB74F0}" ShortID="1058173828">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="050723 you cant hurt me" ID="{2E325007-BD6D-4FE9-8EBB-BF900FF7A93F}">
+									<Language>SFX</Language>
+									<AudioFile>050723 you cant hurt me.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="479757779"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="050723 you cant hurt me" ID="{2E325007-BD6D-4FE9-8EBB-BF900FF7A93F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="BowLand" ID="{F8D9D29F-EDD7-4713-B5CC-2A6A60D5641E}" ShortID="780988368">
+					<ChildrenList>
+						<Sound Name="050723 teleport" ID="{59896916-9C28-442A-B257-36611CF072E9}" ShortID="278791493">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EF09D150-A07A-452B-A886-A4CAC68A6ECB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B56C2564-7F94-45E9-BA3A-E7756291F256}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="050723 teleport" ID="{796E679C-8640-4244-95D3-4798F92CA218}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.137585388127854"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.625388127853881"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.47216803652968"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.60099360730594"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>050723 teleport.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="164935982"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="050723 teleport" ID="{796E679C-8640-4244-95D3-4798F92CA218}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

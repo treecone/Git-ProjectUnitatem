@@ -320,6 +320,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_evil_laugh" ID="{E8F96C84-208B-4E8C-BA05-A7E632686D81}">
+					<ChildrenList>
+						<Action Name="" ID="{D7F3FD56-3E0B-4CFC-AEA0-E480B3CD8C8D}" ShortID="129487959">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="050723 evil bullet laugh2" ID="{6622C1CA-21BB-4A7F-AA2A-5AF57D1B5F2E}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_you_cant_hurt_me" ID="{43CC7DC0-927E-4616-815C-52065B3299C9}">
+					<ChildrenList>
+						<Action Name="" ID="{B5A0F507-5999-414E-B749-92647A2983C1}" ShortID="13851410">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="050723 you cant hurt me" ID="{B04BE1AF-2029-4B65-B456-5E2735DB74F0}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_teleport" ID="{877539F8-A9A3-4BB5-A40A-912BD46A24F7}">
+					<ChildrenList>
+						<Action Name="" ID="{554821A6-5596-4B81-91E7-910955746D79}" ShortID="887009517">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="050723 teleport" ID="{59896916-9C28-442A-B257-36611CF072E9}" WorkUnitID="{B1628716-7E54-46C6-92E0-FCBF899D1E61}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
