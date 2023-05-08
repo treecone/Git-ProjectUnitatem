@@ -55,6 +55,7 @@ public class PlayerScript : MonoBehaviour
     public AK.Wwise.Event highScoreEvent;
     public AK.Wwise.Event playerDamage;
     public AK.Wwise.Event setRegularScore;
+    public AK.Wwise.Event playerAttack;
     public GameObject deathEventObj;
     
 
@@ -214,6 +215,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         float inputValue = context.ReadValue<float>();
+        playerAttack.Post(BGMManager);
         Transform HitboxSpawnPoint = playerArm.transform.Find("HitboxSpawnPoint").transform;
 
         switch (currentWeapon)

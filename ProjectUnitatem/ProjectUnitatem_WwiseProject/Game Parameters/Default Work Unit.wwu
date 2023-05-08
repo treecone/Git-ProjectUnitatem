@@ -9,9 +9,17 @@
 						<Property Name="Max" Type="Real64" Value="3"/>
 					</PropertyList>
 				</GameParameter>
-				<GameParameter Name="Distortion" ID="{5E5161C6-0A89-49F5-9A28-B8C07D43F677}"/>
+				<GameParameter Name="Distortion" ID="{5E5161C6-0A89-49F5-9A28-B8C07D43F677}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
 				<GameParameter Name="Score" ID="{FFDC15B2-352B-4090-86B2-9043501733AB}"/>
-				<GameParameter Name="DamageToBoss" ID="{92035F73-122A-423B-B073-23AC68BA4B10}"/>
+				<GameParameter Name="DamageToBoss" ID="{92035F73-122A-423B-B073-23AC68BA4B10}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
 				<GameParameter Name="BGM_Controller" ID="{AF6F93AD-7946-44FF-BBFD-CE28BDE5B961}">
 					<PropertyList>
 						<Property Name="RTPCRamping" Type="int16" Value="1"/>
@@ -22,7 +30,7 @@
 				<GameParameter Name="PauseFilter" ID="{BB1F9053-352E-4EEA-8A5D-7B86670B2A87}"/>
 				<GameParameter Name="DamageSideChain" ID="{6DB8BDFF-4271-4E21-B084-9291544F4D89}">
 					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="6"/>
+						<Property Name="InitialValue" Type="Real64" Value="-48"/>
 						<Property Name="Max" Type="Real64" Value="6"/>
 						<Property Name="Min" Type="Real64" Value="-48"/>
 						<Property Name="RTPCRamping" Type="int16" Value="1"/>

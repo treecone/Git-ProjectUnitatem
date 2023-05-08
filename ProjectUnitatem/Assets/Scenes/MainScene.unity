@@ -17228,6 +17228,10 @@ PrefabInstance:
       propertyPath: abilityUI.Array.data[2]
       value: 
       objectReference: {fileID: 1663096618}
+    - target: {fileID: 6916772454847418656, guid: a841f011dafd97e4aab8b9d4d0a17ffa, type: 3}
+      propertyPath: playerAttack.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 775b072b615731940b8cf2174d1ad0bb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17293,6 +17297,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7759968002795631228, guid: fb4c21c928a48b943be8189cb709b528, type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: ffe2dc44428b19040862f2c1c3eb2595, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -57735,6 +57743,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2017597337995064989, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
+      propertyPath: click.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 9b700bcc57c938141a10b656b3a84a7c, type: 2}
+    - target: {fileID: 2017597337995064989, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
+      propertyPath: hover.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c0a970dfd9290f4ebd0c4063fa40e37, type: 2}
     - target: {fileID: 3922399323491067844, guid: 31d24e450ded57f43af5c658f40d6d69, type: 3}
       propertyPath: m_Name
       value: MainCanvas
