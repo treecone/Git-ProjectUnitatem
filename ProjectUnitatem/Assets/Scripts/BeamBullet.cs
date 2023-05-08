@@ -18,11 +18,11 @@ public class BeamBullet : BulletBase
         Transform child = transform.GetChild(0);
         if (Description.RotationDirection != ROTATION_DIRECTION.None)
         {
-            child.position = transform.position + new Vector3(Description.Width / 2 - 0.5f, 0);
+            child.localPosition = new Vector3(Description.Width / 2 - 0.5f, 0);
         }
         else
         {
-            child.position = transform.position;
+            child.localPosition = Vector3.zero;
         }
         // Rotate whole object about pivot
         transform.rotation = Description.Rotation;
