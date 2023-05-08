@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossScript : MonoBehaviour
 {
@@ -65,6 +66,7 @@ public class BossScript : MonoBehaviour
         {
             //Win game!
             Debug.Log("------------------ Game win -----------------------------");
+            SceneManager.LoadScene(2);
 
         }
         else

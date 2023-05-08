@@ -52,8 +52,11 @@ public class CanvasScript : MonoBehaviour
 
     IEnumerator TutorialPanel(int panelID)
     {
+        float a = 5;
+        if (panelID == 0)
+            a = 10;
         tutorialPanels[panelID].SetActive(true);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(a);
         tutorialPanels[panelID].SetActive(false);
     }
 }
