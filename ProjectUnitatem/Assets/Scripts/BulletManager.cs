@@ -85,10 +85,12 @@ public class BulletDescription
     public float StartScale;
     public float EndScale;
     public float Speed;
+    public bool Homing;
+    public GameObject PlayerRef;
 
     public BulletDescription(BULLET_TYPE tag, Vector3 position, Quaternion rotation, float width = 1, float height = 1,
          float activeDurationS = 5, float fadeInDurationS = 0, ROTATION_DIRECTION rotationDirection = ROTATION_DIRECTION.None, float rotationSpeed = 0,
-         float startScale = 1.0f, float endScale = 1.0f, float speed = 15.0f)
+         float startScale = 1.0f, float endScale = 1.0f, float speed = 15.0f, bool homing = false, GameObject playerRef = null)
     {
         Tag = tag;
         Position = position;
@@ -102,5 +104,7 @@ public class BulletDescription
         StartScale = startScale;
         EndScale = endScale;
         Speed = speed;
+        Homing = homing;
+        PlayerRef = playerRef;
     }
 }

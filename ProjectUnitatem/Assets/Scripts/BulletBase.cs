@@ -27,6 +27,9 @@ public class BulletBase : MonoBehaviour
 
     protected float _timeAliveS = 0;
 
+    private bool _hit;
+    public bool Hit { set { _hit = value; } }
+
     public void OnEnable()
     {
         // Bullet has been created for pool so skip initialization
@@ -57,7 +60,14 @@ public class BulletBase : MonoBehaviour
     public virtual void Update()
     {
         _timeAliveS += Time.deltaTime;
+        if (Description.Homing && !_hit)
+        {
+            Vector2 dir = Description.PlayerRef.transform.position - gameObject.transform.position;
+            float rad = Mathf.Atan2(dir.y, dir.x);
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, (Mathf.Rad2Deg * rad) - 90);
+        }
         gameObject.transform.Translate(gameObject.transform.up * Time.deltaTime * Description.Speed, Space.World);
+        
         if(_timeAliveS > Description.ActiveDurationS)
         {
             gameObject.SetActive(false);

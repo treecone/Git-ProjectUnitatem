@@ -46,6 +46,7 @@ public class HitboxScript : MonoBehaviour
                         if (bBase != null)
                         {
                             bBase.Description.Speed *= 2;
+                            bBase.Hit = true;
                         }
                         collision.transform.rotation = Quaternion.Euler(0, 0, pScript.GetRotationForAbilities());
                         Destroy(gameObject);
