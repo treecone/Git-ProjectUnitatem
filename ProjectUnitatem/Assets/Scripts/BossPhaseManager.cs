@@ -96,6 +96,11 @@ public class BossPhaseManager : MonoBehaviour
         _currentPhase = phase;
     }
 
+    public int IncrementPhase()
+    {
+        return (++_currentPhase);
+    }
+
     // Update is called once per frame
     void Update()
     {

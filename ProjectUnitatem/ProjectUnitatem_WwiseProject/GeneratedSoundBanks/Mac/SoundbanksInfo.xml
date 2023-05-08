@@ -9,13 +9,12 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B70BF66B-50DC-72F4-DEB9-FAB15E180B7C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6A56E81C-4E8C-B84D-63A2-1189030718C9}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<Custom>
 					<Plugin Id="83649599" Name="Meter (Custom)" LibName="Wwise Meter" LibId="8454147"/>
-					<Plugin Id="585875790" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="990475134" Name="Meter (Custom)" LibName="Wwise Meter" LibId="8454147"/>
 				</Custom>
 				<AudioDevices>
@@ -28,7 +27,6 @@
 				<Bus Id="257282035" Name="Player Damage Bus">
 					<PluginRefs>
 						<Custom>
-							<PluginRef Id="585875790"/>
 							<PluginRef Id="990475134"/>
 						</Custom>
 					</PluginRefs>
@@ -95,7 +93,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{037C4D14-1B15-27D9-BF26-B479244E1089}">
+		<SoundBank Id="2228651116" Type="User" Language="SFX" Hash="{6D80318F-5AC8-6577-4F50-ADC6CCC43B4A}">
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<Media>
@@ -107,13 +105,25 @@
 					<ShortName>LoD Landing.wav</ShortName>
 					<CachePath>SFX/LoD Landing_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="74947698" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>050723 guitar bullet break.wav</ShortName>
+					<CachePath>SFX/050723 guitar bullet break_10C4C929.wem</CachePath>
+				</File>
 				<File Id="90237330" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>class_2hearts_1.wav</ShortName>
 					<CachePath>SFX/class_2hearts_1_10C4C929.wem</CachePath>
 				</File>
+				<File Id="101857992" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>8bitsword_time_2_emin.wav</ShortName>
+					<CachePath>SFX/8bitsword_time_2_emin_10C4C929.wem</CachePath>
+				</File>
 				<File Id="104139717" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hover3.wav</ShortName>
 					<CachePath>SFX/hover3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="105547845" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>8bitsword_time_6_bmin.wav</ShortName>
+					<CachePath>SFX/8bitsword_time_6_bmin_10C4C929.wem</CachePath>
 				</File>
 				<File Id="161537859" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>050323 keyboard volley 1_1.wav</ShortName>
@@ -143,6 +153,10 @@
 					<ShortName>hover1.wav</ShortName>
 					<CachePath>SFX/hover1_10C4C929.wem</CachePath>
 				</File>
+				<File Id="405125683" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>8bitsword_time_3_gmaj.wav</ShortName>
+					<CachePath>SFX/8bitsword_time_3_gmaj_10C4C929.wem</CachePath>
+				</File>
 				<File Id="417742145" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>bowshot4.wav</ShortName>
 					<CachePath>SFX/bowshot4_10C4C929.wem</CachePath>
@@ -154,6 +168,10 @@
 				<File Id="540432875" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>retrohit_3hearts_1.wav</ShortName>
 					<CachePath>SFX/retrohit_3hearts_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="625917642" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>8bitsword_time_5_dmaj.wav</ShortName>
+					<CachePath>SFX/8bitsword_time_5_dmaj_10C4C929.wem</CachePath>
 				</File>
 				<File Id="648207739" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rock_3hearts_1.wav</ShortName>
@@ -170,6 +188,10 @@
 				<File Id="672768681" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>class_3hearts_1.wav</ShortName>
 					<CachePath>SFX/class_3hearts_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="748047733" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>8bitsword_time_1_cmaj.wav</ShortName>
+					<CachePath>SFX/8bitsword_time_1_cmaj_10C4C929.wem</CachePath>
 				</File>
 				<File Id="810500137" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>050323 8bit base version.wav</ShortName>
@@ -190,6 +212,10 @@
 				<File Id="897376006" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>retrohit_1hearts_1.wav</ShortName>
 					<CachePath>SFX/retrohit_1hearts_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="907514971" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>8bitsword_time_4_amin.wav</ShortName>
+					<CachePath>SFX/8bitsword_time_4_amin_10C4C929.wem</CachePath>
 				</File>
 				<File Id="956999226" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>click2.wav</ShortName>
@@ -216,6 +242,11 @@
 					<CachePath>SFX/rock_2hearts_1_10C4C929.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="979584505" Name="Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</Custom>
+			</Plugins>
 			<Events>
 				<Event Id="779278001" Name="Death" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
@@ -369,11 +400,46 @@
 								<MediaRef Id="90237330"/>
 								<MediaRef Id="672768681"/>
 							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="979584505"/>
+								</Custom>
+							</PluginRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 				<Event Id="2752533807" Name="Play_TestSound" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2824512041" Name="Player_Attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2824512041" Name="Player_Attack" DurationType="OneShot" DurationMin="1.3413334" DurationMax="3.9419727">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3496907731"/>
+							<MediaRefs>
+								<MediaRef Id="101857992"/>
+								<MediaRef Id="105547845"/>
+								<MediaRef Id="405125683"/>
+								<MediaRef Id="625917642"/>
+								<MediaRef Id="748047733"/>
+								<MediaRef Id="907514971"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3232836819"/>
+							<MediaRefs>
+								<MediaRef Id="74947698"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1445037870" Id="3063529226"/>
+							<MediaRefs>
+								<MediaRef Id="221970478"/>
+								<MediaRef Id="238069379"/>
+								<MediaRef Id="265884621"/>
+								<MediaRef Id="417742145"/>
+								<MediaRef Id="847368009"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="1565052233" Name="Resume_Game" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3901001571" Name="Set_8BitSwitch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetSwitch>
@@ -445,5 +511,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{725550B2-1A6E-D270-B096-766C4DAB4603}</FileHash>
+	<FileHash>{8913F5E6-1A3F-ECE3-3393-D795289FC990}</FileHash>
 </SoundBanksInfo>
