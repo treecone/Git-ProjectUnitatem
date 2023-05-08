@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossPhaseManager : MonoBehaviour
 {
-    private BossPhase[] _bossPhases = new BossPhase[1];
+    private BossPhase[] _bossPhases = new BossPhase[5];
     private BossMoveDescription _currentMove;
     private int _currentPhase = 0;
 
@@ -12,6 +12,7 @@ public class BossPhaseManager : MonoBehaviour
     private GameObject _player;
     private GameObject _boss;
     private bool _enableRepeatedMoves = false;
+    private bool _inTransition;
 
     // Start is called before the first frame update
     void Start()
@@ -20,24 +21,58 @@ public class BossPhaseManager : MonoBehaviour
         _player = GameObject.Find("Player");
         _boss = GameObject.Find("Boss");
 
-        // Create phases
+        // Phase 1
         _bossPhases[0] = new BossPhase(
             new List<BossMoveDescription>()
             {
-                //new BossMoveDescription(Move_ShootInSpiral, 1),
+                new BossMoveDescription(Move_ShootInSpiral, 1),
                 new BossMoveDescription(Move_CrossFireBeams, 1),
-                //new BossMoveDescription(Move_CircularBlast, 1),
-                //new BossMoveDescription(MOVE_BlowUpOnPlayer, 1),
-                //new BossMoveDescription(Move_SpawnFragmentingCirclesAroundBoss, 1),
-                //new BossMoveDescription(Move_RadialBulletsPattern1, 1),
-                //new BossMoveDescription(Move_RadialBulletsPattern2, 1),
-                //new BossMoveDescription(Move_RadialBulletsPattern3, 1),
+            }
+        );
+        // Phase 2
+        _bossPhases[1] = new BossPhase(
+            new List<BossMoveDescription>()
+            {
+                new BossMoveDescription(Move_CircularBlast, 1),
+                new BossMoveDescription(MOVE_BlowUpOnPlayer, 1),
+            }
+        );
+        // Phase 3
+        _bossPhases[2] = new BossPhase(
+            new List<BossMoveDescription>()
+            {
+                new BossMoveDescription(Move_RadialBulletsPattern1, 1),
+                new BossMoveDescription(Move_RadialBulletsPattern2, 1),
+                new BossMoveDescription(Move_RadialBulletsPattern3, 1),
+                new BossMoveDescription(Move_SweepingBeam, 1),
+            }
+        );
+        // Phase 4
+        _bossPhases[3] = new BossPhase(
+            new List<BossMoveDescription>()
+            {
+                new BossMoveDescription(Move_SpawnFragmentingCirclesAroundBoss, 1),
+                new BossMoveDescription(MOVE_BlowUpOnPlayer, 1),
+            }
+        );
+        // Testing phase not for realsies
+        _bossPhases[4] = new BossPhase(
+            new List<BossMoveDescription>()
+            {
+                new BossMoveDescription(Move_ShootInSpiral, 1),
+                new BossMoveDescription(Move_CrossFireBeams, 1),
+                new BossMoveDescription(Move_CircularBlast, 1),
+                new BossMoveDescription(MOVE_BlowUpOnPlayer, 1),
+                new BossMoveDescription(Move_SpawnFragmentingCirclesAroundBoss, 1),
+                new BossMoveDescription(Move_RadialBulletsPattern1, 1),
+                new BossMoveDescription(Move_RadialBulletsPattern2, 1),
+                new BossMoveDescription(Move_RadialBulletsPattern3, 1),
             }
         );
 
         // Debug safeguard against only having one move and not enabling repeated moves...
         // It will crash Unity otherwise.
-        foreach(var bossPhase in _bossPhases)
+        foreach (var bossPhase in _bossPhases)
         {
             if(bossPhase.GetNumMoves() == 1)
             {
@@ -46,14 +81,43 @@ public class BossPhaseManager : MonoBehaviour
         }
     }
 
+    public void SetInTransition(bool inTransition)
+    {
+        _inTransition = inTransition;
+    }
+
+    public void SetPhase(int phase)
+    {
+        _currentPhase = phase;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            _currentPhase = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            _currentPhase = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            _currentPhase = 2;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            _currentPhase = 3;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            _currentPhase = 4;
+        }
     }
     public void OnBeat()
     {
-        if(_currentMove == null || _currentMove.Complete)
+        if(!_inTransition && (_currentMove == null || _currentMove.Complete))
         {
             BossMoveDescription candidateMove;
             do
@@ -256,6 +320,55 @@ public class BossPhaseManager : MonoBehaviour
             blasts++;
         }
         StartCoroutine(WaitAndMarkComplete(new object[] { 2.0f, desc }));
+    }
+
+    public void Move_SweepingBeam(BossMoveDescription desc)
+    {
+        int random = Random.Range(0, 4);
+        float angle = random * 90;
+        // Position beam at the correct corner of the map as the beam will always move in the direction of it's up vector
+        Vector2 position = new Vector2(random == 0 || random == 2 ? 0 : random == 1 ? 40 : -40,
+                                       random == 1 || random == 3 ? 0 : random == 0 ? -30 : 30);
+        BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, position, Quaternion.Euler(0, 0, angle),
+          width: 90, height: 1, activeDurationS: 7f, fadeInDurationS: 0, speed: 10);
+        _bulletManager.SpawnFromPool(beamDescription);
+        //StartCoroutine(SweepingBeam(desc));
+        StartCoroutine(WaitAndMarkComplete(new object[] { 0.1f, desc }));
+    }
+
+    public IEnumerator SweepingBeam(BossMoveDescription desc)
+    {
+        yield return new WaitForEndOfFrame();
+        int random = Random.Range(0, 4);
+        float angle = random * 90;
+        // Position beam at the correct corner of the map as the beam will always move in the direction of it's up vector
+        Vector2 position = new Vector2(random == 0 || random == 2 ? 0 : random == 1 ? 40 : -40,
+                                       random == 1 || random == 3 ? 0 : random == 0 ? -30 : 30);
+        BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, position, Quaternion.Euler(0, 0, angle),
+          width: 90, height: 1, activeDurationS: 7f, fadeInDurationS: 0, speed: 10);
+        _bulletManager.SpawnFromPool(beamDescription);
+        //for (int i = 0; i < 4; i++)
+        //{
+        //    float angle = i * 90;
+        //    // Position beam at the correct corner of the map as the beam will always move in the direction of it's up vector
+        //    Vector2 position = new Vector2(i == 0 || i == 3 ? -40 : 40, i == 0 || i == 1 ? -30 : 30);
+        //    BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, position, Quaternion.Euler(0, 0, angle),
+        //      width: 90, height: 1, activeDurationS: 7f, fadeInDurationS: 0, speed: 10);
+        //    _bulletManager.SpawnFromPool(beamDescription);
+
+        //    if (i == 1)
+        //    {
+        //        yield return new WaitForSeconds(4.0f);
+        //    }
+        //}
+        //StartCoroutine(WaitAndMarkComplete(new object[] { 6.0f, desc }));
+    }
+
+    public void Move_BlockBreak(BossMoveDescription desc)
+    {
+        float angle = GetZRotationTowardsObj(_player);
+      //  BulletDescription beamDescription = new BulletDescription(BULLET_TYPE.Beam, position, Quaternion.Euler(0, 0, angle),
+         //   width: 90, height: 1, activeDurationS: 7f, fadeInDurationS: 0, speed: 10);
     }
 
     private IEnumerator WaitAndMarkComplete(object[] param)

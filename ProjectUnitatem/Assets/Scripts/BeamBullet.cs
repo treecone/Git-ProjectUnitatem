@@ -16,7 +16,14 @@ public class BeamBullet : BulletBase
         transform.position = Description.Position;
         // Move child so the pivot is at the end
         Transform child = transform.GetChild(0);
-        child.position = transform.position + new Vector3(Description.Width / 2 - 0.5f, 0);
+        if (Description.RotationDirection != ROTATION_DIRECTION.None)
+        {
+            child.position = transform.position + new Vector3(Description.Width / 2 - 0.5f, 0);
+        }
+        else
+        {
+            child.position = transform.position;
+        }
         // Rotate whole object about pivot
         transform.rotation = Description.Rotation;
         _spriteRenderer = child.GetComponent<SpriteRenderer>();
@@ -45,20 +52,29 @@ public class BeamBullet : BulletBase
     {
         _timeAliveS += Time.deltaTime;
         // Kill it!
-        if(_timeAliveS > Description.FadeInDurationS + Description.ActiveDurationS)
+        if (_timeAliveS > Description.FadeInDurationS + Description.ActiveDurationS)
         {
             gameObject.SetActive(false);
         }
         // Time to enable collision!
-        else if(!_collisionEnabled &&_timeAliveS > Description.FadeInDurationS)
+        else if (!_collisionEnabled && _timeAliveS > Description.FadeInDurationS)
         {
-             SetAlpha(1.0f);
-             _collisionEnabled = true;
-             _boxCollider2D.enabled = true;
+            SetAlpha(1.0f);
+            _collisionEnabled = true;
+            _boxCollider2D.enabled = true;
         }
         else if (_collisionEnabled)
         {
-           gameObject.transform.Rotate(new Vector3(0, 0, Time.deltaTime * 60 * Description.RotationSpeed * (Description.RotationDirection == ROTATION_DIRECTION.CounterClockwise ? 1 : -1)));
+            // Rotating beam
+            if (Description.RotationDirection != ROTATION_DIRECTION.None)
+            {
+                gameObject.transform.Rotate(new Vector3(0, 0, Time.deltaTime * 60 * Description.RotationSpeed * (Description.RotationDirection == ROTATION_DIRECTION.CounterClockwise ? 1 : -1)));
+            }
+            // Linearly traveling beam
+            else
+            {
+                gameObject.transform.Translate(gameObject.transform.up * Time.deltaTime * Description.Speed, Space.World);
+            }
         }
     }
 }
